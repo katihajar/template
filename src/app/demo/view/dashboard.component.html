@@ -54,11 +54,11 @@
                     <span class="timeline-event-title">Uploaded Images</span>
                     <span class="timeline-event-time">15m</span>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="ui-g">
-                        <div class="ui-g-6">
+                    <div class="p-grid">
+                        <div class="p-col-6">
                             <img src="../../../assets/layout/images/dashboard/image-1.jpg" alt="">
                         </div>
-                        <div class="ui-g-6">
+                        <div class="p-col-6">
                             <img src="../../../assets/layout/images/dashboard/image-2.jpg" alt="">
                         </div>
                     </div>
@@ -163,7 +163,7 @@
             </div>
         </div>
         <div class="p-col-12 p-lg-6 p-xl-4">
-            <div class="card card-w-title resolution-center ui-fluid">
+            <div class="card card-w-title resolution-center p-fluid">
                 <h3>Resolution Center</h3>
 
                 <input id="input" type="text" pInputText placeholder="Username"> 
@@ -386,7 +386,7 @@
             </div>
         </div>
         <div class="p-col-12 p-xl-8">
-            <div class="card card-w-title global-sales ui-fluid">
+            <div class="card card-w-title global-sales p-fluid">
                 <h3>Global Sales</h3>
                 <p-table [columns]="cols" [value]="cars" selectionMode="single" dataKey="vin" [(selection)]="selectedCar" [responsive]="true"
                          [paginator]="true" [rows]="5">
@@ -413,9 +413,9 @@
                                 {{rowData[col.field]}}
                             </td>
                             <td>
-                                <div class="ui-g">
-                                    <div class="ui-g-6"><p-button icon="pi pi-search" type="button"></p-button></div>
-                                    <div class="ui-g-6"><p-button icon="pi pi-times" type="button" styleClass="ui-button-danger"></p-button></div>
+                                <div class="p-grid">
+                                    <div class="p-col-6"><p-button icon="pi pi-search" type="button"></p-button></div>
+                                    <div class="p-col-6"><p-button icon="pi pi-times" type="button" styleClass="ui-button-danger"></p-button></div>
                                 </div>
                             </td>
                         </tr>

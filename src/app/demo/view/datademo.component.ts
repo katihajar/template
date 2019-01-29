@@ -30,11 +30,11 @@ import { TreeNode, SelectItem, LazyLoadEvent } from 'primeng/api';
             padding-top: 5px;
         }
 
-        .car-item .ui-md-3 {
+        .car-item .p-md-3 {
             text-align: center;
         }
 
-        .car-item .ui-g-10 {
+        .car-item .p-col-10 {
             font-weight: bold;
         }
 

@@ -10,27 +10,28 @@
     background: #ffffff;
     padding: 1em;
     box-sizing: border-box;
+    margin-bottom: 16px;
     @include shadow(0 2px 8px 0 rgba(0, 0, 0, 0.08));
     @include border-radius($borderRadius);
-    
+
     &.card-w-title {
         padding-bottom: 1em;
     }
-    
+
     &.no-gutter {
         margin-bottom: 0;
     }
-    
+
     h1 {
         font-size: 18px;
         font-weight: 500;
         margin: 24px 0;
-        
+
         &:first-child {
             margin-top: 0px;
         }
     }
-    
+
     h2 {
         font-size: 16px;
         font-weight: 500;
@@ -39,7 +40,7 @@
             margin-top: 0px;
         }
     }
-    
+
     h3 {
         font-size: 14px;
         font-weight: 500;
@@ -48,7 +49,7 @@
             margin-top: 0px;
         }
     }
-    
+
     h4 {
         font-size: 13px;
         font-weight: 500;
@@ -61,60 +62,60 @@
 
 .nopad {
     padding: 0;
-    
+
     .ui-panel-content {
         padding: 0;
     }
 }
 
 @-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -20px, 0);
-    transform: translate3d(0, -20px, 0);
-  }
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
 
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
 }
 
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -20px, 0);
-  }
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
 
-  to {
-    opacity: 1;
-    transform: none;
-  }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @-webkit-keyframes fadeOutUp {
-  from {
-    opacity: 1;
-  }
+    from {
+        opacity: 1;
+    }
 
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -20px, 0);
-    transform: translate3d(0, -20px, 0);
-  }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
 }
 
 @keyframes fadeOutUp {
-  from {
-    opacity: 1;
-  }
+    from {
+        opacity: 1;
+    }
 
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -20px, 0);
-    transform: translate3d(0, -20px, 0);
-  }
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
 }
 
 @keyframes fadeinmask {
@@ -141,7 +142,7 @@
         position: absolute;
         right: 15px;
         bottom: 70px;
-    
+
         .layout-ajax-loader-icon {
             color: red;
             font-size: 32px;

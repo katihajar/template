@@ -1,16 +1,5 @@
 
-// Icon Override Mixin
-@mixin icon-override($icon) {
-    background: none;
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-indent: 0px !important;
-    text-align: center;
-    
+@mixin icon-override($icon) {    
     &:before {
         content: $icon;
     }
@@ -91,16 +80,22 @@
     border-bottom-right-radius: $val;
 }
 
+@mixin border-radius-top-right($val) {
+    -moz-border-radius-topright: $val;
+    -webkit-border-top-right-radius: $val;
+    border-top-right-radius: $val;
+}
+
+@mixin border-radius-bottom-right($val) {
+    -moz-border-radius-bottomright: $val;
+    -webkit-border-bottom-right-radius: $val;
+    border-bottom-right-radius: $val; 
+}
+
 @mixin opacity($opacity) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie);
-}
-
-@mixin box-sizing($box-model) {
-    -webkit-box-sizing: $box-model;
-    -moz-box-sizing: $box-model;
-    box-sizing: $box-model;
 }
 
 @mixin placeholder {
@@ -124,15 +119,4 @@
     -o-transform: scale($deg);
     -ms-transform: scale($deg);
     transform: scale($deg);
-}
-
-@mixin background-gradient-top2bottom($start-color, $end-color) {
-    background-color: $start-color;
-    background-image: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));
-    background-image: -webkit-linear-gradient(top, $start-color, $end-color);
-    background-image:    -moz-linear-gradient(top, $start-color, $end-color);
-    background-image:     -ms-linear-gradient(top, $start-color, $end-color);
-    background-image:      -o-linear-gradient(top, $start-color, $end-color);
-    background-image:         linear-gradient(to bottom, $start-color, $end-color);
-    filter:            progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start-color}', endColorstr='#{$end-color}');
 }
