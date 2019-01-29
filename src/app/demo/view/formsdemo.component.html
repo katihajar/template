@@ -1,4 +1,4 @@
-<div class="p-grid p-fluid">
+<div class="p-grid ui-fluid">
     <div class="p-col-12 p-lg-6">
         <!-- Left Side -->
         <div class="card card-w-title">
@@ -241,98 +241,100 @@
     </div>
 
     <div class="p-col-12 p-col-nopad">
-        <div class="p-col-12 p-lg-6" style="padding-top:0">
-            <div class="card card-w-title">
-                <h1>Buttons</h1>
+        <div class="p-grid">
+            <div class="p-col-12 p-lg-6" style="padding-top:0">
+                <div class="card card-w-title">
+                    <h1>Buttons</h1>
 
-                <div class="p-grid">
-                    <div class="p-col-12">ToggleButton</div>
-                    <div class="p-col-12">
-                        <p-toggleButton [(ngModel)]="toggleButtonChecked"></p-toggleButton>
-                    </div>
+                    <div class="p-grid">
+                        <div class="p-col-12">ToggleButton</div>
+                        <div class="p-col-12">
+                            <p-toggleButton [(ngModel)]="toggleButtonChecked"></p-toggleButton>
+                        </div>
 
-                    <div class="p-col-12">SelectButton</div>
-                    <div class="p-col-12">
-                        <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
-                    </div>
+                        <div class="p-col-12">SelectButton</div>
+                        <div class="p-col-12">
+                            <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+                        </div>
 
-                    <div class="p-col-12">Button</div>
-                    <div class="p-col-12">
-                        <button type="button" label="Bookmark" icon="fa fa-star" pButton></button>
-                    </div>
+                        <div class="p-col-12">Button</div>
+                        <div class="p-col-12">
+                            <button type="button" label="Bookmark" icon="fa fa-star" pButton></button>
+                        </div>
 
-                    <div class="p-col-12">Left Icon</div>
-                    <div class="p-col-12">
-                        <button type="button" label="Clear" pButton icon="fa fa-star"></button>
-                    </div>
+                        <div class="p-col-12">Left Icon</div>
+                        <div class="p-col-12">
+                            <button type="button" label="Clear" pButton icon="fa fa-star"></button>
+                        </div>
 
-                    <div class="p-col-12">Right Icon</div>
-                    <div class="p-col-12">
-                        <button type="button" label="Clear" pButton icon="fa fa-star" iconPos="right"></button>
-                    </div>
+                        <div class="p-col-12">Right Icon</div>
+                        <div class="p-col-12">
+                            <button type="button" label="Clear" pButton icon="fa fa-star" iconPos="right"></button>
+                        </div>
 
-                    <div class="p-col-12">Icon Only</div>
-                    <div class="p-col-12">
-                        <button type="button" icon="fa fa-star" pButton></button>
-                    </div>
+                        <div class="p-col-12">Icon Only</div>
+                        <div class="p-col-12">
+                            <button type="button" icon="fa fa-star" pButton></button>
+                        </div>
 
-                    <div class="p-col-12">Link</div>
-                    <div class="p-col-12">
-                        <a href="http://www.primefaces.org" target="_blank">Homepage</a>
-                    </div>
+                        <div class="p-col-12">Link</div>
+                        <div class="p-col-12">
+                            <a href="http://www.primefaces.org" target="_blank">Homepage</a>
+                        </div>
 
-                    <div class="p-col-12">SplitButton</div>
-                    <div class="p-col-12">
-                        <p-splitButton label="Save" icon="fa fa-check" [model]="splitButtonItems"></p-splitButton>
+                        <div class="p-col-12">SplitButton</div>
+                        <div class="p-col-12">
+                            <p-splitButton label="Save" icon="fa fa-check" [model]="splitButtonItems"></p-splitButton>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="p-col-12 p-lg-6" style="padding-top:0">
-            <div class="card">
-                <h1>Buttons</h1>
-                <p>Raised and Flat buttons with various severities.</p>
-                <div class="p-grid">
-                    <div class="p-col-12 p-md-4" style="text-align:center">
-                        <button pButton type="button" label="Primary" style="margin-bottom:10px"></button>
+            <div class="p-col-12 p-lg-6" style="padding-top:0">
+                <div class="card">
+                    <h1>Buttons</h1>
+                    <p>Raised and Flat buttons with various severities.</p>
+                    <div class="p-grid">
+                        <div class="p-col-12 p-md-4" style="text-align:center">
+                            <button pButton type="button" label="Primary" style="margin-bottom:10px"></button>
 
-                        <button pButton type="button" label="Secondary" style="margin-bottom:10px" class="ui-button-secondary"></button>
+                            <button pButton type="button" label="Secondary" style="margin-bottom:10px" class="ui-button-secondary"></button>
 
-                        <button pButton type="button" label="Success" style="margin-bottom:10px" class="ui-button-success"></button>
+                            <button pButton type="button" label="Success" style="margin-bottom:10px" class="ui-button-success"></button>
 
-                        <button pButton type="button" label="Info" style="margin-bottom:10px" class="ui-button-info"></button>
+                            <button pButton type="button" label="Info" style="margin-bottom:10px" class="ui-button-info"></button>
 
-                        <button pButton type="button" label="Warning" style="margin-bottom:10px" class="ui-button-warning"></button>
+                            <button pButton type="button" label="Warning" style="margin-bottom:10px" class="ui-button-warning"></button>
 
-                        <button pButton type="button" label="Danger" style="margin-bottom:10px" class="ui-button-danger"></button>
-                    </div>
+                            <button pButton type="button" label="Danger" style="margin-bottom:10px" class="ui-button-danger"></button>
+                        </div>
 
-                    <div class="p-col-12 p-md-4" style="text-align:center">
-                        <button pButton type="button" label="Primary" style="margin-bottom:10px" class="ui-button-raised"></button>
+                        <div class="p-col-12 p-md-4" style="text-align:center">
+                            <button pButton type="button" label="Primary" style="margin-bottom:10px" class="ui-button-raised"></button>
 
-                        <button pButton type="button" label="Secondary" style="margin-bottom:10px" class="ui-button-secondary ui-button-raised"></button>
+                            <button pButton type="button" label="Secondary" style="margin-bottom:10px" class="ui-button-secondary ui-button-raised"></button>
 
-                        <button pButton type="button" label="Success" style="margin-bottom:10px" class="ui-button-success ui-button-raised"></button>
+                            <button pButton type="button" label="Success" style="margin-bottom:10px" class="ui-button-success ui-button-raised"></button>
 
-                        <button pButton type="button" label="Info" style="margin-bottom:10px" class="ui-button-info ui-button-raised"></button>
+                            <button pButton type="button" label="Info" style="margin-bottom:10px" class="ui-button-info ui-button-raised"></button>
 
-                        <button pButton type="button" label="Warning" style="margin-bottom:10px" class="ui-button-warning ui-button-raised"></button>
+                            <button pButton type="button" label="Warning" style="margin-bottom:10px" class="ui-button-warning ui-button-raised"></button>
 
-                        <button pButton type="button" label="Danger" style="margin-bottom:10px" class="ui-button-danger ui-button-raised"></button>
-                    </div>
+                            <button pButton type="button" label="Danger" style="margin-bottom:10px" class="ui-button-danger ui-button-raised"></button>
+                        </div>
 
-                    <div class="p-col-12 p-md-4" style="text-align:center">
-                        <button pButton type="button" label="Primary" style="margin-bottom:10px" class="ui-button-rounded"></button>
+                        <div class="p-col-12 p-md-4" style="text-align:center">
+                            <button pButton type="button" label="Primary" style="margin-bottom:10px" class="ui-button-rounded"></button>
 
-                        <button pButton type="button" label="Secondary" style="margin-bottom:10px" class="ui-button-secondary ui-button-rounded"></button>
+                            <button pButton type="button" label="Secondary" style="margin-bottom:10px" class="ui-button-secondary ui-button-rounded"></button>
 
-                        <button pButton type="button" label="Success" style="margin-bottom:10px" class="ui-button-success ui-button-rounded"></button>
+                            <button pButton type="button" label="Success" style="margin-bottom:10px" class="ui-button-success ui-button-rounded"></button>
 
-                        <button pButton type="button" label="Info" style="margin-bottom:10px" class="ui-button-info ui-button-rounded"></button>
+                            <button pButton type="button" label="Info" style="margin-bottom:10px" class="ui-button-info ui-button-rounded"></button>
 
-                        <button pButton type="button" label="Warning" style="margin-bottom:10px" class="ui-button-warning ui-button-rounded"></button>
+                            <button pButton type="button" label="Warning" style="margin-bottom:10px" class="ui-button-warning ui-button-rounded"></button>
 
-                        <button pButton type="button" label="Danger" style="margin-bottom:10px" class="ui-button-danger ui-button-rounded"></button>
+                            <button pButton type="button" label="Danger" style="margin-bottom:10px" class="ui-button-danger ui-button-rounded"></button>
+                        </div>
                     </div>
                 </div>
             </div>
