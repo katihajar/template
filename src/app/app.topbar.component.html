@@ -1,0 +1,104 @@
+<div class="layout-topbar">
+
+    <a class="layout-right-panel-button layout-topbar-icon" (click)="app.onRightMenuClick($event)" href="#">
+            <i class="fa fa-ellipsis-v"></i>
+    </a>
+
+    <a href="#" class="layout-menu-button layout-topbar-icon" (click)="app.onMenuButtonClick($event)">
+        <i class="fa fa-bars"></i>
+    </a>
+
+    <a href="#" class="layout-topbar-logo">
+        <img id="topbar-logo" src="assets/layout/images/logo-roma-white.svg">
+    </a>
+
+    <span class="layout-topbar-search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Enter your search term">
+    </span>
+
+    <ul  class="topbar-menu" >
+        <li class="user-profile" [ngClass]="{'active-topmenuitem fadeInDown': app.topbarUserMenuActive}">
+            <a href="#" (click)="app.onTopbarUserMenuButtonClick($event)" *ngIf="!app.inlineUser">
+                <img src="assets/layout/images/avatar.png" alt="roma-layout" />
+                <div class="layout-profile-userinfo">
+                    <span class="layout-profile-name">Arlene Welch</span>
+                    <span class="layout-profile-role">Design Ops</span>
+                </div>
+            </a>
+            <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-envelope-o"></i>
+                            <span>Messages</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-bell-o"></i>
+                            <span>Notifications</span>
+                        </a>
+                    </li>
+            </ul>
+        </li>
+        <li [ngClass]="{'active-topmenuitem fadeInDown': app.topbarNotificationMenuActive}">
+                <a href="#" class="layout-topbar-icon" (click)="app.onTopbarNotificationMenuButtonClick($event)">
+                    <i class="topbar-icon fa fa-fw fa-bell"></i>
+                </a>
+                <ul class="">
+                    <li role="menuitem">
+                        <a href="#"><img src="../assets/layout/images/avatar-1.png" alt="">
+                            <div class="topbar-menu-info">
+                                <span class="topbar-menu-name">Bithika Abhedananda</span>
+                                <span class="topbar-menu-role">User interface review is done.</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#"><img src="../assets/layout/images/avatar-2.png" alt="">
+                            <div class="topbar-menu-info">
+                                <span class="topbar-menu-name">Dai Jiang</span>
+                                <span class="topbar-menu-role">Uh, we have sort of a problem here.</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#"><img src="../assets/layout/images/avatar-3.png" alt="">
+                            <div class="topbar-menu-info">
+                                <span class="topbar-menu-name">Karlien Nijhuis</span>
+                                <span class="topbar-menu-role">You apparently didn’t put the thing</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#"><img src="../assets/layout/images/avatar-4.png" alt="">
+                            <div class="topbar-menu-info">
+                                <span class="topbar-menu-name">Tom Chun</span>
+                                <span class="topbar-menu-role">Please check the files</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="menuitem">
+                        <a href="#"><img src="../assets/layout/images/avatar-5.png" alt="">
+                            <div class="topbar-menu-info">
+                                <span class="topbar-menu-name">Maria Trofimova</span>
+                                <span class="topbar-menu-role">Meeting reports attached.</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+        </li>
+    </ul>
+</div>
