@@ -107,7 +107,7 @@ body {
             color: $panelHeaderTextColor;
             border: $panelHeaderBorder;
             padding: $panelHeaderPadding;
-            text-align: center;
+            text-align: left;
         }
 
         .ui-table-caption {
@@ -120,12 +120,16 @@ body {
             font-weight: $tableSummaryFontWeight;
         }
 
-        .ui-table-thead > tr > th {
-            padding: $tableHeaderCellPadding;
+        .ui-table-thead > tr {
             border: $tableHeaderCellBorder;
-            font-weight: $tableHeaderCellFontWeight;
-            color: $tableHeaderCellTextColor;
-            background-color: $tableHeaderCellBgColor;
+            > th {
+                padding: $tableHeaderCellPadding;
+                border: 0 none;
+                font-weight: $tableHeaderCellFontWeight;
+                color: $tableHeaderCellTextColor;
+                background-color: $tableHeaderCellBgColor;
+                text-align: left;
+            }
         }
 
         .ui-table-tbody > tr > td {
@@ -180,10 +184,11 @@ body {
             > tr {
                 background: $tableBodyRowBgColor;
                 color: $tableBodyRowTextColor;
+                border: $tableBodyCellBorder;
 
                 > td {
                     background: inherit;
-                    border: $tableBodyCellBorder;
+                    border: 0 none;
                 }
 
                 &.ui-state-highlight {
@@ -234,6 +239,44 @@ body {
 
         .ui-column-resizer-helper {
             background-color: $tableResizerHelperBgColor;
+        }
+
+        &.ui-table-borderless {
+            .ui-paginator-top {
+                border-left: 0 none;
+                border-right: 0 none;
+                border-bottom: $tableBodyCellBorder;
+            }
+
+            .ui-paginator-bottom {
+                border-left: 0 none;
+                border-right: 0 none;
+                border-top: $tableBodyCellBorder;
+            }
+
+            .ui-table-caption  {
+                border-top: 0 none;
+                border-left: 0 none;
+                border-right: 0 none;
+            }
+
+            .ui-table-summary {
+                border-bottom: 0 none;
+                border-left: 0 none;
+                border-right: 0 none;
+            }
+
+            thead {
+                > tr {
+                    border: 0 none;
+                }
+            }
+
+            .ui-table-tbody {
+                > tr {
+                    border: 0 none;
+                }
+            }
         }
     }
 
