@@ -90,7 +90,8 @@ body {
             background-color: $toggleButtonFocusBgColor;
             border-color: $toggleButtonFocusBorderColor;
             color: $toggleButtonFocusTextColor;
-            outline: $toggleButtonFocusOutline;
+            z-index: 1;
+            @include shadow($buttonFocusShadow);
 
             .ui-button-icon-left {
                 color: $toggleButtonFocusIconColor;
@@ -120,7 +121,9 @@ body {
                 background-color: $toggleButtonActiveFocusBgColor;
                 border-color: $toggleButtonActiveFocusBorderColor;
                 color: $toggleButtonActiveFocusTextColor;
-    
+                z-index: 1;
+                @include shadow($buttonFocusShadow);
+
                 .ui-button-icon-left {
                     color: $toggleButtonActiveFocusIconColor;
                 }
@@ -153,7 +156,8 @@ body {
                 background-color: $toggleButtonFocusBgColor;
                 border-color: $toggleButtonFocusBorderColor;
                 color: $toggleButtonFocusTextColor;
-                outline: $toggleButtonFocusOutline;
+                z-index: 1;
+                @include shadow($buttonFocusShadow);
     
                 .ui-button-icon-left {
                     color: $toggleButtonFocusIconColor;
@@ -183,6 +187,8 @@ body {
                     background-color: $toggleButtonActiveFocusBgColor;
                     border-color: $toggleButtonActiveFocusBorderColor;
                     color: $toggleButtonActiveFocusTextColor;
+                    z-index: 1;
+                    @include shadow($buttonFocusShadow);
         
                     .ui-button-icon-left {
                         color: $toggleButtonActiveFocusIconColor;

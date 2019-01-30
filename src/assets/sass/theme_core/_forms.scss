@@ -156,13 +156,14 @@ body {
             @include transition($inputSwitchTransition);
             border-radius: $inputSwitchBorderRadius;
             background: $inputSwitchSliderOffBgColor;
+            border: $inputBorder;
 
             &:before {
                 background-color: $inputSwitchHandleOffBgColor;
-                height: 1.250em;
-                width: 1.250em;
-                left: .25em;
-                bottom: .25em;
+                height: 1.538em;
+                width: 1.538em;
+                left: 0;
+                bottom: -.27em;
                 border-radius: 50%;
                 -webkit-transition: $transitionDuration;
                 transition: $transitionDuration;
@@ -180,6 +181,9 @@ body {
         &.ui-inputswitch-focus {
             .ui-inputswitch-slider {
                 background: $inputSwitchSliderOffFocusBgColor;
+                &:before {
+                    @include focused-input();
+                }
             }
         }
 
@@ -192,6 +196,11 @@ body {
         &.ui-inputswitch-checked {
             .ui-inputswitch-slider {
                 background-color: $inputSwitchSliderOnBgColor;
+                border: 1px solid $inputSwitchSliderOnBgColor;
+
+                &:before {
+                    background-color: $inputSwitchHandleOnBgColor;
+                }
             }
 
             &:not(.ui-state-disabled):hover {
@@ -589,7 +598,7 @@ body {
             margin: $inputListHeaderMargin;
 
             .ui-listbox-filter-container {
-                width: calc(100% - (#{$inputListHeaderPaddingLeft} + #{$inputListHeaderPaddingLeft} + #{$inlineSpacing}));
+                width: calc(100% - 3em);
 
                 input {
                     padding: $inputPadding;
@@ -897,6 +906,7 @@ body {
             padding: $inputListHeaderPaddingTop $inputListHeaderPaddingRight $inputListHeaderPaddingBottom $inputListHeaderPaddingLeft;
             background-color: $inputListHeaderBgColor;
             color: $inputListHeaderTextColor;
+            font-weight: 600;
             @include border-radius(0);
 
             .ui-datepicker-prev,
@@ -963,6 +973,7 @@ body {
                     a {
                         background-color: $calendarCellDateTodayBgColor;
                         color: $calendarCellDateTodayTextColor;
+                        font-weight: 600;
 
                         &.ui-state-active {
                             color: $calendarCellDateSelectedTextColor;
@@ -1174,6 +1185,10 @@ body {
                 }
             }
         }
+    }
+
+    .ui-calendar .ui-datepicker {
+        min-width: auto;
     }
 
     ::-webkit-input-placeholder {color:$inputPlaceholderTextColor}
