@@ -463,6 +463,7 @@ $stepsItemBgColor:#ffffff;
 $stepsItemBorder:1px solid #d8d8dc;
 $stepsItemNumberColor:$textColor;
 $stepsItemTextColor:$textSecondaryColor;
+$stepsItemActiveBorder:1px solid $primaryColor;
 $stepsItemWidth:2em;
 $stepsItemHeight:2em;
 
@@ -478,15 +479,15 @@ $menuBorder:1px solid #d8d8dc;
 $menuPadding:0;
 $menuTextColor:$textColor;
 $menuitemPadding:.571em .857em;
-$menuitemMargin:0; //?
+$menuitemMargin:0;
 $menuitemTextColor:$textColor;
 $menuitemIconColor:$textSecondaryColor;
 $menuitemHoverTextColor:$textColor;
 $menuitemHoverIconColor:$textColor;
 $menuitemHoverBgColor:#eaeaea;
-$menuitemActiveTextColor:#333333; //?
-$menuitemActiveIconColor:#333333;
-$menuitemActiveBgColor:#eaeaea;
+$menuitemActiveTextColor:$primaryTextColor;
+$menuitemActiveIconColor:$primaryTextColor;
+$menuitemActiveBgColor:$primaryColor;
 $submenuHeaderMargin: 0;
 $submenuPadding: 0;
 $overlayMenuBorder:0 none;

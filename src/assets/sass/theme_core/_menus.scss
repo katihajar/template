@@ -6,20 +6,47 @@ body {
 
         ul {
             li {
+                float: none;
+                display: inline-block;
+                vertical-align: middle;
+
                 .ui-menuitem-link {
-                    color: $panelContentTextColor;
+                    color: $textSecondaryColor;
                     margin: 0;
+                    float: none;
+                    padding: $menuitemPadding;
+                    display: block;
+                    position: relative;
+                    overflow: hidden;
+                    @include transition(color $transitionDuration);
+
+                    &:focus {
+                        background-color: $menuitemHoverBgColor;
+                        outline: 0 none;
+                    }
+
+                    &:hover {
+                        color: $textColor;
+                    }
                 }
 
                 &.ui-breadcrumb-chevron {
-                    margin: 0 $inlineSpacing 0 $inlineSpacing;
+                    margin: 0;
+                    font-size: .8em;
                     color: $textSecondaryColor;
                 }
 
                 &:first-child {
+                    margin: $menuitemPadding;
+                    margin-top: 0;
+                    margin-left: 0;
+                    margin-bottom: 0;
+
                     a {
+                        font-size: $fontSize + 4;
                         color: $textSecondaryColor;
                         margin: 0;
+                        padding: 0;
                     }
                 }
 
@@ -36,6 +63,7 @@ body {
         .ui-steps-item {
             background-color: transparent;
             text-align: center;
+            @include opacity(1);
                         
             .ui-menuitem-link {
                 display: inline-block;
@@ -50,18 +78,18 @@ body {
                     background-color: $stepsItemBgColor;
                     border: $stepsItemBorder;
                     position: relative;
-                    top: $fontSize + 2;
+                    top: $fontSize;
                     margin-bottom: $fontSize;
                     width: $stepsItemWidth;
                     height: $stepsItemHeight;
                     font-size: $fontSize + 2;
-                    line-height: $stepsItemHeight - 4;
+                    padding-top: .4em;
                     text-align: center;
                 }
                 
                 .ui-steps-title {
                     display: block;
-                    margin-top: 6px;
+                    margin-top: .5em;
                     color: $stepsItemTextColor;
                 }
             }
@@ -70,6 +98,7 @@ body {
                 .ui-steps-number {
                     background: $highlightBgColor;
                     color: $highlightColorText;
+                    border: $stepsItemActiveBorder;
                 }
                 
                 .ui-steps-title { 
@@ -352,15 +381,27 @@ body {
         .ui-tabmenu-nav {
             padding: 0;
             background: $tabsNavBgColor;
-            border-bottom: $panelHeaderBorder;
+            border: $tabsNavBorder;
+            border-bottom: 1px solid #dadada;
+            background-color: $tabsNavBgColor;
            
             .ui-tabmenuitem {
                 position: static;
-                border: $panelHeaderBorder;
+                border-top: 1px solid transparent;
+                border-left: 1px solid transparent;
+                border-right: 1px solid transparent;
+                border-bottom: $panelHeaderBorder;
                 background-color: $panelHeaderBgColor;
+                font-weight: $panelHeaderFontWeight;
                 margin-right: $tabHeaderSpacing;
-                margin-bottom: -1px;
+                margin-bottom: -2px;
                 @include transition($panelHeaderTransition);
+                padding: 0;
+                white-space: nowrap;
+                display: inline-block;
+                vertical-align: top;
+                float: none;
+                padding: 0;
 
                 .ui-menuitem-link {
                     color: $panelHeaderTextColor;
@@ -379,7 +420,6 @@ body {
 
                 &:not(.ui-state-active):not(.ui-state-disabled):hover {
                     background-color: $panelHeaderHoverBgColor;
-                    border: $panelHeaderHoverBorder;
 
                     .ui-menuitem-link {
                         .ui-menuitem-text {
@@ -395,6 +435,7 @@ body {
                 &.ui-state-active {
                     background-color: $panelHeaderActiveBgColor;
                     border: $panelHeaderActiveBorder;
+                    border-bottom-color: transparent;
 
                     .ui-menuitem-link {
                         .ui-menuitem-text {
@@ -480,7 +521,7 @@ body {
                 border: $panelHeaderBorder;
                 background-color: $panelHeaderBgColor;
                 color: $panelHeaderTextColor;
-                padding: $menuitemPadding;
+                padding: $panelHeaderPadding;
                 font-weight: $panelHeaderFontWeight;
                 position: static;
                 font-size: $fontSize;
