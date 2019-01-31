@@ -12,7 +12,7 @@
                 </div>
                 <div class="p-col-6">
                     <button type="button" pButton label="DataTable" (click)="op2.toggle($event)"></button>
-                    <p-overlayPanel #op2 [showCloseIcon]="true" [dismissable]="false">
+                    <p-overlayPanel #op2 [showCloseIcon]="true">
                         <p-table [columns]="cols" [value]="cars" dataKey="vin" [style]="{'width':'500px'}">
                             <ng-template pTemplate="header" let-columns>
                                 <tr>
@@ -37,15 +37,15 @@
 
         <div class="card">
             <h1>Dialog</h1>
-            <p-dialog header="Godfather I" [(visible)]="display" modal="modal" showEffect="fade" width="400">
+            <p-dialog header="Godfather I" [(visible)]="display" modal="modal" showEffect="fade" width="350">
                 <div style="line-height: 1.5">The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding.
                     His beloved son Michael has just come home from the war, but does not intend to become part of his father's
                     business. Through Michael's life the nature of the family business becomes clear. The business of the
                     family is just like the head of the family, kind and benevolent to those who give respect, but given
                     to ruthless violence whenever anything stands against the good of the family.</div>
                 <p-footer>
-                    <button type="button" pButton icon="fa fa-close" (click)="display=false" label="No"></button>
                     <button type="button" pButton icon="fa fa-check" (click)="display=false" label="Yes"></button>
+                    <button type="button" pButton icon="fa fa-close" (click)="display=false" label="No" class="ui-button-secondary"></button>
                 </p-footer>
             </p-dialog>
 
@@ -58,11 +58,6 @@
 
             <button type="text" (click)="confirm()" pButton icon="fa fa-check" label="Confirm"></button>
         </div>
-
-        <div class="card">
-            <h1>Tooltip</h1>
-            <input type="text" pInputText pTooltip="Enter your username" placeholder="Right" tooltipEvent="focus">
-        </div>
     </div>
 
     <div class="p-col-12 p-lg-6">
@@ -70,6 +65,11 @@
         <div class="card">
             <h1>LightBox</h1>
             <p-lightbox [images]="images"></p-lightbox>
+        </div>
+
+        <div class="card">
+            <h1>Tooltip</h1>
+            <input type="text" pInputText pTooltip="Enter your username" placeholder="Right" tooltipEvent="focus">
         </div>
     </div>
 </div>

@@ -303,6 +303,7 @@ $panelContentBorder:1px solid #d8d8dc;
 $panelContentBgColor:#ffffff;
 $panelContentTextColor:$textColor;
 $panelContentPadding:0.571em 1em;
+$panelContentLineHeight:1.5;
 $panelFooterBorder:1px solid #d8d8dc;
 $panelFooterBgColor:#ffffff;
 $panelFooterTextColor:$textColor;
@@ -443,7 +444,7 @@ $overlayContentBorder:0 none;
 $overlayContainerShadow:0 0 10px 0 rgba(0, 0, 0, 0.16);
 
 //dialog
-$dialogHeaderPadding:1em; //?
+$dialogHeaderPadding:1.5em;
 $confirmDialogPadding:1.5em;
 
 //overlay panel

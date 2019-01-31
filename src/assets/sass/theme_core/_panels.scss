@@ -42,7 +42,7 @@ body {
             border: $panelContentBorder;
             background-color: $panelContentBgColor;
             color: $panelContentTextColor;
-            padding: $panelContentPadding;
+            line-height: $panelContentLineHeight;
             border-top: 0 none;
         }
 
@@ -180,6 +180,7 @@ body {
             background-color: $panelContentBgColor;
             color: $panelContentTextColor;
             border-top: 0 none;
+            line-height: $panelContentLineHeight;
         }
     }
 
@@ -345,12 +346,13 @@ body {
 
         .ui-tabview-panels {
             background-color: $panelContentBgColor;
-            padding: $panelContentPadding;
+            padding: 0;
             border: $panelContentBorder;
             color: $panelContentTextColor;
 
             .ui-tabview-panel {
-                padding: 0;
+                padding: $panelContentPadding;
+                line-height: $panelContentLineHeight;
             }
         }
     }

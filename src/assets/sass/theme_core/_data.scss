@@ -367,7 +367,7 @@ body {
             border: $panelContentBorder;
             background-color: $panelContentBgColor;
             color: $panelContentTextColor;
-            padding: $panelContentPadding;
+            line-height: $panelContentLineHeight;
         }
 
         .ui-datascroller-footer {
