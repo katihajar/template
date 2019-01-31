@@ -191,6 +191,20 @@ body {
             @include shadow($toastShadow);
             margin: $toastMessageMargin;
 
+            .ui-toast-message-content {
+                min-height: 70px;
+                padding: 1em;
+
+                .ui-toast-message-text-content {
+                    margin-left: 3.5em;
+                }
+            }
+
+            .ui-toast-icon {
+                left: inherit;
+                font-size: $growlIconFontSize;
+            }
+
             &.ui-toast-message-info {
                 background-color: $infoMessageBgColor;
                 border: $infoMessageBorder;

@@ -196,7 +196,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                 ]
             },
             {
-                label: 'HIERARCHY', icon: 'fa fa-fw fa-sitemap',
+                label: 'Hierarchy', icon: 'fa fa-fw fa-sitemap',
                 items: [
                     {
                         label: 'Submenu 1', icon: 'fa fa-fw fa-sign-in',
