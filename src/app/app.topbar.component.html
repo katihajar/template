@@ -1,11 +1,11 @@
 <div class="layout-topbar">
 
     <a class="layout-right-panel-button layout-topbar-icon" (click)="app.onRightMenuClick($event)" href="#">
-            <i class="fa fa-ellipsis-v"></i>
+            <i class="pi pi-ellipsis-v"></i>
     </a>
 
     <a href="#" class="layout-menu-button layout-topbar-icon" (click)="app.onMenuButtonClick($event)">
-        <i class="fa fa-bars"></i>
+        <i class="pi pi-bars"></i>
     </a>
 
     <a href="#" class="layout-topbar-logo">
@@ -13,7 +13,7 @@
     </a>
 
     <span class="layout-topbar-search">
-        <i class="fa fa-search"></i>
+        <i class="pi pi-search"></i>
         <input type="text" placeholder="Enter your search term">
     </span>
 
@@ -29,25 +29,25 @@
             <ul>
                     <li>
                         <a href="#">
-                            <i class="fa fa-fw fa-user"></i>
+                            <i class="pi pi-fw pi-user"></i>
                             <span>Profile</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-fw fa-cog"></i>
+                            <i class="pi pi-fw pi-cog"></i>
                             <span>Settings</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-fw fa-envelope-o"></i>
+                            <i class="pi pi-fw pi-envelope"></i>
                             <span>Messages</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="fa fa-fw fa-bell-o"></i>
+                            <i class="pi pi-fw pi-bell"></i>
                             <span>Notifications</span>
                         </a>
                     </li>
@@ -55,7 +55,7 @@
         </li>
         <li [ngClass]="{'active-topmenuitem fadeInDown': app.topbarNotificationMenuActive}">
                 <a href="#" class="layout-topbar-icon" (click)="app.onTopbarNotificationMenuButtonClick($event)">
-                    <i class="topbar-icon fa fa-fw fa-bell"></i>
+                    <i class="topbar-icon pi pi-fw pi-bell"></i>
                 </a>
                 <ul class="">
                     <li role="menuitem">

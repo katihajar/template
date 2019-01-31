@@ -81,6 +81,12 @@
 
                 a {
                     height: 36px;
+                    i {
+                        vertical-align: middle;
+                    }
+                    span {
+                        vertical-align: middle;
+                    }
                 }
 
                 ul {
@@ -108,7 +114,7 @@
                         height: 45px;
                         line-height: 45px;
                         text-align: center;
-                        font-size: 23px;
+                        font-size: 2.5em;
                         vertical-align: middle;
                     }
 
@@ -210,13 +216,13 @@
             float: right;
             width: 45px;
             height: 45px;
+            text-align: center;
             line-height: 45px;
             @include border-radius(50%);
             @include transition(background-color $transitionDuration);
 
             i {
-                font-size: 22px;
-                padding: 0 20px;
+                font-size: 2.5em;
                 vertical-align: middle;
             }
         }
