@@ -114,8 +114,8 @@ body {
                 border: $panelHeaderBorder;
                 color: $panelHeaderTextColor;
                 background-color: $panelHeaderBgColor;
-                color: $panelHeaderTextColor;
                 font-weight: $panelHeaderFontWeight;
+                @include border-radius($borderRadius);
                 @include transition($panelHeaderTransition);
 
                 .ui-accordion-toggle-icon {
@@ -136,6 +136,7 @@ body {
                     background-color: $panelHeaderHoverBgColor;
                     border: $panelHeaderHoverBorder;
                     color: $panelHeaderHoverTextColor;
+                    @include border-radius-bottom(0);
 
                     .ui-accordion-toggle-icon {
                         color: $panelHeaderHoverIconColor;
@@ -144,10 +145,13 @@ body {
             }
 
             &:not(.ui-state-disabled).ui-state-active {
+                margin-bottom: 0;
                 a {
                     background-color: $panelHeaderActiveBgColor;
                     border: $panelHeaderActiveBorder;
                     color: $panelHeaderActiveTextColor;
+                    border-bottom-color: transparent;
+                    @include border-radius-bottom(0);
                     
                     .ui-accordion-toggle-icon {
                         color: $panelHeaderActiveIconColor;
@@ -159,6 +163,8 @@ body {
                         border: $panelHeaderActiveHoverBorder;
                         background-color: $panelHeaderActiveHoverBgColor;
                         color: $panelHeaderActiveHoverTextColor;
+                        border-bottom-color: transparent;
+                        @include border-radius-bottom(0);
                         
                         .ui-accordion-toggle-icon {
                             color: $panelHeaderActiveHoverIconColor;
@@ -173,7 +179,7 @@ body {
             border: $panelContentBorder;
             background-color: $panelContentBgColor;
             color: $panelContentTextColor;
-            padding: $panelContentPadding;
+            border-top: 0 none;
         }
     }
 
@@ -218,7 +224,6 @@ body {
 
                     &:not(.ui-state-active):not(.ui-state-disabled):hover {
                         background-color: $panelHeaderHoverBgColor;
-                        border: $panelHeaderHoverBorder;
                         
                         a {
                             color: $panelHeaderHoverTextColor;
@@ -232,6 +237,7 @@ body {
                     &.ui-state-active {
                         background-color: $panelHeaderActiveBgColor;
                         border: $panelHeaderActiveBorder;
+                        border-bottom-color: transparent;
 
                         a {
                             color: $panelHeaderActiveTextColor;
@@ -242,9 +248,6 @@ body {
                         }
 
                         &:hover {
-                            border: $panelHeaderActiveHoverBorder;
-                            background-color: $panelHeaderActiveHoverBgColor;
-
                             a {
                                 color: $panelHeaderActiveHoverTextColor;
                                 
@@ -270,36 +273,72 @@ body {
 
                 li {
                     margin-right: $tabHeaderSpacing;
+                    border-top: 1px solid transparent;
+                    border-left: 1px solid transparent;
+                    border-right: 1px solid transparent;
+                    border-bottom: $panelHeaderBorder;
+
+                    &.ui-state-active {
+                        border: $panelHeaderBorder;
+                        border-bottom-color: transparent;
+                    }
                 }
             }
         }
 
         &.ui-tabview-bottom {
             .ui-tabview-nav {
-                margin-top: -1px;
-
                 li {
                     margin-right: $tabHeaderSpacing;
+                    border: 1px solid transparent;
+
+                    &.ui-state-active {
+                        border: $panelHeaderBorder;
+                        position: relative;
+                        border-top: 2px solid transparent;
+                        top: -1px;
+                    }
                 }
             }
         }
 
         &.ui-tabview-left {
             .ui-tabview-nav {
-                margin-right: -px;
+                width: 25%;
+                height: auto;
+                border-right: 0 none;
 
                 li {
                     margin-bottom: $tabHeaderSpacing;
+                    width: 100%;
+                    border: 1px solid transparent;
+
+                    &.ui-state-active {
+                        border: $panelHeaderBorder;
+                        position: relative;
+                        border-right: 1px solid transparent;
+                    }
                 }
             }
         }
 
         &.ui-tabview-right {
             .ui-tabview-nav {
-                margin-right: -1px;
+                width: 25%;
+                height: auto;
+                border-left: 0 none;
 
                 li {
                     margin-bottom: $tabHeaderSpacing;
+                    width: 100%;
+                    margin-left: -1px;
+                    border: 1px solid transparent;
+
+                    &.ui-state-active {
+                        border: $panelHeaderBorder;
+                        position: relative;
+                        border-left: 1px solid transparent;
+                    }
                 }
             }
         }     
