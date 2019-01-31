@@ -23,13 +23,13 @@ export class ChartsDemoComponent implements OnInit {
                     label: 'First Dataset',
                     data: [65, 59, 80, 81, 56, 55, 40],
                     fill: false,
-                    borderColor: '#61b5a1'
+                    borderColor: '#b944d6'
                 },
                 {
                     label: 'Second Dataset',
                     data: [28, 48, 40, 19, 86, 27, 90],
                     fill: false,
-                    borderColor: '#ffde7a'
+                    borderColor: '#0F97C7'
                 }
             ]
         };
@@ -39,14 +39,14 @@ export class ChartsDemoComponent implements OnInit {
             datasets: [
                 {
                     label: 'My First dataset',
-                    backgroundColor: '#ffde7a',
-                    borderColor: '#ffde7a',
+                    backgroundColor: '#0F97C7',
+                    borderColor: '#0F97C7',
                     data: [65, 59, 80, 81, 56, 55, 40]
                 },
                 {
                     label: 'My Second dataset',
-                    backgroundColor: '#23818E',
-                    borderColor: '#23818E',
+                    backgroundColor: '#e2841a',
+                    borderColor: '#e2841a',
                     data: [28, 48, 40, 19, 86, 27, 90]
                 }
             ]
@@ -56,11 +56,12 @@ export class ChartsDemoComponent implements OnInit {
             labels: ['A', 'B', 'C'],
             datasets: [
                 {
-                    data: [300, 50, 100],
+                    data: [540, 325, 702, 421],
                     backgroundColor: [
-                        '#AB44BC',
-                        '#17AFC2',
-                        '#F9CC9B'
+                        '#0F97C7',
+                        '#b944d6',
+                        '#e2841a',
+                        '#10b163'
                     ]
                 }]
         };
@@ -71,24 +72,21 @@ export class ChartsDemoComponent implements OnInit {
                     11,
                     16,
                     7,
-                    3,
-                    14
+                    3
                 ],
                 backgroundColor: [
-                    '#F6AA91',
-                    '#F6DD80',
-                    '#A882C9',
-                    '#17AFC2',
-                    '#AB44BC'
+                    '#0F97C7',
+                    '#b944d6',
+                    '#e2841a',
+                    '#10b163'
                 ],
                 label: 'My dataset'
             }],
             labels: [
-                'Red',
-                'Green',
-                'Yellow',
-                'Grey',
-                'Blue'
+                'Blue',
+                'Purple',
+                'Orange',
+                'Green'
             ]
         };
 
@@ -97,22 +95,22 @@ export class ChartsDemoComponent implements OnInit {
             datasets: [
                 {
                     label: 'My First dataset',
-                    backgroundColor: 'rgba(179,181,198,0.2)',
-                    borderColor: 'rgba(179,181,198,1)',
-                    pointBackgroundColor: 'rgba(179,181,198,1)',
+                    backgroundColor: 'rgba(15,151,199,0.2)',
+                    borderColor: 'rgba(15,151,199,1)',
+                    pointBackgroundColor: 'rgba(15,151,199,1)',
                     pointBorderColor: '#fff',
                     pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgba(179,181,198,1)',
+                    pointHoverBorderColor: 'rgba(15,151,199,1)',
                     data: [65, 59, 90, 81, 56, 55, 40]
                 },
                 {
                     label: 'My Second dataset',
-                    backgroundColor: 'rgba(255,99,132,0.2)',
-                    borderColor: 'rgba(255,99,132,1)',
-                    pointBackgroundColor: 'rgba(255,99,132,1)',
+                    backgroundColor: 'rgba(185,68,214,0.2)',
+                    borderColor: 'rgba(185,68,214,1)',
+                    pointBackgroundColor: 'rgba(185,68,214,1)',
                     pointBorderColor: '#fff',
                     pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgba(255,99,132,1)',
+                    pointHoverBorderColor: 'rgba(185,68,214,1)',
                     data: [28, 48, 40, 19, 96, 27, 100]
                 }
             ]

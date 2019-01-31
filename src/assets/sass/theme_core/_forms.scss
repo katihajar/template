@@ -1078,7 +1078,6 @@ body {
             border: $panelHeaderBorder;
             color: $panelHeaderTextColor;
             border-bottom: 0 none;
-            line-height: $panelContentLineHeight;
 
             .ui-button {
                 margin-right: 8px;
@@ -1090,6 +1089,7 @@ body {
             padding: $panelContentPadding;
             border: $panelContentBorder;
             color: $panelContentTextColor;
+            line-height: $panelContentLineHeight;
         }
 
         .ui-progressbar {
