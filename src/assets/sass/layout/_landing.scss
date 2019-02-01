@@ -3,7 +3,7 @@
 
     .landing-wrapper {
         .landing-header {
-            background: url("\#{resource['roma-layout:images/landing/landing-header@2x.png']}");
+            background: url("../../layout/images/landing/landing-header@2x.png");
             background-size: cover;
             height: 472px;
             position: relative;
@@ -140,7 +140,7 @@
         }
 
         .landing-news {
-            background: url("\#{resource['roma-layout:images/landing/landing-news@2x.png']}");
+            background: url("../../layout/images/landing/landing-news@2x.png");
             background-size: cover;
             height: 236px;
             padding: 36px 450px 48px 145px;

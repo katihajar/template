@@ -3,8 +3,8 @@
     overflow: hidden;
     margin: 0 auto;
     position: relative;
-    height: 100%;
-    background: url("\#{resource['roma-layout:images/pages/login-bg.jpg']}") no-repeat;
+    height: 100vh;
+    background: url("../../layout/images/pages/login-bg.jpg") no-repeat;
     background-size: cover;
 
     .login-panel {

@@ -1,9 +1,10 @@
 .exception-body {
     padding: 0;
+    height: 100vh;
     $borderColor: transparent;
 
     &.error {
-        background: url("\#{resource['roma-layout:images/pages/error-bg.jpg']}");
+        background: url("../../layout/images/pages/error-bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -13,7 +14,7 @@
     }
 
     &.notfound {
-        background: url("\#{resource['roma-layout:images/pages/notfound-bg.jpg']}");
+        background: url("../../layout/images/pages/notfound-bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
@@ -24,7 +25,7 @@
     }
 
     &.accessdenied {
-        background: url("\#{resource['roma-layout:images/pages/accessdenied-bg.jpg']}");
+        background: url("../../layout/images/pages/accessdenied-bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppComponent} from './app.component';
+import { AppMainComponent } from './app.main.component';
 
 @Component({
   selector: 'app-right-menu',
@@ -10,7 +10,7 @@ export class AppRightMenuComponent {
 
 	messagesActive:boolean;
 	
-	constructor(public app: AppComponent) {}
+	constructor(public app: AppMainComponent) {}
 
 	messagesClick() {
 		this.statusActive = false;

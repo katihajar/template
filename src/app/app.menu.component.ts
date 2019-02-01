@@ -3,7 +3,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { MenuItem, ScrollPanel } from 'primeng/primeng';
-import { AppComponent } from './app.component';
+import { AppMainComponent } from './app.main.component';
 
 @Component({
     selector: 'app-menu',
@@ -34,7 +34,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
     @ViewChild('layoutMenuScroller') layoutMenuScrollerViewChild: ScrollPanel;
 
-    constructor(public app: AppComponent) { }
+    constructor(public app: AppMainComponent) { }
 
     ngOnInit() {
         this.model = [
@@ -185,13 +185,13 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                 label: 'Pages', icon: 'fa fa-fw fa-cube',
                 items: [
                     { label: 'Empty', icon: 'fa fa-fw fa-square-o', routerLink: ['/empty'] },
-                    { label: 'Login', icon: 'fa fa-fw fa-sign-in', url: 'assets/pages/login.html', target: '_blank' },
+                    { label: 'Login', icon: 'fa fa-fw fa-sign-in', routerLink: ['/login'], target: '_blank' },
                     { label: 'Landing', icon: 'fa fa-fw fa-certificate', url: 'assets/pages/landing.html', target: '_blank' },
-                    { label: 'Error', icon: 'fa fa-fw fa-exclamation-circle', url: 'assets/pages/error.html', target: '_blank' },
-                    { label: '404', icon: 'fa fa-fw fa-times', url: 'assets/pages/404.html', target: '_blank' },
+                    { label: 'Error', icon: 'fa fa-fw fa-exclamation-circle', routerLink: ['/error'], target: '_blank' },
+                    { label: '404', icon: 'fa fa-fw fa-times', routerLink: ['/accessdenied'], target: '_blank' },
                     {
                         label: 'Access Denied', icon: 'fa fa-fw fa-exclamation-triangle',
-                        url: 'assets/pages/access.html', target: '_blank'
+                        routerLink: ['/access'], target: '_blank'
                     }
                 ]
             },
@@ -346,7 +346,7 @@ export class AppSubMenuComponent {
     _parentActive: boolean;
     _reset: boolean;
     activeIndex: number;
-    constructor(public app: AppComponent, public appMenu: AppMenuComponent) { }
+    constructor(public app: AppMainComponent, public appMenu: AppMenuComponent) { }
     itemClick(event: Event, item: MenuItem, index: number) {
         if (this.root) {
             this.app.menuHoverActive = !this.app.menuHoverActive;
