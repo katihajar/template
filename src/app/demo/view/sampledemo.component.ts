@@ -91,9 +91,9 @@ export class SampleDemoComponent implements OnInit {
         this.cities2 = this.cities1.slice(1, 6);
 
         this.splitButtonItems = [
-            { label: 'Update', icon: 'fa fa-fw fa-refresh' },
-            { label: 'Delete', icon: 'fa fa-fw fa-close' },
-            { label: 'Home', icon: 'fa fa-fw fa-home', url: 'http://www.primefaces.org/primeng' }
+            { label: 'Update', icon: 'pi pi-fw pi-refresh' },
+            { label: 'Delete', icon: 'pi pi-fw pi-times' },
+            { label: 'Home', icon: 'pi pi-fw pi-home', url: 'http://www.primefaces.org/primeng' }
         ];
 
         this.carOptions = [];
@@ -116,85 +116,136 @@ export class SampleDemoComponent implements OnInit {
         this.menuItems = [{
             label: 'File',
             items: [
-                { label: 'New', icon: 'fa fa-fw fa-plus' },
-                { label: 'Open', icon: 'fa fa-fw fa-download' }
+                { label: 'New', icon: 'pi pi-fw pi-plus' },
+                { label: 'Open', icon: 'pi pi-fw pi-download' }
             ]
         },
         {
             label: 'Edit',
             items: [
-                { label: 'Undo', icon: 'fa fa-fw fa-refresh' },
-                { label: 'Redo', icon: 'fa fa-fw fa-repeat' }
+                { label: 'Undo', icon: 'pi pi-fw pi-refresh' },
+                { label: 'Redo', icon: 'pi pi-fw pi-replay' }
             ]
         }];
 
         this.panelMenuItems = [
             {
-                label: 'File',
-                icon: 'fa fa-fw fa-file-o',
-                items: [{
-                    label: 'New',
-                    icon: 'fa fa-fw fa-plus',
-                    items: [
-                        { label: 'Project' },
-                        { label: 'Other' },
-                    ]
-                },
-                { label: 'Open' },
-                { label: 'Quit' }
-                ]
-            },
-            {
-                label: 'Edit',
-                icon: 'fa fa-fw fa-edit',
-                items: [
-                    { label: 'Undo', icon: 'fa fa-fw fa-mail-forward' },
-                    { label: 'Redo', icon: 'fa fa-fw fa-mail-reply' }
-                ]
-            },
-            {
-                label: 'Help',
-                icon: 'fa fa-fw fa-question',
+                label: 'Documents',
+                icon: 'pi pi-fw pi-file',
                 items: [
                     {
-                        label: 'Contents'
+                        label: 'New',
+                        icon: 'pi pi-fw pi-plus',
+                        items: [
+                            {
+                                label: 'Bookmark',
+                                icon: 'pi pi-fw pi-bookmark'
+                            },
+                            {
+                                label: 'Video',
+                                icon: 'pi pi-fw pi-video'
+                            },
+
+                        ]
+                    },
+                    {
+                        label: 'Delete',
+                        icon: 'pi pi-fw pi-trash'
+                    },
+                    {
+                        separator: true
+                    },
+                    {
+                        label: 'Export',
+                        icon: 'pi pi-fw pi-external-link'
+                    }
+                ]
+            },
+            {
+                label: 'Manage',
+                icon: 'pi pi-fw pi-pencil',
+                items: [
+                    {
+                        label: 'Left',
+                        icon: 'pi pi-fw pi-align-left'
+                    },
+                    {
+                        label: 'Right',
+                        icon: 'pi pi-fw pi-align-right'
+                    },
+                    {
+                        label: 'Center',
+                        icon: 'pi pi-fw pi-align-center'
+                    },
+                    {
+                        label: 'Justify',
+                        icon: 'pi pi-fw pi-align-justify'
+                    },
+
+                ]
+            },
+            {
+                label: 'Accounts',
+                icon: 'pi pi-fw pi-user',
+                items: [
+                    {
+                        label: 'New',
+                        icon: 'pi pi-fw pi-user-plus',
+
+                    },
+                    {
+                        label: 'Delete',
+                        icon: 'pi pi-fw pi-user-minus',
+
                     },
                     {
                         label: 'Search',
-                        icon: 'fa fa-fw fa-search',
+                        icon: 'pi pi-fw pi-users',
                         items: [
                             {
-                                label: 'Text',
+                                label: 'Filter',
+                                icon: 'pi pi-fw pi-filter',
                                 items: [
                                     {
-                                        label: 'Workspace'
+                                        label: 'Print',
+                                        icon: 'pi pi-fw pi-print'
                                     }
                                 ]
                             },
                             {
-                                label: 'File'
+                                icon: 'pi pi-fw pi-bars',
+                                label: 'List'
                             }
                         ]
                     }
                 ]
             },
             {
-                label: 'Actions',
-                icon: 'fa fa-fw fa-gear',
+                label: 'Calendar',
+                icon: 'pi pi-fw pi-calendar',
                 items: [
                     {
                         label: 'Edit',
-                        icon: 'fa fa-fw fa-refresh',
+                        icon: 'pi pi-fw pi-pencil',
                         items: [
-                            { label: 'Save', icon: 'fa fa-fw fa-save' },
-                            { label: 'Update', icon: 'fa fa-fw fa-save' },
+                            {
+                                label: 'Save',
+                                icon: 'pi pi-fw pi-calendar-plus'
+                            },
+                            {
+                                label: 'Delete',
+                                icon: 'pi pi-fw pi-calendar-minus'
+                            }
                         ]
                     },
                     {
-                        label: 'Other',
-                        icon: 'fa fa-fw fa-phone',
+                        label: 'Archieve',
+                        icon: 'pi pi-fw pi-calendar-times',
                         items: [
-                            { label: 'Delete', icon: 'fa fa-fw fa-minus' }
+                            {
+                                label: 'Remove',
+                                icon: 'pi pi-fw pi-calendar-minus'
+                            }
                         ]
                     }
                 ]

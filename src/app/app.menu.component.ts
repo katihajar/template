@@ -38,18 +38,18 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.model = [
-            { label: 'Dashboard', icon: 'fa fa-fw fa-dashboard', routerLink: ['/']},
+            { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/']},
             {
-                label: 'Layouts', icon: 'fa fa-fw fa-desktop',
+                label: 'Layouts', icon: 'pi pi-fw pi-th-large',
                 items: [
-                    { label: 'Static', icon: 'fa fa-fw fa-bars', command: event => this.app.changeMenuMode('static') },
-                    { label: 'Overlay', icon: 'fa fa-fw fa-bars', command: event => this.app.changeMenuMode('overlay') },
-                    { label: 'Slim', icon: 'fa fa-fw fa-bars', command: event => {
+                    { label: 'Static', icon: 'pi pi-fw pi-bars', command: event => this.app.changeMenuMode('static') },
+                    { label: 'Overlay', icon: 'pi pi-fw pi-bars', command: event => this.app.changeMenuMode('overlay') },
+                    { label: 'Slim', icon: 'pi pi-fw pi-bars', command: event => {
                         this.app.changeMenuMode('slim');
                         this.app.inlineUser = false;
                         this.inlineUserMenuActive = false;
                     }},
-                    { label: 'Horizontal', icon: 'fa fa-fw fa-bars', command: event => {
+                    { label: 'Horizontal', icon: 'pi pi-fw pi-bars', command: event => {
                         this.app.changeMenuMode('horizontal');
                         this.app.inlineUser = false;
                         this.inlineUserMenuActive = false;
@@ -57,180 +57,180 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                 ]
             },
             {
-                label: 'Topbar Colors', icon: 'fa fa-fw fa-magic',
+                label: 'Topbar Colors', icon: 'pi pi-fw pi-pencil',
                 items: [
                     {
-                        label: 'Light', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Light', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTopbarColor('layout-topbar-light', 'logo-olympia')
                     },
                     {
-                        label: 'Dark', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Dark', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTopbarColor('layout-topbar-dark', 'logo-olympia-white')
                     },
                     {
-                        label: 'Blue-Grey', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Blue-Grey', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTopbarColor('layout-topbar-bluegrey', 'logo-olympia-white')
                     },
                     {
-                        label: 'Purple', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Purple', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTopbarColor('layout-topbar-purple', 'logo-olympia-white')
                     },
                     {
-                        label: 'Cyan', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Cyan', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTopbarColor('layout-topbar-cyan', 'logo-olympia-white')
                     },
                     {
-                        label: 'Pink', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Pink', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTopbarColor('layout-topbar-pink', 'logo-olympia-white')
                     },
                     {
-                        label: 'Teal', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Teal', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTopbarColor('layout-topbar-teal', 'logo-olympia-white')
                     },
                     {
-                        label: 'Yellow', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Yellow', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTopbarColor('layout-topbar-yellow', 'logo-olympia')
                     },
                     {
-                        label: 'Lime', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Lime', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTopbarColor('layout-topbar-lime', 'logo-olympia')
                     },
                     {
-                        label: 'Green', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Green', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTopbarColor('layout-topbar-green', 'logo-olympia')
                     }
                 ]
             },
             {
-                label: 'Menu Colors', icon: 'fa fa-fw fa-list',
+                label: 'Menu Colors', icon: 'pi pi-fw pi-list',
                 items: [
-                    { label: 'Light', icon: 'fa fa-fw fa-circle-o', command: event => this.app.lightMenu = true },
-                    { label: 'Dark', icon: 'fa fa-fw fa-circle', command: event => this.app.lightMenu = false }
+                    { label: 'Light', icon: 'pi pi-fw pi-circle-off', command: event => this.app.lightMenu = true },
+                    { label: 'Dark', icon: 'pi pi-fw pi-circle-on', command: event => this.app.lightMenu = false }
                 ]
             },
             {
-                label: 'User Profile', icon: 'fa fa-fw fa-user',
+                label: 'User Profile', icon: 'pi pi-fw pi-user',
                 items: [
-                    { label: 'Popup', icon: 'fa fa-fw fa-user', command: event => {
+                    { label: 'Popup', icon: 'pi pi-fw pi-user', command: event => {
                         this.app.inlineUser = false;
                         this.inlineUserMenuActive = false;
                     }},
-                    { label: 'Inline', icon: 'fa fa-fw fa-user', command: event => {
+                    { label: 'Inline', icon: 'pi pi-fw pi-user', command: event => {
                         if (this.app.isStatic() || this.app.isOverlay())
                             this.app.inlineUser = true;
                     }}
                 ]
             },
             {
-                label: 'Theme', icon: 'fa fa-fw fa-paint-brush',
+                label: 'Theme', icon: 'pi pi-fw pi-pencil',
                 items: [
                     {
-                        label: 'Blue-Grey Teal', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Blue-Grey Teal', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTheme('bluegrey-teal')
                     },
                     {
-                        label: 'Green Yellow', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Green Yellow', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTheme('green-yellow')
                     },
                     {
-                        label: 'Purple Blue', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Purple Blue', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTheme('purple-blue')
                     },
                     {
-                        label: 'Blue Orange', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Blue Orange', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTheme('blue-orange')
                     },
                     {
-                        label: 'Indigo Yellow', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Indigo Yellow', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTheme('indigo-yellow')
                     },
                     {
-                        label: 'Amber Teal', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Amber Teal', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTheme('amber-teal')
                     },
                     {
-                        label: 'Cyan Amber', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Cyan Amber', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTheme('cyan-amber')
                     },
                     {
-                        label: 'Brown Cyan', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Brown Cyan', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTheme('brown-cyan')
                     },
                     {
-                        label: 'Lime Purple', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Lime Purple', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTheme('lime-purple')
                     },
                     {
-                        label: 'Deep-Orange Blue', icon: 'fa fa-fw fa-paint-brush',
+                        label: 'Deep-Orange Blue', icon: 'pi pi-fw pi-pencil',
                         command: (event) => this.changeTheme('deeporange-blue')
                     }
                 ]
             },
             {
-                label: 'Components', icon: 'fa fa-fw fa-bars',
+                label: 'Components', icon: 'pi pi-fw pi-star',
                 items: [
-                    { label: 'Sample Page', icon: 'fa fa-fw fa-columns', routerLink: ['/sample']  },
-                    { label: 'Forms', icon: 'fa fa-fw fa-code', routerLink: ['/forms'] },
-                    { label: 'Data', icon: 'fa fa-fw fa-table', routerLink: ['/data'] },
-                    { label: 'Panels', icon: 'fa fa-fw fa-list-alt', routerLink: ['/panels'] },
-                    { label: 'Overlays', icon: 'fa fa-fw fa-square', routerLink: ['/overlays'] },
-                    { label: 'Menus', icon: 'fa fa-fw fa-minus-square-o', routerLink: ['/menus'] },
-                    { label: 'Messages', icon: 'fa fa-fw fa-circle-o-notch', routerLink: ['/messages'] },
-                    { label: 'Charts', icon: 'fa fa-fw fa-area-chart', routerLink: ['/charts'] },
-                    { label: 'File', icon: 'fa fa-fw fa-arrow-circle-o-up', routerLink: ['/file'] },
-                    { label: 'Misc', icon: 'fa fa-fw fa-user-secret', routerLink: ['/misc'] }
+                    { label: 'Sample Page', icon: 'pi pi-fw pi-th-large', routerLink: ['/sample']  },
+                    { label: 'Forms', icon: 'pi pi-fw pi-file', routerLink: ['/forms'] },
+                    { label: 'Data', icon: 'pi pi-fw pi-table', routerLink: ['/data'] },
+                    { label: 'Panels', icon: 'pi pi-fw pi-list', routerLink: ['/panels'] },
+                    { label: 'Overlays', icon: 'pi pi-fw pi-clone', routerLink: ['/overlays'] },
+                    { label: 'Menus', icon: 'pi pi-fw pi-plus', routerLink: ['/menus'] },
+                    { label: 'Messages', icon: 'pi pi-fw pi-envelope', routerLink: ['/messages'] },
+                    { label: 'Charts', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/charts'] },
+                    { label: 'File', icon: 'pi pi-fw pi-upload', routerLink: ['/file'] },
+                    { label: 'Misc', icon: 'pi pi-fw pi-spinner', routerLink: ['/misc'] }
                 ]
             },
             {
-                label: 'Pages', icon: 'fa fa-fw fa-cube',
+                label: 'Pages', icon: 'pi pi-fw pi-copy',
                 items: [
-                    { label: 'Empty', icon: 'fa fa-fw fa-square-o', routerLink: ['/empty'] },
-                    { label: 'Login', icon: 'fa fa-fw fa-sign-in', routerLink: ['/login'], target: '_blank' },
-                    { label: 'Landing', icon: 'fa fa-fw fa-certificate', url: 'assets/pages/landing.html', target: '_blank' },
-                    { label: 'Error', icon: 'fa fa-fw fa-exclamation-circle', routerLink: ['/error'], target: '_blank' },
-                    { label: '404', icon: 'fa fa-fw fa-times', routerLink: ['/accessdenied'], target: '_blank' },
+                    { label: 'Empty', icon: 'pi pi-fw pi-clone', routerLink: ['/empty'] },
+                    { label: 'Login', icon: 'pi pi-fw pi-sign-in', routerLink: ['/login'], target: '_blank' },
+                    { label: 'Landing', icon: 'pi pi-fw pi-globe', url: 'assets/pages/landing.html', target: '_blank' },
+                    { label: 'Error', icon: 'pi pi-fw pi-exclamation-triangle', routerLink: ['/error'], target: '_blank' },
+                    { label: '404', icon: 'pi pi-fw pi-times', routerLink: ['/accessdenied'], target: '_blank' },
                     {
-                        label: 'Access Denied', icon: 'fa fa-fw fa-exclamation-triangle',
+                        label: 'Access Denied', icon: 'pi pi-fw pi-ban',
                         routerLink: ['/access'], target: '_blank'
                     }
                 ]
             },
             {
-                label: 'Hierarchy', icon: 'fa fa-fw fa-sitemap',
+                label: 'Hierarchy', icon: 'pi pi-fw pi-sitemap',
                 items: [
                     {
-                        label: 'Submenu 1', icon: 'fa fa-fw fa-sign-in',
+                        label: 'Submenu 1', icon: 'pi pi-fw pi-sign-in',
                         items: [
                             {
-                                label: 'Submenu 1.1', icon: 'fa fa-fw fa-sign-in',
+                                label: 'Submenu 1.1', icon: 'pi pi-fw pi-sign-in',
                                 items: [
-                                    { label: 'Submenu 1.1.1', icon: 'fa fa-fw fa-sign-in' },
-                                    { label: 'Submenu 1.1.2', icon: 'fa fa-fw fa-sign-in' },
-                                    { label: 'Submenu 1.1.3', icon: 'fa fa-fw fa-sign-in' },
+                                    { label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-sign-in' },
+                                    { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-sign-in' },
+                                    { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-sign-in' },
                                 ]
                             },
                             {
-                                label: 'Submenu 1.2', icon: 'fa fa-fw fa-sign-in',
+                                label: 'Submenu 1.2', icon: 'pi pi-fw pi-sign-in',
                                 items: [
-                                    { label: 'Submenu 1.2.1', icon: 'fa fa-fw fa-sign-in' }
+                                    { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-sign-in' }
                                 ]
                             },
                         ]
                     },
                     {
-                        label: 'Submenu 2', icon: 'fa fa-fw fa-sign-in',
+                        label: 'Submenu 2', icon: 'pi pi-fw pi-sign-in',
                         items: [
                             {
-                                label: 'Submenu 2.1', icon: 'fa fa-fw fa-sign-in',
+                                label: 'Submenu 2.1', icon: 'pi pi-fw pi-sign-in',
                                 items: [
-                                    { label: 'Submenu 2.1.1', icon: 'fa fa-fw fa-sign-in' },
-                                    { label: 'Submenu 2.1.2', icon: 'fa fa-fw fa-sign-in' },
+                                    { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-sign-in' },
+                                    { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-sign-in' },
                                 ]
                             },
                             {
-                                label: 'Submenu 2.2', icon: 'fa fa-fw fa-sign-in',
+                                label: 'Submenu 2.2', icon: 'pi pi-fw pi-sign-in',
                                 items: [
-                                    { label: 'Submenu 2.2.1', icon: 'fa fa-fw fa-sign-in' },
+                                    { label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-sign-in' },
                                 ]
                             },
                         ]
@@ -238,26 +238,26 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                 ]
             },
             {
-                label: 'Docs', icon: 'fa fa-fw fa-file-code-o', routerLink: ['/documentation']
+                label: 'Docs', icon: 'pi pi-fw pi-file', routerLink: ['/documentation']
             },
             {
-                label: 'Buy Now', icon: 'fa fa-fw fa-credit-card-alt', url: ['https://www.primefaces.org/store']
+                label: 'Buy Now', icon: 'pi pi-fw pi-money-bill', url: ['https://www.primefaces.org/store']
             }
         ];
         this.inlineModel = [
             {
-                label: 'Profile', icon: 'fa fa-fw fa-user'
+                label: 'Profile', icon: 'pi pi-fw pi-user'
             },
             {
-                label: 'Settings', icon: 'fa fa-fw fa-cog'
+                label: 'Settings', icon: 'pi pi-fw pi-cog'
             },
             {
-                label: 'Messages', icon: 'fa fa-fw fa-envelope-o'
+                label: 'Messages', icon: 'pi pi-fw pi-envelope'
             },
             {
-                label: 'Notifications', icon: 'fa fa-fw fa-bell-o'
+                label: 'Notifications', icon: 'pi pi-fw pi-bell'
             }
-        ]
+        ];
     }
 
     ngAfterViewInit() {
@@ -299,14 +299,14 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                    [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target">
                     <i [ngClass]="child.icon" class="layout-menuitem-icon"></i>
                     <span class="layout-menuitem-text">{{child.label}}</span>
-                    <i class="fa fa-fw fa-angle-down layout-submenu-toggler" *ngIf="child.items"></i>
+                    <i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="child.items"></i>
                 </a>
                 <a (click)="itemClick($event,child,i)" (mouseenter)="onMouseEnter(i)" *ngIf="child.routerLink"
                    [routerLink]="child.routerLink" routerLinkActive="active-menuitem-routerlink" [fragment]="child.fragment"
                    [routerLinkActiveOptions]="{exact: true}" [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target">
                     <i [ngClass]="child.icon" class="layout-menuitem-icon"></i>
                     <span class="layout-menuitem-text">{{child.label}}</span>
-                    <i class="fa fa-fw fa-angle-down layout-submenu-toggler" *ngIf="child.items"></i>
+                    <i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="child.items"></i>
                 </a>
                 <div class="layout-menu-tooltip">
                     <div class="layout-menu-tooltip-arrow"></div>

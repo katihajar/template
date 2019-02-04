@@ -38,9 +38,9 @@ export class DashboardDemoComponent implements OnInit {
         ];
 
         this.items = [
-            { label: 'Save', icon: 'fa fa-check' },
-            { label: 'Update', icon: 'fa fa-refresh' },
-            { label: 'Delete', icon: 'fa fa-trash' },
+            { label: 'Save', icon: 'pi pi-check' },
+            { label: 'Update', icon: 'pi pi-refresh' },
+            { label: 'Delete', icon: 'pi pi-trash' },
         ];
 
         this.chartData = {

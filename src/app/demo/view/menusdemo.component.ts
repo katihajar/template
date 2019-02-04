@@ -37,212 +37,261 @@ export class MenusDemoComponent implements OnInit {
         this.breadcrumbItems.push({ label: 'Kobe Bryant'});
 
         this.tabMenuItems = [
-            { label: 'Stats', icon: 'fa fa-fw fa-bar-chart' },
-            { label: 'Calendar', icon: 'fa fa-fw fa-calendar' },
-            { label: 'Documentation', icon: 'fa fa-fw fa-book' },
-            { label: 'Support', icon: 'fa fa-fw fa-support' },
-            { label: 'Social', icon: 'fa fa-fw fa-twitter' }
+            {label: 'Home', icon: 'pi pi-fw pi-home'},
+            {label: 'Calendar', icon: 'pi pi-fw pi-calendar'},
+            {label: 'Edit', icon: 'pi pi-fw pi-pencil'},
+            {label: 'Documentation', icon: 'pi pi-fw pi-file'},
+            {label: 'Settings', icon: 'pi pi-fw pi-cog'}
         ];
 
         this.tieredItems = [
             {
                 label: 'File',
-                icon: 'fa fa-fw fa-file-o',
-                items: [{
-                    label: 'New',
-                    icon: 'fa fa-fw fa-plus',
-                    items: [
-                        { label: 'Project' },
-                        { label: 'Other' },
-                    ]
-                },
-                { label: 'Open' },
-                { label: 'Quit' }
+                icon: 'pi pi-fw pi-file',
+                items: [
+                    {
+                        label: 'New',
+                        icon: 'pi pi-fw pi-plus',
+                        items: [
+                            {
+                                label: 'Bookmark',
+                                icon: 'pi pi-fw pi-bookmark'
+                            },
+                            {
+                                label: 'Video',
+                                icon: 'pi pi-fw pi-video'
+                            },
+
+                        ]
+                    },
+                    {
+                        label: 'Delete',
+                        icon: 'pi pi-fw pi-trash'
+                    },
+                    {
+                        separator: true
+                    },
+                    {
+                        label: 'Export',
+                        icon: 'pi pi-fw pi-external-link'
+                    }
                 ]
             },
             {
                 label: 'Edit',
-                icon: 'fa fa-fw fa-edit',
+                icon: 'pi pi-fw pi-pencil',
                 items: [
-                    { label: 'Undo', icon: 'fa fa-fw fa-mail-forward' },
-                    { label: 'Redo', icon: 'fa fa-fw fa-mail-reply' }
+                    {
+                        label: 'Left',
+                        icon: 'pi pi-fw pi-align-left'
+                    },
+                    {
+                        label: 'Right',
+                        icon: 'pi pi-fw pi-align-right'
+                    },
+                    {
+                        label: 'Center',
+                        icon: 'pi pi-fw pi-align-center'
+                    },
+                    {
+                        label: 'Justify',
+                        icon: 'pi pi-fw pi-align-justify'
+                    },
+
                 ]
             },
             {
-                label: 'Help',
-                icon: 'fa fa-fw fa-question',
+                label: 'Users',
+                icon: 'pi pi-fw pi-user',
                 items: [
                     {
-                        label: 'Contents'
+                        label: 'New',
+                        icon: 'pi pi-fw pi-user-plus',
+
+                    },
+                    {
+                        label: 'Delete',
+                        icon: 'pi pi-fw pi-user-minus',
+
                     },
                     {
                         label: 'Search',
-                        icon: 'fa fa-fw fa-search',
+                        icon: 'pi pi-fw pi-users',
                         items: [
                             {
-                                label: 'Text',
+                                label: 'Filter',
+                                icon: 'pi pi-fw pi-filter',
                                 items: [
                                     {
-                                        label: 'Workspace'
+                                        label: 'Print',
+                                        icon: 'pi pi-fw pi-print'
                                     }
                                 ]
                             },
                             {
-                                label: 'File'
+                                icon: 'pi pi-fw pi-bars',
+                                label: 'List'
                             }
                         ]
                     }
                 ]
             },
             {
-                label: 'Actions',
-                icon: 'fa fa-fw fa-gear',
+                label: 'Events',
+                icon: 'pi pi-fw pi-calendar',
                 items: [
                     {
                         label: 'Edit',
-                        icon: 'fa fa-fw fa-refresh',
+                        icon: 'pi pi-fw pi-pencil',
                         items: [
-                            { label: 'Save', icon: 'fa fa-fw fa-save' },
-                            { label: 'Update', icon: 'fa fa-fw fa-save' },
+                            {
+                                label: 'Save',
+                                icon: 'pi pi-fw pi-calendar-plus'
+                            },
+                            {
+                                label: 'Delete',
+                                icon: 'pi pi-fw pi-calendar-minus'
+                            }
                         ]
                     },
                     {
-                        label: 'Other',
-                        icon: 'fa fa-fw fa-phone',
+                        label: 'Archieve',
+                        icon: 'pi pi-fw pi-calendar-times',
                         items: [
-                            { label: 'Delete', icon: 'fa fa-fw fa-minus' }
+                            {
+                                label: 'Remove',
+                                icon: 'pi pi-fw pi-calendar-minus'
+                            }
                         ]
                     }
                 ]
             },
             {
-                label: 'Quit', icon: 'fa fa-fw fa-minus'
+                label: 'Quit',
+                icon: 'pi pi-fw pi-power-off'
             }
         ];
 
-        this.items = [{
-            label: 'File',
-            items: [
-                { label: 'New', icon: 'fa fa-fw fa-plus' },
-                { label: 'Open', icon: 'fa fa-fw fa-download' }
-            ]
-        },
-        {
-            label: 'Edit',
-            items: [
-                { label: 'Undo', icon: 'fa fa-fw fa-refresh' },
-                { label: 'Redo', icon: 'fa fa-fw fa-repeat' }
-            ]
-        }];
+        this.items = [
+            {
+                label: 'Options',
+                items: [{label: 'New', icon: 'pi pi-fw pi-plus'},
+                    {label: 'Delete', icon: 'pi pi-fw pi-trash', url: 'http://primetek.com.tr'}]
+            },
+            {
+                label: 'Account',
+                items: [{label: 'Options', icon: 'pi pi-fw pi-cog'},
+                    {label: 'Sign Out', icon: 'pi pi-fw pi-power-off'} ]
+            }
+        ];
 
         this.megaMenuItems = [
             {
-                label: 'TV', icon: 'fa fa-fw fa-check',
+                label: 'Videos', icon: 'pi pi-fw pi-video',
                 items: [
                     [
                         {
-                            label: 'TV 1',
-                            items: [{ label: 'TV 1.1' }, { label: 'TV 1.2' }]
+                            label: 'Video 1',
+                            items: [{label: 'Video 1.1'}, {label: 'Video 1.2'}]
                         },
                         {
-                            label: 'TV 2',
-                            items: [{ label: 'TV 2.1' }, { label: 'TV 2.2' }]
+                            label: 'Video 2',
+                            items: [{label: 'Video 2.1'}, {label: 'Video 2.2'}]
                         }
                     ],
                     [
                         {
-                            label: 'TV 3',
-                            items: [{ label: 'TV 3.1' }, { label: 'TV 3.2' }]
+                            label: 'Video 3',
+                            items: [{label: 'Video 3.1'}, {label: 'Video 3.2'}]
                         },
                         {
-                            label: 'TV 4',
-                            items: [{ label: 'TV 4.1' }, { label: 'TV 4.2' }]
+                            label: 'Video 4',
+                            items: [{label: 'Video 4.1'}, {label: 'Video 4.2'}]
                         }
                     ]
                 ]
             },
             {
-                label: 'Sports', icon: 'fa fa-fw fa-soccer-ball-o',
+                label: 'Users', icon: 'pi pi-fw pi-users',
                 items: [
                     [
                         {
-                            label: 'Sports 1',
-                            items: [{ label: 'Sports 1.1' }, { label: 'Sports 1.2' }]
+                            label: 'User 1',
+                            items: [{label: 'User 1.1'}, {label: 'User 1.2'}]
                         },
                         {
-                            label: 'Sports 2',
-                            items: [{ label: 'Sports 2.1' }, { label: 'Sports 2.2' }]
+                            label: 'User 2',
+                            items: [{label: 'User 2.1'}, {label: 'User 2.2'}]
                         },
-
                     ],
                     [
                         {
-                            label: 'Sports 3',
-                            items: [{ label: 'Sports 3.1' }, { label: 'Sports 3.2' }]
+                            label: 'User 3',
+                            items: [{label: 'User 3.1'}, {label: 'User 3.2'}]
                         },
                         {
-                            label: 'Sports 4',
-                            items: [{ label: 'Sports 4.1' }, { label: 'Sports 4.2' }]
+                            label: 'User 4',
+                            items: [{label: 'User 4.1'}, {label: 'User 4.2'}]
                         }
                     ],
                     [
                         {
-                            label: 'Sports 5',
-                            items: [{ label: 'Sports 5.1' }, { label: 'Sports 5.2' }]
+                            label: 'User 5',
+                            items: [{label: 'User 5.1'}, {label: 'User 5.2'}]
                         },
                         {
-                            label: 'Sports 6',
-                            items: [{ label: 'Sports 6.1' }, { label: 'Sports 6.2' }]
+                            label: 'User 6',
+                            items: [{label: 'User 6.1'}, {label: 'User 6.2'}]
                         }
                     ]
                 ]
             },
             {
-                label: 'Entertainment', icon: 'fa fa-fw fa-child',
+                label: 'Events', icon: 'pi pi-fw pi-calendar',
                 items: [
                     [
                         {
-                            label: 'Entertainment 1',
-                            items: [{ label: 'Entertainment 1.1' }, { label: 'Entertainment 1.2' }]
+                            label: 'Event 1',
+                            items: [{label: 'Event 1.1'}, {label: 'Event 1.2'}]
                         },
                         {
-                            label: 'Entertainment 2',
-                            items: [{ label: 'Entertainment 2.1' }, { label: 'Entertainment 2.2' }]
+                            label: 'Event 2',
+                            items: [{label: 'Event 2.1'}, {label: 'Event 2.2'}]
                         }
                     ],
                     [
                         {
-                            label: 'Entertainment 3',
-                            items: [{ label: 'Entertainment 3.1' }, { label: 'Entertainment 3.2' }]
+                            label: 'Event 3',
+                            items: [{label: 'Event 3.1'}, {label: 'Event 3.2'}]
                         },
                         {
-                            label: 'Entertainment 4',
-                            items: [{ label: 'Entertainment 4.1' }, { label: 'Entertainment 4.2' }]
+                            label: 'Event 4',
+                            items: [{label: 'Event 4.1'}, {label: 'Event 4.2'}]
                         }
                     ]
                 ]
             },
             {
-                label: 'Technology', icon: 'fa fa-fw fa-gears',
+                label: 'Settings', icon: 'pi pi-fw pi-cog',
                 items: [
                     [
                         {
-                            label: 'Technology 1',
-                            items: [{ label: 'Technology 1.1' }, { label: 'Technology 1.2' }]
+                            label: 'Setting 1',
+                            items: [{label: 'Setting 1.1'}, {label: 'Setting 1.2'}]
                         },
                         {
-                            label: 'Technology 2',
-                            items: [{ label: 'Technology 2.1' }, { label: 'Technology 2.2' }]
+                            label: 'Setting 2',
+                            items: [{label: 'Setting 2.1'}, {label: 'Setting 2.2'}]
                         },
                         {
-                            label: 'Technology 3',
-                            items: [{ label: 'Technology 3.1' }, { label: 'Technology 3.2' }]
+                            label: 'Setting 3',
+                            items: [{label: 'Setting 3.1'}, {label: 'Setting 3.2'}]
                         }
                     ],
                     [
                         {
                             label: 'Technology 4',
-                            items: [{ label: 'Technology 4.1' }, { label: 'Technology 4.2' }]
+                            items: [{label: 'Setting 4.1'}, {label: 'Setting 4.2'}]
                         }
                     ]
                 ]
@@ -251,71 +300,122 @@ export class MenusDemoComponent implements OnInit {
 
         this.panelMenuItems = [
             {
-                label: 'File',
-                icon: 'fa fa-fw fa-file-o',
-                items: [{
-                    label: 'New',
-                    icon: 'fa fa-fw fa-plus',
-                    items: [
-                        { label: 'Project' },
-                        { label: 'Other' },
-                    ]
-                },
-                { label: 'Open' },
-                { label: 'Quit' }
-                ]
-            },
-            {
-                label: 'Edit',
-                icon: 'fa fa-fw fa-edit',
-                items: [
-                    { label: 'Undo', icon: 'fa fa-fw fa-mail-forward' },
-                    { label: 'Redo', icon: 'fa fa-fw fa-mail-reply' }
-                ]
-            },
-            {
-                label: 'Help',
-                icon: 'fa fa-fw fa-question',
+                label: 'Documents',
+                icon: 'pi pi-fw pi-file',
                 items: [
                     {
-                        label: 'Contents'
+                        label: 'New',
+                        icon: 'pi pi-fw pi-plus',
+                        items: [
+                            {
+                                label: 'Bookmark',
+                                icon: 'pi pi-fw pi-bookmark'
+                            },
+                            {
+                                label: 'Video',
+                                icon: 'pi pi-fw pi-video'
+                            },
+
+                        ]
+                    },
+                    {
+                        label: 'Delete',
+                        icon: 'pi pi-fw pi-trash'
+                    },
+                    {
+                        separator: true
+                    },
+                    {
+                        label: 'Export',
+                        icon: 'pi pi-fw pi-external-link'
+                    }
+                ]
+            },
+            {
+                label: 'Manage',
+                icon: 'pi pi-fw pi-pencil',
+                items: [
+                    {
+                        label: 'Left',
+                        icon: 'pi pi-fw pi-align-left'
+                    },
+                    {
+                        label: 'Right',
+                        icon: 'pi pi-fw pi-align-right'
+                    },
+                    {
+                        label: 'Center',
+                        icon: 'pi pi-fw pi-align-center'
+                    },
+                    {
+                        label: 'Justify',
+                        icon: 'pi pi-fw pi-align-justify'
+                    },
+
+                ]
+            },
+            {
+                label: 'Accounts',
+                icon: 'pi pi-fw pi-user',
+                items: [
+                    {
+                        label: 'New',
+                        icon: 'pi pi-fw pi-user-plus',
+
+                    },
+                    {
+                        label: 'Delete',
+                        icon: 'pi pi-fw pi-user-minus',
+
                     },
                     {
                         label: 'Search',
-                        icon: 'fa fa-fw fa-search',
+                        icon: 'pi pi-fw pi-users',
                         items: [
                             {
-                                label: 'Text',
+                                label: 'Filter',
+                                icon: 'pi pi-fw pi-filter',
                                 items: [
                                     {
-                                        label: 'Workspace'
+                                        label: 'Print',
+                                        icon: 'pi pi-fw pi-print'
                                     }
                                 ]
                             },
                             {
-                                label: 'File'
+                                icon: 'pi pi-fw pi-bars',
+                                label: 'List'
                             }
                         ]
                     }
                 ]
             },
             {
-                label: 'Actions',
-                icon: 'fa fa-fw fa-gear',
+                label: 'Calendar',
+                icon: 'pi pi-fw pi-calendar',
                 items: [
                     {
                         label: 'Edit',
-                        icon: 'fa fa-fw fa-refresh',
+                        icon: 'pi pi-fw pi-pencil',
                         items: [
-                            { label: 'Save', icon: 'fa fa-fw fa-save' },
-                            { label: 'Update', icon: 'fa fa-fw fa-save' },
+                            {
+                                label: 'Save',
+                                icon: 'pi pi-fw pi-calendar-plus'
+                            },
+                            {
+                                label: 'Delete',
+                                icon: 'pi pi-fw pi-calendar-minus'
+                            }
                         ]
                     },
                     {
-                        label: 'Other',
-                        icon: 'fa fa-fw fa-phone',
+                        label: 'Archieve',
+                        icon: 'pi pi-fw pi-calendar-times',
                         items: [
-                            { label: 'Delete', icon: 'fa fa-fw fa-minus' }
+                            {
+                                label: 'Remove',
+                                icon: 'pi pi-fw pi-calendar-minus'
+                            }
                         ]
                     }
                 ]
