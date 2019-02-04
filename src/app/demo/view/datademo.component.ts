@@ -101,6 +101,8 @@ export class DataDemoComponent implements OnInit {
 
     cars3: Car[];
 
+    cars4: Car[];
+
     carsVirtual: Car[] = [];
 
     cols: any[];
@@ -110,6 +112,8 @@ export class DataDemoComponent implements OnInit {
     data: TreeNode[];
 
     selectedCar: Car;
+
+    selectedCar2: Car;
 
     sourceCars: Car[];
 
@@ -153,6 +157,7 @@ export class DataDemoComponent implements OnInit {
 
     ngOnInit() {
         this.carService.getCarsMedium().then(cars => this.cars1 = cars);
+        this.carService.getCarsMedium().then(cars => this.cars4 = cars);
         this.cols = [
             { field: 'vin', header: 'Vin' },
             { field: 'year', header: 'Year' },

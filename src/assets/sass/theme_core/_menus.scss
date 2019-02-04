@@ -393,7 +393,7 @@ body {
                 border-bottom: $panelHeaderBorder;
                 background-color: $panelHeaderBgColor;
                 font-weight: $panelHeaderFontWeight;
-                margin-right: $tabHeaderSpacing;
+                margin-right: 0;
                 margin-bottom: -2px;
                 @include transition($panelHeaderTransition);
                 padding: 0;
@@ -401,7 +401,6 @@ body {
                 display: inline-block;
                 vertical-align: top;
                 float: none;
-                padding: 0;
 
                 .ui-menuitem-link {
                     color: $panelHeaderTextColor;

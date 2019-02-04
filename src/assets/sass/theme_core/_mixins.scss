@@ -24,14 +24,6 @@
     @include shadow($inputFocusShadow);
 }
 
-@mixin disabled-input() {
-	border-color: $inputDisabledBorderColor;
-    background-color: $inputDisabledBgColor;
-    color: $inputDisabledTextColor;
-    cursor: default !important;
-    pointer-events: none;
-}
-
 @mixin shadow($value) {
     -webkit-box-shadow: $value;
     -moz-box-shadow: $value;
