@@ -21,19 +21,20 @@
         height: 8px;
     }
 
-    .ui-tabs.ui-tabs-top {
+    .ui-tabview.ui-tabview-top {
         padding: 16px;
 
-        .ui-tabs-panels {
+        .ui-tabview-panels {
             border: 0 none;
 
-            .ui-tabs-panel {
+            .ui-tabview-panel {
                 padding: 0;
             }
         }
 
-        .ui-tabs-nav {
-            .ui-tabs-header {
+        .ui-tabview-nav {
+            li {
+                outline: none;
                 border: 0 none;
                 margin-right: 0;
                 width: 50%;
