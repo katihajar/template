@@ -1,7 +1,5 @@
 import { Component, Input, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Location } from '@angular/common';
-import { Router } from '@angular/router';
 import { MenuItem, ScrollPanel } from 'primeng/primeng';
 import { AppMainComponent } from './app.main.component';
 
@@ -61,43 +59,71 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                 items: [
                     {
                         label: 'Light', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-light', 'logo-olympia')
+                        command: (event) => this.changeTopbarColor('layout-topbar-light', 'logo-roma')
                     },
                     {
                         label: 'Dark', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-dark', 'logo-olympia-white')
+                        command: (event) => this.changeTopbarColor('layout-topbar-dark', 'logo-roma-white')
                     },
                     {
-                        label: 'Blue-Grey', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-bluegrey', 'logo-olympia-white')
-                    },
-                    {
-                        label: 'Purple', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-purple', 'logo-olympia-white')
-                    },
-                    {
-                        label: 'Cyan', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-cyan', 'logo-olympia-white')
-                    },
-                    {
-                        label: 'Pink', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-pink', 'logo-olympia-white')
-                    },
-                    {
-                        label: 'Teal', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-teal', 'logo-olympia-white')
-                    },
-                    {
-                        label: 'Yellow', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-yellow', 'logo-olympia')
-                    },
-                    {
-                        label: 'Lime', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-lime', 'logo-olympia')
+                        label: 'Blue', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-blue', 'logo-roma-white')
                     },
                     {
                         label: 'Green', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-green', 'logo-olympia')
+                        command: (event) => this.changeTopbarColor('layout-topbar-green', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Orange', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-orange', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Magenta', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-magenta', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Blue Grey', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-bluegrey', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Deep Purple', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-deeppurple', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Brown', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-brown', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Lime', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-lime', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Rose', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-rose', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Cyan', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-cyan', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Teal', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-teal', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Deep Orange', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-deeporange', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Indigo', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-indigo', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Pink', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-pink', 'logo-roma-white')
+                    },
+                    {
+                        label: 'Purple', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTopbarColor('layout-topbar-purple', 'logo-roma-white')
                     }
                 ]
             },
@@ -274,7 +300,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
     changeTopbarColor(topbarColor, logo) {
         this.app.topbarColor = topbarColor;
         const topbarLogoLink: HTMLImageElement = <HTMLImageElement>document.getElementById('topbar-logo');
-        topbarLogoLink.src = 'assets/layout/images/' + logo + '.png';
+        topbarLogoLink.src = 'assets/layout/images/' + logo + '.svg';
     }
 
     onMenuClick(event) {
