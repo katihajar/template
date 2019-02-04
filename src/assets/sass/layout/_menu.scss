@@ -274,6 +274,15 @@
                                 color: $menuitemIconHoverColor;
                             }
                         }
+
+                        &.active-menuitem-routerlink {
+                            color: $primaryColor;
+
+                            .layout-menuitem-icon,
+                            .layout-submenu-toggler {
+                                color: $primaryColor;
+                            }
+                        }
                     }
 
                     &.active-menuitem {
@@ -286,6 +295,19 @@
                                 color: $primaryColor;
                             }
                         } 
+                    }
+
+                    > a {
+                        &.active-menuitem-routerlink {
+                            .layout-menuitem-text {
+                                color: $primaryColor;
+                            }
+
+                            .layout-menuitem-icon,
+                            .layout-submenu-toggler {
+                                color: $primaryColor;
+                            }
+                        }
                     }
                 }
             }
@@ -369,6 +391,15 @@
                                 color: $darkMenuitemIconHoverColor;
                             }
                         }
+
+                        &.active-menuitem-routerlink {
+                            color: $primaryColor;
+
+                            .layout-menuitem-icon,
+                            .layout-submenu-toggler {
+                                color: $primaryColor;
+                            }
+                        }
                     }
 
                     &.active-menuitem {
@@ -381,6 +412,19 @@
                                 color: $primaryColor;
                             }
                         } 
+                    }
+
+                    > a {
+                         &.active-menuitem-routerlink {
+                             .layout-menuitem-text {
+                                 color: $primaryColor;
+                             }
+
+                             .layout-menuitem-icon,
+                             .layout-submenu-toggler {
+                                 color: $primaryColor;
+                             }
+                         }
                     }
                 }
             }
