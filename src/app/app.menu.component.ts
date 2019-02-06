@@ -28,7 +28,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
     inlineModel: any[];
 
-    inlineUserMenuActive:boolean = false;
+    inlineUserMenuActive = false;
 
     @ViewChild('layoutMenuScroller') layoutMenuScrollerViewChild: ScrollPanel;
 
@@ -142,8 +142,9 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                         this.inlineUserMenuActive = false;
                     }},
                     { label: 'Inline', icon: 'pi pi-fw pi-user', command: event => {
-                        if (this.app.isStatic() || this.app.isOverlay())
+                        if (this.app.isStatic() || this.app.isOverlay()) {
                             this.app.inlineUser = true;
+                        }
                     }}
                 ]
             },

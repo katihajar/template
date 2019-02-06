@@ -1,24 +1,25 @@
-import { Component } from '@angular/core';
-import { AppMainComponent } from './app.main.component';
+import {Component} from '@angular/core';
+import {AppMainComponent} from './app.main.component';
 
 @Component({
-  selector: 'app-right-menu',
-  templateUrl: './app.right-menu.component.html'
+    selector: 'app-right-menu',
+    templateUrl: './app.right-menu.component.html'
 })
 export class AppRightMenuComponent {
-	statusActive:boolean = true;
+    statusActive = true;
 
-	messagesActive:boolean;
-	
-	constructor(public app: AppMainComponent) {}
+    messagesActive: boolean;
 
-	messagesClick() {
-		this.statusActive = false;
-		this.messagesActive = true;
-	}
+    constructor(public app: AppMainComponent) {
+    }
 
-	statusClick() {
-		this.statusActive = true;
-		this.messagesActive = false;
-	}
+    messagesClick() {
+        this.statusActive = false;
+        this.messagesActive = true;
+    }
+
+    statusClick() {
+        this.statusActive = true;
+        this.messagesActive = false;
+    }
 }

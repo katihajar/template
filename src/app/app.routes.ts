@@ -20,7 +20,7 @@ import { AppAccessdeniedComponent } from './pages/app.accessdenied.component';
 import { AppLoginComponent } from './pages/app.login.component';
 
 export const routes: Routes = [
-    { path: '', component: AppMainComponent, 
+    { path: '', component: AppMainComponent,
         children: [
             { path: '', component: DashboardDemoComponent },
             { path: 'sample', component: SampleDemoComponent },
@@ -42,7 +42,7 @@ export const routes: Routes = [
     {path: '404', component: AppNotfoundComponent},
     {path: 'login', component: AppLoginComponent},
     {path: '**', redirectTo: '/404'},
-    
+
 ];
 
 export const AppRoutes: ModuleWithProviders = RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'});

@@ -25,7 +25,7 @@ export class DashboardDemoComponent implements OnInit {
 
     events: any[];
 
-    constructor(private carService: CarService, private eventService:EventService) {}
+    constructor(private carService: CarService, private eventService: EventService) {}
 
     ngOnInit() {
         this.carService.getCarsMedium().then(cars => this.cars = cars);
@@ -120,7 +120,7 @@ export class DashboardDemoComponent implements OnInit {
                 center: 'title',
                 right: 'month,agendaWeek,agendaDay'
             },
-            editable:true
+            editable: true
         };
     }
 }

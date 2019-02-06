@@ -39,7 +39,7 @@ export class AppMainComponent {
 
     rightPanelMenuActive: boolean;
 
-    inlineUser:boolean;
+    inlineUser: boolean;
 
 
     onLayoutClick() {
@@ -87,10 +87,9 @@ export class AppMainComponent {
         } else {
             this.staticMenuMobileActive = !this.staticMenuMobileActive;
             if (this.staticMenuMobileActive) {
-                document.body.classList.add("blocked-scroll");
-            }
-            else {
-                document.body.classList.remove("blocked-scroll");
+                document.body.classList.add('blocked-scroll');
+            } else {
+                document.body.classList.remove('blocked-scroll');
             }
         }
 
