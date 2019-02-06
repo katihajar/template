@@ -387,28 +387,40 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
     ]
 })
 export class AppSubMenuComponent {
+
     @Input() item: MenuItem;
+
     @Input() root: boolean;
+    
     @Input() visible: boolean;
+    
     _parentActive: boolean;
+    
     _reset: boolean;
+    
     activeIndex: number;
+    
     constructor(public app: AppMainComponent, public appMenu: AppMenuComponent) { }
+    
     itemClick(event: Event, item: MenuItem, index: number) {
         if (this.root) {
             this.app.menuHoverActive = !this.app.menuHoverActive;
         }
+
         // avoid processing disabled items
         if (item.disabled) {
             event.preventDefault();
             return true;
         }
+
         // activate current item and deactivate active sibling if any
         this.activeIndex = (this.activeIndex === index) ? null : index;
+        
         // execute command
         if (item.command) {
             item.command({ originalEvent: event, item: item });
         }
+        
         // prevent hash change
         if (item.items || (!item.url && !item.routerLink)) {
             setTimeout(() => {
@@ -416,36 +428,43 @@ export class AppSubMenuComponent {
             }, 450);
             event.preventDefault();
         }
+
         // hide menu
         if (!item.items) {
-            if (this.app.isHorizontal() || this.app.isSlim()) {
+            if (this.app.isHorizontal() || this.app.isSlim())
                 this.app.resetMenu = true;
-            } else {
+            else
                 this.app.resetMenu = false;
-            }
+            
             this.app.overlayMenuActive = false;
             this.app.staticMenuMobileActive = false;
             this.app.menuHoverActive = !this.app.menuHoverActive;
+            this.app.unblockBodyScroll();
         }
     }
+
     onMouseEnter(index: number) {
         if (this.root && this.app.menuHoverActive && (this.app.isHorizontal() || this.app.isSlim())
             && !this.app.isMobile() && !this.app.isTablet()) {
             this.activeIndex = index;
         }
     }
+
     isActive(index: number): boolean {
         return this.activeIndex === index;
     }
+
     @Input() get reset(): boolean {
         return this._reset;
     }
+    
     set reset(val: boolean) {
         this._reset = val;
         if (this._reset && (this.app.isHorizontal() || this.app.isSlim())) {
             this.activeIndex = null;
         }
     }
+    
     @Input() get parentActive(): boolean {
         return this._parentActive;
     }

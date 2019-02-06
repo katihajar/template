@@ -65,6 +65,7 @@ export class AppMainComponent {
             }
 
             this.menuHoverActive = false;
+            this.unblockBodyScroll();
         }
 
         this.userMenuClick = false;
@@ -82,15 +83,16 @@ export class AppMainComponent {
         if (this.isOverlay()) {
             this.overlayMenuActive = !this.overlayMenuActive;
         }
+        
         if (this.isDesktop()) {
             this.staticMenuDesktopInactive = !this.staticMenuDesktopInactive;
-        } else {
+        } 
+        else {
             this.staticMenuMobileActive = !this.staticMenuMobileActive;
-            if (this.staticMenuMobileActive) {
-                document.body.classList.add('blocked-scroll');
-            } else {
-                document.body.classList.remove('blocked-scroll');
-            }
+            if (this.staticMenuMobileActive)
+                this.blockBodyScroll();
+            else
+                this.unblockBodyScroll();
         }
 
         event.preventDefault();
@@ -170,5 +172,19 @@ export class AppMainComponent {
         this.menuMode = menuMode;
         this.staticMenuDesktopInactive = false;
         this.overlayMenuActive = false;
+    }
+
+    blockBodyScroll(): void {
+        if (document.body.classList)
+            document.body.classList.add('blocked-scroll');
+        else
+            document.body.className += ' blocked-scroll';
+    }
+
+    unblockBodyScroll(): void {
+        if (document.body.classList)
+            document.body.classList.remove('blocked-scroll');
+        else
+            document.body.className = document.body.className.replace(new RegExp('(^|\\b)' + 'blocked-scroll'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
 }
