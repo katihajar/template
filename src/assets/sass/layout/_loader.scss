@@ -19,25 +19,25 @@ body {
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		width: 20px;
-		height: 20px;
+		width: 15px;
+		height: 15px;
 		background: #0772B3;
 		border-radius: 50%;
 
 		&.dot-a{
-			@include place(a, -40px, -40px)
+			@include place(a, -25px, -25px)
 		}
 
 		&.dot-b {
-			@include place(b, -40px, 0px)
+			@include place(b, -25px, 0px)
 		}
 
 		&.dot-c {
-			@include place(c, -40px, 40px)
+			@include place(c, -25px, 25px)
 		}
 
 		&.dot-d {
-			@include place(d, 0px, -40px)
+			@include place(d, 0px, -25px)
 		}
 
 		&.dot-e {
@@ -45,19 +45,19 @@ body {
 		}
 
 		&.dot-f {
-			@include place(f, 0px, 40px)
+			@include place(f, 0px, 25px)
 		}
 
 		&.dot-g {
-			@include place(g, 40px, -40px)
+			@include place(g, 25px, -25px)
 		}
 
 		&.dot-h {
-			@include place(h, 40px, 0px)
+			@include place(h, 25px, 0px)
 		}
 
 		&.dot-i{
-			@include place(i, 40px, 40px)
+			@include place(i, 25px, 25px)
 		}
 	}
 }
@@ -65,98 +65,98 @@ body {
 @keyframes a{
 	50% {
 		top: 0px;
-		left: -40px;
+		left: -25px;
 	}
 	100% {
 		top: 0px;
-		left: -40px;
+		left: -25px;
 	}
 }
 
 @keyframes b{
 	50% {
-		top: -40px;
-		left: -40px;
+		top: -25px;
+		left: -25px;
 	}
 	100% {
-		top: -40px;
-		left: -40px;
+		top: -25px;
+		left: -25px;
 	}
 }
 
 @keyframes c{
 	50% {
-		top: -40px;
+		top: -25px;
 		left: 0px;
 	}
 	100% {
-		top: -40px;
+		top: -25px;
 		left: 0px;
 	}
 }
 
 @keyframes d{
 	50% {
-		top: 40px;
-		left: -40px;
+		top: 25px;
+		left: -25px;
 	}
 	100% {
-		top: 40px;
-		left: -40px;
+		top: 25px;
+		left: -25px;
 	}
 }
 
 /*@keyframes e{
 	50% {
 		top: 0px;
-		left: -40px;
+		left: -25px;
 	}
 	100% {
 		top: 0px;
-		left: -40px;
+		left: -25px;
 	}
 }*/
 
 @keyframes f{
 	50% {
-		top: -40px;
-		left: 40px;
+		top: -25px;
+		left: 25px;
 	}
 	100% {
-		top: -40px;
-		left: 40px;
+		top: -25px;
+		left: 25px;
 	}
 }
 
 @keyframes g{
 	50% {
-		top: 40px;
+		top: 25px;
 		left: 0px;
 	}
 	100% {
-		top: 40px;
+		top: 25px;
 		left: 0px;
 	}
 }
 
 @keyframes h{
 	50% {
-		top: 40px;
-		left: 40px;
+		top: 25px;
+		left: 25px;
 	}
 	100% {
-		top: 40px;
-		left: 40px;
+		top: 25px;
+		left: 25px;
 	}
 }
 
 @keyframes i{
 	50% {
 		top: 0px;
-		left: 40px;
+		left: 25px;
 	}
 	100% {
 		top: 0px;
-		left: 40px;
+		left: 25px;
 	}
 }
