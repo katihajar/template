@@ -179,6 +179,11 @@ body {
             background-color: $panelHeaderBgColor;
             font-weight: $panelHeaderFontWeight;
             border: 0 none;
+            border-top: $menuBorder;
+
+            &:first-child {
+                border-top: 0 none;
+            }
         }
 
         .ui-menu-separator {
@@ -557,6 +562,7 @@ body {
                     border: $panelHeaderActiveBorder;
                     background-color: $panelHeaderActiveBgColor;
                     color: $panelHeaderActiveTextColor;
+                    border-bottom-color: transparent;
 
                     .ui-panelmenu-icon {
                         color: $panelHeaderActiveIconColor;

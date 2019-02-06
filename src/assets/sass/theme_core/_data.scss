@@ -959,7 +959,7 @@ body {
 
         .ui-treetable-tbody {
             > tr {
-                background: $tableBodyRowBgColor;
+                background: $tableBodyRowEvenBgColor;
                 color: $tableBodyRowTextColor;
 
                 > td {
