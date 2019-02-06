@@ -1,5 +1,9 @@
 .layout-dashboard {
 
+    .card {
+        margin-bottom: 0;
+    }
+
     .overview-box {
         position: relative;
         padding: .5em 1em;
@@ -103,7 +107,7 @@
     }
 
     .timeline {
-        min-height: 509px;
+        min-height: 494px;
 
         ul {
             margin: 0;
