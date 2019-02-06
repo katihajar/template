@@ -242,44 +242,64 @@ export class AppMenuComponent implements OnInit, AfterViewInit &#123;
                 label: 'Theme', icon: 'pi pi-fw pi-pencil',
                 items: [
                     &#123;
-                        label: 'Blue-Grey Teal', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('bluegrey-teal')
+                        label: 'Blue', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('blue')
                     &#125;,
                     &#123;
-                        label: 'Green Yellow', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('green-yellow')
+                        label: 'Green', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('green')
                     &#125;,
                     &#123;
-                        label: 'Purple Blue', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('purple-blue')
+                        label: 'Orange', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('orange')
                     &#125;,
                     &#123;
-                        label: 'Blue Orange', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('blue-orange')
+                        label: 'Magenta', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('magenta')
                     &#125;,
                     &#123;
-                        label: 'Indigo Yellow', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('indigo-yellow')
+                        label: 'Blue Grey', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('bluegrey')
                     &#125;,
                     &#123;
-                        label: 'Amber Teal', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('amber-teal')
+                        label: 'Deep Purple', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('deeppurple')
                     &#125;,
                     &#123;
-                        label: 'Cyan Amber', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('cyan-amber')
+                        label: 'Brown', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('brown')
                     &#125;,
                     &#123;
-                        label: 'Brown Cyan', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('brown-cyan')
+                        label: 'Lime', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('lime')
                     &#125;,
                     &#123;
-                        label: 'Lime Purple', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('lime-purple')
+                        label: 'Rose', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('rose')
                     &#125;,
                     &#123;
-                        label: 'Deep-Orange Blue', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('deeporange-blue')
+                        label: 'Cyan', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('cyan')
+                    &#125;,
+                    &#123;
+                        label: 'Teal', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('teal')
+                    &#125;,
+                    &#123;
+                        label: 'Deep-Orange', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('deeporange')
+                    &#125;,
+                    &#123;
+                        label: 'Indigo', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('indigo')
+                    &#125;,
+                    &#123;
+                        label: 'Pink', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('pink')
+                    &#125;,
+                    &#123;
+                        label: 'Purple', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('purple')
                     &#125;
                 ]
             &#125;,
@@ -451,7 +471,7 @@ $primaryDarkerColor:#0772b3;
 $primaryColor:#0f97c7;
 $primaryLighterColor:#1cb9d7;
 $primaryLightestColor:#2ed7e4;
-$primaryTextColor:#ffffff;
+$primaryColorText:#ffffff;
 
 @import '../sass/theme/_theme_variables';
 @import '../sass/theme_core/_core';
@@ -556,7 +576,7 @@ $linkActiveColor:$primaryDarkestColor;
 
 //highlight
 $highlightBgColor:$primaryColor;
-$highlightColorText:$primaryTextColor;
+$highlightColorText:$primaryColorText;
 
 //input field (e.g. inputtext, spinner, inputmask)
 $inputPadding:.5em;
@@ -573,7 +593,6 @@ $inputTransition:border-color $transitionDuration,box-shadow $transitionDuration
 $inputGroupBorderColor:#a9a9ae;
 $inputGroupBgColor:#ffffff;
 $inputGroupTextColor:$textColor;
-//?
 
 //input lists (e.g. dropdown, autocomplete, multiselect, orderlist)
 $inputListMinWidth:12em;
@@ -590,9 +609,8 @@ $inputListItemHighlightBgColor:$highlightBgColor;
 $inputListItemHighlightTextColor:$highlightColorText;
 $inputListItemBorder:0 none;
 $inputListItemMargin:0;
-//?$inputListItemTransition:background-color $transitionDuration;
 
-$inputListItemDividerColor:#d8dae2;
+$inputListItemDividerColor:#ffffff;
 $inputListHeaderPaddingTop:.5em;
 $inputListHeaderPaddingLeft:.75em;
 $inputListHeaderPaddingRight:.75em;
@@ -619,8 +637,6 @@ $inputOverlayShadow:0 0 10px 0 rgba(0, 0, 0, 0.16);
 //input dropdowns (e.g. multiselect, dropdown)
 $inputDropdownIconColor:$textSecondaryColor;
 
-//?$inputButtonWidth:2.143em;
-
 //button
 $buttonTextOnlyPadding:.5em 1em;
 $buttonWithLeftIconPadding:.5em 1em .5em 2em;
@@ -630,17 +646,16 @@ $buttonIconOnlyWidth:2.143em;
 
 $buttonBgColor:$primaryColor;
 $buttonBorder:1px solid $primaryColor;
-$buttonTextColor:$primaryTextColor;
+$buttonTextColor:$primaryColorText;
 
 $buttonHoverBgColor:$primaryLighterColor;
-$buttonHoverTextColor:$primaryTextColor;
+$buttonHoverTextColor:$primaryColorText;
 $buttonHoverBorderColor:$primaryLighterColor;
 
 $buttonActiveBgColor:$primaryDarkerColor;
-$buttonActiveTextColor:$primaryTextColor;
+$buttonActiveTextColor:$primaryColorText;
 $buttonActiveBorderColor:$primaryDarkerColor;
 
-$buttonFocusBorderColor:$primaryDarkerColor;
 $buttonFocusOutline:0 none;
 $buttonFocusOutlineOffset:0px;
 $buttonFocusShadow:0 0 0 0.2em $primaryLightestColor;
@@ -648,14 +663,14 @@ $buttonTransition:background-color $transitionDuration,box-shadow $transitionDur
 $raisedButtonShadow:0 2px 4px 0 rgba(0, 0, 0, 0.10);
 $roundedButtonBorderRadius:1em;
 
-$secondaryButtonBgColor:$primaryTextColor;
+$secondaryButtonBgColor:$primaryColorText;
 $secondaryButtonBorder:1px solid $primaryColor;
 $secondaryButtonTextColor:$primaryColor;
 $secondaryButtonHoverBgColor:$primaryLighterColor;
-$secondaryButtonHoverTextColor:$primaryTextColor;
+$secondaryButtonHoverTextColor:$primaryColorText;
 $secondaryButtonHoverBorderColor:$primaryLighterColor;
 $secondaryButtonActiveBgColor:$primaryDarkerColor;
-$secondaryButtonActiveTextColor:$primaryTextColor;
+$secondaryButtonActiveTextColor:$primaryColorText;
 $secondaryButtonActiveBorderColor:$primaryDarkerColor;
 $secondaryButtonFocusShadow:$buttonFocusShadow;
 
@@ -708,12 +723,12 @@ $checkboxWidth:20px;
 $checkboxHeight:20px;
 $checkboxActiveBorderColor:$primaryColor;
 $checkboxActiveBgColor:$primaryColor;
-$checkboxActiveTextColor:$primaryTextColor;
+$checkboxActiveTextColor:$primaryColorText;
 $checkboxActiveHoverBgColor:$primaryLighterColor;
-$checkboxActiveHoverTextColor:$primaryTextColor;
+$checkboxActiveHoverTextColor:$primaryColorText;
 $checkboxActiveHoverBorderColor:$primaryColor;
 $checkboxActiveFocusBgColor:$primaryColor;
-$checkboxActiveFocusTextColor:$primaryTextColor;
+$checkboxActiveFocusTextColor:$primaryColorText;
 $checkboxActiveFocusBorderColor:$primaryColor;
 $checkboxFocusBgColor:$inputBgColor;
 $checkboxFocusTextColor:$primaryColor;
@@ -726,12 +741,12 @@ $radiobuttonWidth:20px;
 $radiobuttonHeight:20px;
 $radiobuttonActiveBorderColor:$primaryColor;
 $radiobuttonActiveBgColor:$primaryColor;
-$radiobuttonActiveTextColor:$primaryTextColor;
+$radiobuttonActiveTextColor:$primaryColorText;
 $radiobuttonActiveHoverBgColor:$primaryLighterColor;
-$radiobuttonActiveHoverTextColor:$primaryTextColor;
+$radiobuttonActiveHoverTextColor:$primaryColorText;
 $radiobuttonActiveHoverBorderColor:$primaryColor;
 $radiobuttonActiveFocusBgColor:$primaryColor;
-$radiobuttonActiveFocusTextColor:$primaryTextColor;
+$radiobuttonActiveFocusTextColor:$primaryColorText;
 $radiobuttonActiveFocusBorderColor:$primaryColor;
 $radiobuttonFocusBgColor:$inputBgColor;
 $radiobuttonFocusTextColor:$primaryColor;
@@ -750,12 +765,12 @@ $toggleButtonHoverTextColor:$primaryColor;
 $toggleButtonHoverIconColor:$primaryColor;
 $toggleButtonActiveBgColor:$primaryColor;
 $toggleButtonActiveBorderColor:$primaryColor;
-$toggleButtonActiveTextColor:$primaryTextColor;
-$toggleButtonActiveIconColor:$primaryTextColor;
+$toggleButtonActiveTextColor:$primaryColorText;
+$toggleButtonActiveIconColor:$primaryColorText;
 $toggleButtonActiveHoverBgColor:$primaryLighterColor;
 $toggleButtonActiveHoverBorderColor:$primaryLighterColor;
-$toggleButtonActiveHoverTextColor:$primaryTextColor;
-$toggleButtonActiveHoverIconColor:$primaryTextColor;
+$toggleButtonActiveHoverTextColor:$primaryColorText;
+$toggleButtonActiveHoverIconColor:$primaryColorText;
 $toggleButtonFocusOutline:$buttonFocusShadow;
 $toggleButtonFocusBgColor:#eaeaea;
 $toggleButtonFocusBorderColor:#eaeaea;
@@ -763,8 +778,8 @@ $toggleButtonFocusTextColor:$primaryColor;
 $toggleButtonFocusIconColor:$primaryColor;
 $toggleButtonActiveFocusBgColor:$primaryLighterColor;
 $toggleButtonActiveFocusBorderColor:$primaryLighterColor;
-$toggleButtonActiveFocusTextColor:$primaryTextColor;
-$toggleButtonActiveFocusIconColor:$primaryTextColor;
+$toggleButtonActiveFocusTextColor:$primaryColorText;
+$toggleButtonActiveFocusIconColor:$primaryColorText;
 
 //inplace
 $inplacePadding:.5em;
@@ -807,9 +822,9 @@ $calendarCellDatePadding:.286em;
 $calendarCellDateHoverBgColor:#ebebef;
 $calendarCellDateBorderRadius:$borderRadius;
 $calendarCellDateSelectedBgColor:$primaryColor;
-$calendarCellDateSelectedTextColor:$primaryTextColor;
+$calendarCellDateSelectedTextColor:$primaryColorText;
 $calendarCellDateTodayBgColor:$primaryColor;
-$calendarCellDateTodayTextColor:$primaryTextColor;
+$calendarCellDateTodayTextColor:$primaryColorText;
 $calendarTimePickerDivider: 1px solid #ebebef;
 $calendarTimePickerPadding:.75em 1.25em .75em .75em;
 $calendarTimePickerIconColor:$textSecondaryColor;
@@ -908,7 +923,7 @@ $tableHeaderCellFontWeight:500;
 $tableHeaderCellBorder:1px solid #d8d8dc;
 $tableHeaderCellHoverBgColor:#eaeaea;
 $tableHeaderCellHoverTextColor:$textColor;
-$tableHeaderCellIconColor:$textSecondaryColor;
+$tableHeaderCellIconColor:$textColor;
 $tableHeaderCellHoverIconColor:$textColor;
 $tableBodyRowBgColor:#ffffff;
 $tableBodyRowTextColor:$textColor;
@@ -927,7 +942,7 @@ $tableResizerHelperBgColor:$primaryColor;
 //schedule
 $scheduleEventBgColor:$primaryColor;
 $scheduleEventBorder:1px solid $primaryColor;
-$scheduleEventTextColor:$primaryTextColor;
+$scheduleEventTextColor:$primaryColorText;
 
 //tree
 $treeNodePadding:0.143em 0;
@@ -962,7 +977,7 @@ $infoMessageBgColor:#1cb9d7;
 $infoMessageBorder:1px solid #1cb9d7;
 $infoMessageTextColor:#ffffff;
 $infoMessageIconColor:#ffffff;
-$successMessageBgColor:#b7d8b7;
+$successMessageBgColor:#b7d8b7; //?
 $successMessageBorder:0 none;
 $successMessageTextColor:#212121;
 $successMessageIconColor:#212121;
@@ -995,9 +1010,9 @@ $confirmDialogPadding:1.5em;
 
 //overlay panel
 $overlayPanelCloseIconBgColor:$primaryColor;
-$overlayPanelCloseIconColor:$primaryTextColor;
+$overlayPanelCloseIconColor:$primaryColorText;
 $overlayPanelCloseIconHoverBgColor:$primaryLighterColor;
-$overlayPanelCloseIconHoverColor:$primaryTextColor;
+$overlayPanelCloseIconHoverColor:$primaryColorText;
 
 //tooltip
 $tooltipBgColor:#252529;
@@ -1031,8 +1046,8 @@ $menuitemIconColor:$textSecondaryColor;
 $menuitemHoverTextColor:$textColor;
 $menuitemHoverIconColor:$textColor;
 $menuitemHoverBgColor:#eaeaea;
-$menuitemActiveTextColor:$primaryTextColor;
-$menuitemActiveIconColor:$primaryTextColor;
+$menuitemActiveTextColor:$primaryColorText;
+$menuitemActiveIconColor:$primaryColorText;
 $menuitemActiveBgColor:$primaryColor;
 $submenuHeaderMargin: 0;
 $submenuPadding: 0;
@@ -1047,7 +1062,7 @@ $dataIconColor:$textSecondaryColor;       //icon color of a data such as treetog
 $dataIconHoverColor:$textColor;           //hover icon color of a data such as treetoggler, table expander
 
 //general
-$disabledOpacity:.5;                      //opacity of a disabled item            
+$disabledOpacity:.5;                      //opacity of a disabled item
 </code>
 </pre>
 </div>

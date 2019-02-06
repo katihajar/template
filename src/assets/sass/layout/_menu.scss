@@ -168,29 +168,37 @@
             }
         }
 
-        .nano {
-            > .nano-content {
-                &.menu-scroll-content {
-                    display: block;
-                    height: 100%;
-                    position: relative;
-                    overflow: scroll;
-                    overflow-x: hidden;
-                    
-                    .layout-menu {
-                        padding-bottom: 120px;
-                    }
-                }
+        .ui-scrollpanel {
+            background-color: transparent;
+            border-radius: 0;
+            border: none;
+
+            .ui-scrollpanel-content {
+                overflow-x: hidden;
             }
-            
-            > .nano-pane {
-                .nano-slider {
-                    background-color: #aaaaaa;
-                    opacity: 0.3;
-                    filter: alpha(opacity=30);
-                }
+
+            .ui-scrollpanel-bar {
+                background-color: #aaaaaa;
+                opacity: 0.3;
+                filter: alpha(opacity=30);
+            }
+
+            .ui-scrollpanel-hidden {
+                display: block;
+                visibility: hidden;
+            }
+
+            .ui-scrollpanel-bar-x {
+                display: none;
+            }
+
+            .menu-scroll-content {
+                width: 306px;
+                padding-right: 18px;
+                padding-bottom: 120px;
             }
         }
+
         .ui-scrollpanel{
             padding: 0;
         }
@@ -824,31 +832,46 @@
     }
 
     .layout-wrapper {
-        &.layout-horizontal, &.layout-slim {
+        &.layout-horizontal {
             .layout-menu-container {
-                .nano {
-                    > .nano-content {
-                        &.menu-scroll-content {
-                            display: block;
-                            height: auto;
-                            position: static;
+                .ui-scrollpanel {
+                    .ui-scrollpanel-wrapper {
+                        overflow: visible;
+                        .ui-scrollpanel-content {
                             overflow: visible;
-                            overflow-x: visible;
-                            margin-right: 0px !important;
-                            padding-right: 0px !important;
-                        }
-
-                        .nano-scroll-footer {
-                            height: 0px;
-                        }
-
-                        .layout-menu {
-                            padding-bottom: 0;
+                            padding: 0;
                         }
                     }
-                    
-                    > .nano-pane {
-                        display: none !important;
+
+                    .ui-scrollpanel-bar {
+                        display: none;
+                    }
+
+                    .menu-scroll-content {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        &.layout-slim {
+            .layout-menu-container {
+                .ui-scrollpanel {
+                    .ui-scrollpanel-wrapper {
+                        overflow: visible;
+                        .ui-scrollpanel-content {
+                            overflow: visible;
+                        }
+                    }
+
+                    .ui-scrollpanel-bar {
+                        display: none;
+                    }
+
+                    .menu-scroll-content {
+                        width: 100%;
+                        padding: 0;
                     }
                 }
             }

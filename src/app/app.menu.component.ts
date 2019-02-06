@@ -151,44 +151,64 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                 label: 'Theme', icon: 'pi pi-fw pi-pencil',
                 items: [
                     {
-                        label: 'Blue-Grey Teal', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('bluegrey-teal')
+                        label: 'Blue', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('blue')
                     },
                     {
-                        label: 'Green Yellow', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('green-yellow')
+                        label: 'Green', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('green')
                     },
                     {
-                        label: 'Purple Blue', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('purple-blue')
+                        label: 'Orange', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('orange')
                     },
                     {
-                        label: 'Blue Orange', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('blue-orange')
+                        label: 'Magenta', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('magenta')
                     },
                     {
-                        label: 'Indigo Yellow', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('indigo-yellow')
+                        label: 'Blue Grey', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('bluegrey')
                     },
                     {
-                        label: 'Amber Teal', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('amber-teal')
+                        label: 'Deep Purple', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('deeppurple')
                     },
                     {
-                        label: 'Cyan Amber', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('cyan-amber')
+                        label: 'Brown', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('brown')
                     },
                     {
-                        label: 'Brown Cyan', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('brown-cyan')
+                        label: 'Lime', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('lime')
                     },
                     {
-                        label: 'Lime Purple', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('lime-purple')
+                        label: 'Rose', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('rose')
                     },
                     {
-                        label: 'Deep-Orange Blue', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('deeporange-blue')
+                        label: 'Cyan', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('cyan')
+                    },
+                    {
+                        label: 'Teal', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('teal')
+                    },
+                    {
+                        label: 'Deep-Orange', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('deeporange')
+                    },
+                    {
+                        label: 'Indigo', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('indigo')
+                    },
+                    {
+                        label: 'Pink', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('pink')
+                    },
+                    {
+                        label: 'Purple', icon: 'pi pi-fw pi-pencil',
+                        command: (event) => this.changeTheme('purple')
                     }
                 ]
             },
@@ -292,7 +312,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
     changeTheme(theme: string) {
         const layoutLink: HTMLLinkElement = <HTMLLinkElement>document.getElementById('layout-css');
-        layoutLink.href = 'assets/layout/css/layout-' + theme.split('-')[0] + '.css';
+        layoutLink.href = 'assets/layout/css/layout-' + theme + '.css';
         const themeLink: HTMLLinkElement = <HTMLLinkElement>document.getElementById('theme-css');
         themeLink.href = 'assets/theme/' + 'theme-' + theme + '.css';
     }

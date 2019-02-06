@@ -10,7 +10,7 @@ $linkActiveColor:$primaryDarkestColor;
 
 //highlight
 $highlightBgColor:$primaryColor;
-$highlightColorText:$primaryTextColor;
+$highlightColorText:$primaryColorText;
 
 //input field (e.g. inputtext, spinner, inputmask)
 $inputPadding:.5em;
@@ -27,7 +27,6 @@ $inputTransition:border-color $transitionDuration,box-shadow $transitionDuration
 $inputGroupBorderColor:#a9a9ae;
 $inputGroupBgColor:#ffffff;
 $inputGroupTextColor:$textColor;
-//?
 
 //input lists (e.g. dropdown, autocomplete, multiselect, orderlist)
 $inputListMinWidth:12em;
@@ -44,14 +43,13 @@ $inputListItemHighlightBgColor:$highlightBgColor;
 $inputListItemHighlightTextColor:$highlightColorText;
 $inputListItemBorder:0 none;
 $inputListItemMargin:0;
-//?$inputListItemTransition:background-color $transitionDuration;
 
-$inputListItemDividerColor:#d8dae2; //?
+$inputListItemDividerColor:#ffffff;
 $inputListHeaderPaddingTop:.5em;
 $inputListHeaderPaddingLeft:.75em;
 $inputListHeaderPaddingRight:.75em;
 $inputListHeaderPaddingBottom:.5em;
-$inputListHeaderMargin:0; //?
+$inputListHeaderMargin:0;
 $inputListHeaderBgColor:#ffffff;
 $inputListHeaderTextColor:$textColor;
 $inputListHeaderBorder:1px solid #d8d8dc;
@@ -73,8 +71,6 @@ $inputOverlayShadow:0 0 10px 0 rgba(0, 0, 0, 0.16);
 //input dropdowns (e.g. multiselect, dropdown)
 $inputDropdownIconColor:$textSecondaryColor;
 
-//?$inputButtonWidth:2.143em;
-
 //button
 $buttonTextOnlyPadding:.5em 1em;
 $buttonWithLeftIconPadding:.5em 1em .5em 2em;
@@ -84,17 +80,16 @@ $buttonIconOnlyWidth:2.143em;
 
 $buttonBgColor:$primaryColor;
 $buttonBorder:1px solid $primaryColor;
-$buttonTextColor:$primaryTextColor;
+$buttonTextColor:$primaryColorText;
 
 $buttonHoverBgColor:$primaryLighterColor;
-$buttonHoverTextColor:$primaryTextColor;
+$buttonHoverTextColor:$primaryColorText;
 $buttonHoverBorderColor:$primaryLighterColor;
 
 $buttonActiveBgColor:$primaryDarkerColor;
-$buttonActiveTextColor:$primaryTextColor;
+$buttonActiveTextColor:$primaryColorText;
 $buttonActiveBorderColor:$primaryDarkerColor;
 
-$buttonFocusBorderColor:$primaryDarkerColor; //?
 $buttonFocusOutline:0 none;
 $buttonFocusOutlineOffset:0px;
 $buttonFocusShadow:0 0 0 0.2em $primaryLightestColor;
@@ -102,14 +97,14 @@ $buttonTransition:background-color $transitionDuration,box-shadow $transitionDur
 $raisedButtonShadow:0 2px 4px 0 rgba(0, 0, 0, 0.10);
 $roundedButtonBorderRadius:1em;
 
-$secondaryButtonBgColor:$primaryTextColor;
+$secondaryButtonBgColor:$primaryColorText;
 $secondaryButtonBorder:1px solid $primaryColor;
 $secondaryButtonTextColor:$primaryColor;
 $secondaryButtonHoverBgColor:$primaryLighterColor;
-$secondaryButtonHoverTextColor:$primaryTextColor;
+$secondaryButtonHoverTextColor:$primaryColorText;
 $secondaryButtonHoverBorderColor:$primaryLighterColor;
 $secondaryButtonActiveBgColor:$primaryDarkerColor;
-$secondaryButtonActiveTextColor:$primaryTextColor;
+$secondaryButtonActiveTextColor:$primaryColorText;
 $secondaryButtonActiveBorderColor:$primaryDarkerColor;
 $secondaryButtonFocusShadow:$buttonFocusShadow;
 
@@ -162,12 +157,12 @@ $checkboxWidth:20px;
 $checkboxHeight:20px;
 $checkboxActiveBorderColor:$primaryColor;
 $checkboxActiveBgColor:$primaryColor;
-$checkboxActiveTextColor:$primaryTextColor;
+$checkboxActiveTextColor:$primaryColorText;
 $checkboxActiveHoverBgColor:$primaryLighterColor;
-$checkboxActiveHoverTextColor:$primaryTextColor;
+$checkboxActiveHoverTextColor:$primaryColorText;
 $checkboxActiveHoverBorderColor:$primaryColor;
 $checkboxActiveFocusBgColor:$primaryColor;
-$checkboxActiveFocusTextColor:$primaryTextColor;
+$checkboxActiveFocusTextColor:$primaryColorText;
 $checkboxActiveFocusBorderColor:$primaryColor;
 $checkboxFocusBgColor:$inputBgColor;
 $checkboxFocusTextColor:$primaryColor;
@@ -180,12 +175,12 @@ $radiobuttonWidth:20px;
 $radiobuttonHeight:20px;
 $radiobuttonActiveBorderColor:$primaryColor;
 $radiobuttonActiveBgColor:$primaryColor;
-$radiobuttonActiveTextColor:$primaryTextColor;
+$radiobuttonActiveTextColor:$primaryColorText;
 $radiobuttonActiveHoverBgColor:$primaryLighterColor;
-$radiobuttonActiveHoverTextColor:$primaryTextColor;
+$radiobuttonActiveHoverTextColor:$primaryColorText;
 $radiobuttonActiveHoverBorderColor:$primaryColor;
 $radiobuttonActiveFocusBgColor:$primaryColor;
-$radiobuttonActiveFocusTextColor:$primaryTextColor;
+$radiobuttonActiveFocusTextColor:$primaryColorText;
 $radiobuttonActiveFocusBorderColor:$primaryColor;
 $radiobuttonFocusBgColor:$inputBgColor;
 $radiobuttonFocusTextColor:$primaryColor;
@@ -204,12 +199,12 @@ $toggleButtonHoverTextColor:$primaryColor;
 $toggleButtonHoverIconColor:$primaryColor;
 $toggleButtonActiveBgColor:$primaryColor;
 $toggleButtonActiveBorderColor:$primaryColor;
-$toggleButtonActiveTextColor:$primaryTextColor;
-$toggleButtonActiveIconColor:$primaryTextColor;
+$toggleButtonActiveTextColor:$primaryColorText;
+$toggleButtonActiveIconColor:$primaryColorText;
 $toggleButtonActiveHoverBgColor:$primaryLighterColor;
 $toggleButtonActiveHoverBorderColor:$primaryLighterColor;
-$toggleButtonActiveHoverTextColor:$primaryTextColor;
-$toggleButtonActiveHoverIconColor:$primaryTextColor;
+$toggleButtonActiveHoverTextColor:$primaryColorText;
+$toggleButtonActiveHoverIconColor:$primaryColorText;
 $toggleButtonFocusOutline:$buttonFocusShadow;
 $toggleButtonFocusBgColor:#eaeaea;
 $toggleButtonFocusBorderColor:#eaeaea;
@@ -217,8 +212,8 @@ $toggleButtonFocusTextColor:$primaryColor;
 $toggleButtonFocusIconColor:$primaryColor;
 $toggleButtonActiveFocusBgColor:$primaryLighterColor;
 $toggleButtonActiveFocusBorderColor:$primaryLighterColor;
-$toggleButtonActiveFocusTextColor:$primaryTextColor;
-$toggleButtonActiveFocusIconColor:$primaryTextColor;
+$toggleButtonActiveFocusTextColor:$primaryColorText;
+$toggleButtonActiveFocusIconColor:$primaryColorText;
 
 //inplace
 $inplacePadding:.5em;
@@ -236,7 +231,7 @@ $ratingStarIconHoverColor:$primaryColor;
 
 //slider
 $sliderBgColor:#d8d8dc;
-$sliderBorder:0 none; //?
+$sliderBorder:0 none;
 $sliderHeight:.286em;
 $sliderWidth:0.286em;
 $sliderHandleWidth:1.5em;
@@ -261,9 +256,9 @@ $calendarCellDatePadding:.286em;
 $calendarCellDateHoverBgColor:#ebebef;
 $calendarCellDateBorderRadius:$borderRadius;
 $calendarCellDateSelectedBgColor:$primaryColor;
-$calendarCellDateSelectedTextColor:$primaryTextColor;
+$calendarCellDateSelectedTextColor:$primaryColorText;
 $calendarCellDateTodayBgColor:$primaryColor;
-$calendarCellDateTodayTextColor:$primaryTextColor;
+$calendarCellDateTodayTextColor:$primaryColorText;
 $calendarTimePickerDivider: 1px solid #ebebef;
 $calendarTimePickerPadding:.75em 1.25em .75em .75em;
 $calendarTimePickerIconColor:$textSecondaryColor;
@@ -349,7 +344,7 @@ $paginatorElementHoverBgColor:#eaeaea;
 $paginatorElementHoverIconColor:$textColor;
 $paginatorElementBorderRadius:$borderRadius;
 $paginatorElementMargin:0 .125em;
-$paginatorElementPadding:0; //?
+$paginatorElementPadding:0;
 $paginatorElementBorder:1px solid transparent;
 
 //table
@@ -362,8 +357,8 @@ $tableHeaderCellFontWeight:500;
 $tableHeaderCellBorder:1px solid #d8d8dc;
 $tableHeaderCellHoverBgColor:#eaeaea;
 $tableHeaderCellHoverTextColor:$textColor;
-$tableHeaderCellIconColor:$textSecondaryColor;
-$tableHeaderCellHoverIconColor:$textColor; //?
+$tableHeaderCellIconColor:$textColor;
+$tableHeaderCellHoverIconColor:$textColor;
 $tableBodyRowBgColor:#ffffff;
 $tableBodyRowTextColor:$textColor;
 $tableBodyRowEvenBgColor:#f8f8f8;
@@ -381,7 +376,7 @@ $tableResizerHelperBgColor:$primaryColor;
 //schedule
 $scheduleEventBgColor:$primaryColor;
 $scheduleEventBorder:1px solid $primaryColor;
-$scheduleEventTextColor:$primaryTextColor;
+$scheduleEventTextColor:$primaryColorText;
 
 //tree
 $treeNodePadding:0.143em 0;
@@ -404,7 +399,7 @@ $messageCloseIconFontSize:1.5em;
 //message
 $messagePadding:$inputPadding;
 $messageMargin: 0;
-$messageIconFontSize: 1.25em; //?
+$messageIconFontSize: 1.25em;
 $messageTextFontSize: 1em;
 
 //toast
@@ -432,7 +427,7 @@ $errorMessageIconColor:#ffffff;
 //growl
 $growlTopLocation:70px;
 $growlIconFontSize:3.5em;
-$growlMessageTextMargin: 0 0 0 4em; //?
+$growlMessageTextMargin: 0 0 0 4em;
 $growlMargin:0 0 1em 0;
 $growlPadding:1em;
 $growlShadow:0 3px .5em 0 rgba(0, 0, 0, 0.16);
@@ -449,9 +444,9 @@ $confirmDialogPadding:1.5em;
 
 //overlay panel
 $overlayPanelCloseIconBgColor:$primaryColor;
-$overlayPanelCloseIconColor:$primaryTextColor;
+$overlayPanelCloseIconColor:$primaryColorText;
 $overlayPanelCloseIconHoverBgColor:$primaryLighterColor;
-$overlayPanelCloseIconHoverColor:$primaryTextColor;
+$overlayPanelCloseIconHoverColor:$primaryColorText;
 
 //tooltip
 $tooltipBgColor:#252529;
@@ -485,8 +480,8 @@ $menuitemIconColor:$textSecondaryColor;
 $menuitemHoverTextColor:$textColor;
 $menuitemHoverIconColor:$textColor;
 $menuitemHoverBgColor:#eaeaea;
-$menuitemActiveTextColor:$primaryTextColor;
-$menuitemActiveIconColor:$primaryTextColor;
+$menuitemActiveTextColor:$primaryColorText;
+$menuitemActiveIconColor:$primaryColorText;
 $menuitemActiveBgColor:$primaryColor;
 $submenuHeaderMargin: 0;
 $submenuPadding: 0;
