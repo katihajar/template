@@ -1131,7 +1131,7 @@ body {
             background-color: $inputGroupBgColor;
             color: $inputGroupTextColor;
             padding: $inputPadding;
-            min-width: 2em;
+            min-width: 2.5em;
 
             &:first-child {
                 @include border-radius-left($borderRadius);
