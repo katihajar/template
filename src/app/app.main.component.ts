@@ -17,8 +17,6 @@ export class AppMainComponent {
 
     lightMenu = true;
 
-    lightTopbar = true;
-
     topbarColor = 'layout-topbar-blue';
 
     menuClick: boolean;
@@ -40,7 +38,6 @@ export class AppMainComponent {
     rightPanelMenuActive: boolean;
 
     inlineUser: boolean;
-
 
     onLayoutClick() {
         if (!this.userMenuClick) {
@@ -83,16 +80,16 @@ export class AppMainComponent {
         if (this.isOverlay()) {
             this.overlayMenuActive = !this.overlayMenuActive;
         }
-        
+
         if (this.isDesktop()) {
             this.staticMenuDesktopInactive = !this.staticMenuDesktopInactive;
-        } 
-        else {
+        } else {
             this.staticMenuMobileActive = !this.staticMenuMobileActive;
-            if (this.staticMenuMobileActive)
+            if (this.staticMenuMobileActive) {
                 this.blockBodyScroll();
-            else
+            } else {
                 this.unblockBodyScroll();
+            }
         }
 
         event.preventDefault();
@@ -175,16 +172,19 @@ export class AppMainComponent {
     }
 
     blockBodyScroll(): void {
-        if (document.body.classList)
+        if (document.body.classList) {
             document.body.classList.add('blocked-scroll');
-        else
+        } else {
             document.body.className += ' blocked-scroll';
+        }
     }
 
     unblockBodyScroll(): void {
-        if (document.body.classList)
+        if (document.body.classList) {
             document.body.classList.remove('blocked-scroll');
-        else
-            document.body.className = document.body.className.replace(new RegExp('(^|\\b)' + 'blocked-scroll'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        } else {
+            document.body.className = document.body.className.replace(new RegExp('(^|\\b)' +
+                'blocked-scroll'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+        }
     }
 }

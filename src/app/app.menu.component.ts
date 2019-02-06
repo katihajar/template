@@ -235,10 +235,10 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                     { label: 'Login', icon: 'pi pi-fw pi-sign-in', routerLink: ['/login'], target: '_blank' },
                     { label: 'Landing', icon: 'pi pi-fw pi-globe', url: 'assets/pages/landing.html', target: '_blank' },
                     { label: 'Error', icon: 'pi pi-fw pi-exclamation-triangle', routerLink: ['/error'], target: '_blank' },
-                    { label: '404', icon: 'pi pi-fw pi-times', routerLink: ['/accessdenied'], target: '_blank' },
+                    { label: '404', icon: 'pi pi-fw pi-times', routerLink: ['/404'], target: '_blank' },
                     {
                         label: 'Access Denied', icon: 'pi pi-fw pi-ban',
-                        routerLink: ['/access'], target: '_blank'
+                        routerLink: ['/accessdenied'], target: '_blank'
                     }
                 ]
             },
@@ -391,17 +391,17 @@ export class AppSubMenuComponent {
     @Input() item: MenuItem;
 
     @Input() root: boolean;
-    
+
     @Input() visible: boolean;
-    
+
     _parentActive: boolean;
-    
+
     _reset: boolean;
-    
+
     activeIndex: number;
-    
+
     constructor(public app: AppMainComponent, public appMenu: AppMenuComponent) { }
-    
+
     itemClick(event: Event, item: MenuItem, index: number) {
         if (this.root) {
             this.app.menuHoverActive = !this.app.menuHoverActive;
@@ -415,12 +415,12 @@ export class AppSubMenuComponent {
 
         // activate current item and deactivate active sibling if any
         this.activeIndex = (this.activeIndex === index) ? null : index;
-        
+
         // execute command
         if (item.command) {
             item.command({ originalEvent: event, item: item });
         }
-        
+
         // prevent hash change
         if (item.items || (!item.url && !item.routerLink)) {
             setTimeout(() => {
@@ -431,11 +431,13 @@ export class AppSubMenuComponent {
 
         // hide menu
         if (!item.items) {
-            if (this.app.isHorizontal() || this.app.isSlim())
+            if (this.app.isHorizontal() || this.app.isSlim()) {
                 this.app.resetMenu = true;
-            else
+            }
+            else {
                 this.app.resetMenu = false;
-            
+            }
+
             this.app.overlayMenuActive = false;
             this.app.staticMenuMobileActive = false;
             this.app.menuHoverActive = !this.app.menuHoverActive;
@@ -457,14 +459,14 @@ export class AppSubMenuComponent {
     @Input() get reset(): boolean {
         return this._reset;
     }
-    
+
     set reset(val: boolean) {
         this._reset = val;
         if (this._reset && (this.app.isHorizontal() || this.app.isSlim())) {
             this.activeIndex = null;
         }
     }
-    
+
     @Input() get parentActive(): boolean {
         return this._parentActive;
     }
