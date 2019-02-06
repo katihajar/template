@@ -617,6 +617,7 @@ body {
 
         .ui-listbox-list {
             background-color: $inputListBgColor;
+            padding: $inputListPadding;
 
             .ui-listbox-item {
                 margin: $inputListItemMargin;
