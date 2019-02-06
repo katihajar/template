@@ -90,11 +90,19 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/fullcalendar/dist/fullcalendar.min.css",
+              "node_modules/quill/dist/quill.snow.css",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/fullcalendar/dist/fullcalendar.js",
+              "node_modules/quill/dist/quill.js"
+            ],
             "assets": [
               "src/favicon.ico",
+              "src/upload.php",
               "src/assets"
             ]
           }
@@ -142,5 +150,14 @@
       }
     }
   },
-  "defaultProject": "roma"
+  "defaultProject": "roma",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "app",
+      "styleext": "css"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "app"
+    }
+  }
 }
