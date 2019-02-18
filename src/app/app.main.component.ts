@@ -39,6 +39,8 @@ export class AppMainComponent {
 
     inlineUser: boolean;
 
+    isRTL: boolean;
+
     onLayoutClick() {
         if (!this.userMenuClick) {
             this.topbarUserMenuActive = false;

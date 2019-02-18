@@ -51,7 +51,14 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                         this.app.changeMenuMode('horizontal');
                         this.app.inlineUser = false;
                         this.inlineUserMenuActive = false;
-                    }}
+                    }},
+                    {
+                        label: 'Orientation', icon: 'pi pi-fw pi-align-right',
+                        items: [
+                            {label: 'LTR', icon: 'pi pi-fw pi-align-left', command: (event) => {this.app.isRTL = false; }},
+                            {label: 'RTL', icon: 'pi pi-fw pi-align-right', command: (event) => {this.app.isRTL = true; }}
+                        ]
+                    }
                 ]
             },
             {

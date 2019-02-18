@@ -6,7 +6,8 @@
     'layout-menu-dark': lightMenu === false,
     'layout-overlay-active': overlayMenuActive,
     'layout-mobile-active': staticMenuMobileActive,
-    'layout-static-inactive': staticMenuDesktopInactive}" [class]="topbarColor" (click)="onLayoutClick()">
+    'layout-static-inactive': staticMenuDesktopInactive,
+    'layout-rtl': isRTL}" [class]="topbarColor" (click)="onLayoutClick()">
     <app-topbar></app-topbar>
 
     <app-menu [reset]="resetMenu"></app-menu>
