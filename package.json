@@ -1,6 +1,6 @@
 {
   "name": "roma",
-  "version": "1.0.1-SNAPSHOT",
+  "version": "7.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
