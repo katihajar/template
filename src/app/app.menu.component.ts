@@ -30,7 +30,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
     inlineUserMenuActive = false;
 
-    @ViewChild('layoutMenuScroller') layoutMenuScrollerViewChild: ScrollPanel;
+    @ViewChild('layoutMenuScroller', { static: true }) layoutMenuScrollerViewChild: ScrollPanel;
 
     constructor(public app: AppMainComponent) { }
 
@@ -319,15 +319,15 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
     }
 
     changeTheme(theme: string) {
-        const layoutLink: HTMLLinkElement = <HTMLLinkElement>document.getElementById('layout-css');
+        const layoutLink: HTMLLinkElement = document.getElementById('layout-css') as HTMLLinkElement;
         layoutLink.href = 'assets/layout/css/layout-' + theme + '.css';
-        const themeLink: HTMLLinkElement = <HTMLLinkElement>document.getElementById('theme-css');
+        const themeLink: HTMLLinkElement = document.getElementById('theme-css') as HTMLLinkElement;
         themeLink.href = 'assets/theme/' + 'theme-' + theme + '.css';
     }
 
     changeTopbarColor(topbarColor, logo) {
         this.app.topbarColor = topbarColor;
-        const topbarLogoLink: HTMLImageElement = <HTMLImageElement>document.getElementById('topbar-logo');
+        const topbarLogoLink: HTMLImageElement = document.getElementById('topbar-logo') as HTMLImageElement;
         topbarLogoLink.src = 'assets/layout/images/' + logo + '.svg';
     }
 
@@ -425,7 +425,7 @@ export class AppSubMenuComponent {
 
         // execute command
         if (item.command) {
-            item.command({ originalEvent: event, item: item });
+            item.command({ originalEvent: event, item });
         }
 
         // prevent hash change
@@ -440,8 +440,7 @@ export class AppSubMenuComponent {
         if (!item.items) {
             if (this.app.isHorizontal() || this.app.isSlim()) {
                 this.app.resetMenu = true;
-            }
-            else {
+            } else {
                 this.app.resetMenu = false;
             }
 

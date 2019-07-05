@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import {RomaPage} from './app.po';
 
-describe('workspace-project App', () => {
-  let page: AppPage;
+describe('Rome App', () => {
+    let page: RomaPage;
 
-  beforeEach(() => {
-    page = new AppPage();
-  });
+    beforeEach(() => {
+        page = new RomaPage();
+    });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to roma!');
-  });
+    it('should display welcome message', () => {
+        page.navigateTo();
+        expect(page.getTitleText()).toEqual('Welcome to Roma!');
+    });
 });

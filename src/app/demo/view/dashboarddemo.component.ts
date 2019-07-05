@@ -3,6 +3,9 @@ import { CarService } from '../service/carservice';
 import { Car } from '../domain/car';
 import { MenuItem } from 'primeng/primeng';
 import { EventService } from '../service/eventservice';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin from '@fullcalendar/interaction';
 
 @Component({
     templateUrl: './dashboard.component.html'
@@ -114,13 +117,12 @@ export class DashboardDemoComponent implements OnInit {
         this.eventService.getEvents().then(events => { this.events = events; });
 
         this.fullCalendarOptions = {
+            plugins: [ dayGridPlugin, timeGridPlugin, interactionPlugin ],
             defaultDate: '2016-01-12',
             header: {
-                left: 'prev,next',
-                center: 'title',
-                right: 'month,agendaWeek,agendaDay'
-            },
-            editable: true
+                right: 'prev,next, today',
+                left: 'title'
+            }
         };
     }
 }
