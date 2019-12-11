@@ -41,6 +41,10 @@ export class AppMainComponent {
 
     isRTL: boolean;
 
+    configActive: boolean;
+
+    configClick: boolean;
+
     onLayoutClick() {
         if (!this.userMenuClick) {
             this.topbarUserMenuActive = false;
@@ -67,6 +71,11 @@ export class AppMainComponent {
             this.unblockBodyScroll();
         }
 
+        if (this.configActive && !this.configClick) {
+            this.configActive = false;
+        }
+
+        this.configClick = false;
         this.userMenuClick = false;
         this.rightMenuClick = false;
         this.notificationMenuClick = false;
@@ -131,6 +140,10 @@ export class AppMainComponent {
 
     onTopbarSubItemClick(event) {
         event.preventDefault();
+    }
+
+    onConfigClick(event) {
+        this.configClick = true;
     }
 
     isHorizontal() {
