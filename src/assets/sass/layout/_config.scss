@@ -64,7 +64,7 @@
                         0 12px 17px 2px rgba(0, 0, 0, 0.14);
 
             i {
-                font-size: 32px;
+                font-size: 40px;
                 line-height: inherit;
                 cursor: pointer;
                 @include rotate(0deg);
@@ -93,7 +93,7 @@
         i {
             color: #ffffff;
             line-height: inherit;
-            font-size: 16px;
+            font-size: 20px;
         }
 
         &:hover {
@@ -107,6 +107,7 @@
 
     .ui-tabview {
         border: 0 none;
+        padding: 0;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -127,6 +128,7 @@
                 margin: 0;
                 background-color: transparent;
                 border: 0 none;
+                outline: none;
                 border-radius: 0;
                 border-bottom: 3px solid transparent;
                 cursor: pointer;
@@ -146,7 +148,7 @@
                     border-bottom: 3px solid $primaryColor;
                     background-color: lighten($color: $primaryColor, $amount: 35);
                     @include transition(background-color $transitionDuration);
-                    > a {
+                    > a, a:hover {
                         color: #1b1c1e;
                     }
 
@@ -196,9 +198,16 @@
                 }
 
                 i {
-                    font-size: 48px;
+                    font-size: 40px;
+                    font-weight: bold;
                     color: $primaryColor;
                     position: absolute;
+                    @include border-radius(50%);
+                    background-color: #ffffff;
+                    width: 40px;
+                    line-height: 40px;
+                    height: 40px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
                 }
 
                 &.layout-config-option {
@@ -209,20 +218,9 @@
                     height: auto;
                     overflow: hidden;
                     text-align: center;
-                    
-                    i {
-                        color: #ffffff;
-                        position: absolute;
-                    }
             
                     &:hover {
                         @include scale(1.1);
-                    }
-
-                    &.layout-config-option-light {
-                        i {
-                            color: #000000;
-                        }
                     }
                 }
 
@@ -230,11 +228,6 @@
                     img {
                         height: 87px;
                         width: 109px;
-                    }
-
-                    i {
-                        color: #ffffff;
-                        position: absolute;
                     }
                 }
             }
@@ -305,14 +298,13 @@
              right: auto;
              left: 7px;
         }
-
-       
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 896px) {
     .layout-config {
         transform: translate3d(100%, 0px, 0px);
+        top: 110px;
         
         &.layout-config-active {
             width: 100%;
@@ -322,6 +314,10 @@
         .layout-config-button {
             left: auto;
             right: -52px;
+        }
+        
+        .layout-config-close {
+            right: 10px;
         }
     }
 }
