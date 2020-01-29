@@ -73,6 +73,7 @@ Run 'ng help' for more options.
             &lt;router-outlet&gt;&lt;/router-outlet&gt;
         &lt;/div&gt;
     &lt;/div&gt;
+    &lt;app-config&gt;&lt;/app-config&gt;
     &lt;div class="layout-footer"&gt;
         &lt;app-footer&gt;&lt;/app-footer&gt;
     &lt;/div&gt;
@@ -128,181 +129,6 @@ export class AppMenuComponent implements OnInit, AfterViewInit &#123;
     ngOnInit() &#123;
         this.model = [
             &#123; label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/']&#125;,
-            &#123;
-                label: 'Layouts', icon: 'pi pi-fw pi-th-large',
-                items: [
-                    &#123; label: 'Static', icon: 'pi pi-fw pi-bars', command: event => this.app.changeMenuMode('static') &#125;,
-                    &#123; label: 'Overlay', icon: 'pi pi-fw pi-bars', command: event => this.app.changeMenuMode('overlay') &#125;,
-                    &#123; label: 'Slim', icon: 'pi pi-fw pi-bars', command: event => &#123;
-                        this.app.changeMenuMode('slim');
-                        this.app.inlineUser = false;
-                        this.inlineUserMenuActive = false;
-                    &#125;&#125;,
-                    &#123; label: 'Horizontal', icon: 'pi pi-fw pi-bars', command: event => &#123;
-                        this.app.changeMenuMode('horizontal');
-                        this.app.inlineUser = false;
-                        this.inlineUserMenuActive = false;
-                    &#125;&#125;
-                ]
-            &#125;,
-            &#123;
-                label: 'Topbar Colors', icon: 'pi pi-fw pi-pencil',
-                items: [
-                    &#123;
-                        label: 'Light', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-light', 'logo-roma')
-                    &#125;,
-                    &#123;
-                        label: 'Dark', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-dark', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Blue', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-blue', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Green', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-green', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Orange', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-orange', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Magenta', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-magenta', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Blue Grey', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-bluegrey', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Deep Purple', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-deeppurple', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Brown', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-brown', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Lime', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-lime', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Rose', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-rose', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Cyan', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-cyan', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Teal', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-teal', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Deep Orange', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-deeporange', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Indigo', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-indigo', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Pink', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-pink', 'logo-roma-white')
-                    &#125;,
-                    &#123;
-                        label: 'Purple', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTopbarColor('layout-topbar-purple', 'logo-roma-white')
-                    &#125;
-                ]
-            &#125;,
-            &#123;
-                label: 'Menu Colors', icon: 'pi pi-fw pi-list',
-                items: [
-                    &#123; label: 'Light', icon: 'pi pi-fw pi-circle-off', command: event => this.app.lightMenu = true &#125;,
-                    &#123; label: 'Dark', icon: 'pi pi-fw pi-circle-on', command: event => this.app.lightMenu = false &#125;
-                ]
-            &#125;,
-            &#123;
-                label: 'User Profile', icon: 'pi pi-fw pi-user',
-                items: [
-                    &#123; label: 'Popup', icon: 'pi pi-fw pi-user', command: event => &#123;
-                        this.app.inlineUser = false;
-                        this.inlineUserMenuActive = false;
-                    &#125;&#125;,
-                    &#123; label: 'Inline', icon: 'pi pi-fw pi-user', command: event => &#123;
-                        if (this.app.isStatic() || this.app.isOverlay())
-                            this.app.inlineUser = true;
-                    &#125;&#125;
-                ]
-            &#125;,
-            &#123;
-                label: 'Theme', icon: 'pi pi-fw pi-pencil',
-                items: [
-                    &#123;
-                        label: 'Blue', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('blue')
-                    &#125;,
-                    &#123;
-                        label: 'Green', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('green')
-                    &#125;,
-                    &#123;
-                        label: 'Orange', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('orange')
-                    &#125;,
-                    &#123;
-                        label: 'Magenta', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('magenta')
-                    &#125;,
-                    &#123;
-                        label: 'Blue Grey', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('bluegrey')
-                    &#125;,
-                    &#123;
-                        label: 'Deep Purple', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('deeppurple')
-                    &#125;,
-                    &#123;
-                        label: 'Brown', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('brown')
-                    &#125;,
-                    &#123;
-                        label: 'Lime', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('lime')
-                    &#125;,
-                    &#123;
-                        label: 'Rose', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('rose')
-                    &#125;,
-                    &#123;
-                        label: 'Cyan', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('cyan')
-                    &#125;,
-                    &#123;
-                        label: 'Teal', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('teal')
-                    &#125;,
-                    &#123;
-                        label: 'Deep-Orange', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('deeporange')
-                    &#125;,
-                    &#123;
-                        label: 'Indigo', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('indigo')
-                    &#125;,
-                    &#123;
-                        label: 'Pink', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('pink')
-                    &#125;,
-                    &#123;
-                        label: 'Purple', icon: 'pi pi-fw pi-pencil',
-                        command: (event) => this.changeTheme('purple')
-                    &#125;
-                ]
-            &#125;,
             &#123;
                 label: 'Components', icon: 'pi pi-fw pi-star',
                 items: [
@@ -432,7 +258,7 @@ npm install primeicons@latest --save
             the fly by changing the path however if this is not a requirement, you may also add them to the styles configuration above so they go inside the bundle.</p>
 
             <h1>Theme</h1>
-            <p>Roma provides 15 PrimeNG themes out of the box. Setup of a theme is simple by including the css of theme 
+            <p>Roma provides 15 PrimeNG themes out of the box. Setup of a theme is simple by including the css of theme
                 to your bundle that are located inside assets/theme folder such as assets/theme/theme-amber-teal.css.</p>
 
             <ul>
@@ -1143,6 +969,12 @@ $disabledOpacity:.5;                      //opacity of a disabled item
             </ul>
 
             <h1>Migration Guide</h1>
+            <h4>8.0.0 to 8.0.1</h4>
+            <ul>
+                <li>Update layout css files.</li>
+                <li>Update theme css files.</li>
+            </ul>
+
             <h4>7.0.0 to 8.0.0</h4>
             <ul>
                 <li>Update your project to Angular 8 with ng update. View the official update guide -<a href="https://update.angular.io/">https://update.angular.io/</a>- for more information.</li>
