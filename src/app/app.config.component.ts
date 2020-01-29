@@ -102,7 +102,8 @@ import { AppMainComponent } from './app.main.component';
                     <p-tabPanel header="Topbar">
                         <div class="panel-items">
                             <div class="panel-item" *ngFor="let topbarColor of topbarColors">
-                                <a style="cursor: pointer" class="layout-config-option" (click)="changeTopbarColor(topbarColor.label, topbarColor.logo)">
+                                <a style="cursor: pointer" class="layout-config-option"
+                                   (click)="changeTopbarColor(topbarColor.label, topbarColor.logo)">
                                     <img src="assets/layout/images/configurator/topbar/{{topbarColor.image}}" alt="roma"/>
                                     <i class="pi pi-check" *ngIf="app.topbarColor === topbarColor.label"></i>
                                 </a>
@@ -153,7 +154,7 @@ export class AppConfigComponent implements OnInit {
             {label: 'layout-topbar-indigo', logo: 'logo-roma-white', image: 'indigo.png'},
             {label: 'layout-topbar-pink', logo: 'logo-roma-white', image: 'pink.png'},
             {label: 'layout-topbar-purple', logo: 'logo-roma-white', image: 'purple.png'}
-        ]
+        ];
         this.themes = [
             {label: 'blue', image: 'blue.svg'},
             {label: 'green', image: 'green.svg'},
