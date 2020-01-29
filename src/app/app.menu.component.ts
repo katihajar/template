@@ -8,6 +8,13 @@ import { AppMainComponent } from './app.main.component';
     templateUrl: './app.menu.component.html',
     animations: [
         trigger('inline', [
+            state('hidden', style({
+                height: '0px',
+                overflow: 'hidden'
+            })),
+            state('visible', style({
+                height: '*',
+            })),
             state('hiddenAnimated', style({
                 height: '0px',
                 overflow: 'hidden'

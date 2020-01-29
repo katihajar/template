@@ -66,14 +66,16 @@ import { AppMainComponent } from './app.main.component';
                     <p-tabPanel header="User Profile">
                         <div class="panel-items">
                             <div class="panel-item">
-                                <a style="cursor: pointer" (click)="this.app.inlineUser = true">
+                                <a style="cursor: pointer" [ngClass]="{'ui-state-disabled': app.isHorizontal()}"
+                                   (click)="this.app.inlineUser = true">
                                     <img src="assets/layout/images/configurator/menu/roma-inline.png" alt="roma"/>
                                     <i class="pi pi-check" *ngIf="app.inlineUser"></i>
                                 </a>
                                 <span>Inline</span>
                             </div>
                             <div class="panel-item">
-                                <a style="cursor: pointer" (click)="this.app.inlineUser = false">
+                                <a style="cursor: pointer" [ngClass]="{'ui-state-disabled': app.isHorizontal()}"
+                                   (click)="this.app.inlineUser = false">
                                     <img src="assets/layout/images/configurator/menu/roma-popup.png" alt="roma"/>
                                     <i class="pi pi-check" *ngIf="!app.inlineUser"></i>
                                 </a>

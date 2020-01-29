@@ -11,10 +11,10 @@
     transform: translate3d(550px, 0px, 0px);
     @include transition(transform $transitionDuration);
     background-color: #ffffff;
-    
+
     &.layout-config-active {
         transform: translate3d(0px, 0px, 0px);
-        
+
         .layout-config-content {
             .layout-config-button {
                 i {
@@ -44,7 +44,7 @@
         > form {
             height: 100%;
         }
-        
+
         .layout-config-button {
             display: block;
             position: absolute;
@@ -60,7 +60,7 @@
             color: $primaryColor;
             @include transition(background-color $transitionDuration);
             box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
-                        0 5px 22px 4px rgba(0, 0, 0, 0.12), 
+                        0 5px 22px 4px rgba(0, 0, 0, 0.12),
                         0 12px 17px 2px rgba(0, 0, 0, 0.14);
 
             i {
@@ -70,7 +70,7 @@
                 @include rotate(0deg);
                 @include transition(transform 1s);
             }
-        
+
             &:hover {
                 color: lighten($primaryColor, 15%);
             }
@@ -163,7 +163,7 @@
                     padding: 13px 15px 10px;
                 }
             }
-        } 
+        }
 
         .ui-tabview-panels {
             padding: 1em 0;
@@ -176,7 +176,7 @@
             .ui-tabview-panel {
                 padding: 2em ;
             }
-            
+
             img {
                 max-height: 100px;
                 box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -218,7 +218,7 @@
                     height: auto;
                     overflow: hidden;
                     text-align: center;
-            
+
                     &:hover {
                         @include scale(1.1);
                     }
@@ -231,7 +231,7 @@
                     }
                 }
             }
-            
+
             h1 {
                 font-size: 21px;
                 font-weight: 600px;
@@ -256,11 +256,20 @@
                 overflow: hidden;
                 justify-content: center;
                 align-items: center;
+                pointer-events: none;
+                cursor: default;
 
                 i {
-                    font-size: 48px;
+                    font-size: 32px;
                     color: $primaryColor;
                     position: absolute;
+                    text-align: center;
+                    @include border-radius(50%);
+                    background-color: #ffffff;
+                    width: 40px;
+                    line-height: 40px;
+                    height: 40px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
                 }
             }
         }
@@ -284,7 +293,7 @@
         left: 0;
         width:  550px;
         transform: translate3d(-550px, 0px, 0px);
-        
+
         &.layout-config-active {
             transform: translate3d(0px, 0px, 0px);
         }
@@ -305,7 +314,7 @@
     .layout-config {
         transform: translate3d(100%, 0px, 0px);
         top: 110px;
-        
+
         &.layout-config-active {
             width: 100%;
             transform: translate3d(0px, 0px, 0px);
@@ -315,7 +324,7 @@
             left: auto;
             right: -52px;
         }
-        
+
         .layout-config-close {
             right: 10px;
         }
