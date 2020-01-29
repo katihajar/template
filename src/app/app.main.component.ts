@@ -45,6 +45,10 @@ export class AppMainComponent {
 
     configClick: boolean;
 
+    profileClick: boolean;
+
+    inlineUserMenuActive = false;
+
     onLayoutClick() {
         if (!this.userMenuClick) {
             this.topbarUserMenuActive = false;
@@ -56,6 +60,10 @@ export class AppMainComponent {
 
         if (!this.rightMenuClick) {
             this.rightPanelMenuActive = false;
+        }
+
+        if (!this.profileClick && this.isSlim()) {
+            this.inlineUserMenuActive = false;
         }
 
         if (!this.menuClick) {
@@ -80,6 +88,7 @@ export class AppMainComponent {
         this.rightMenuClick = false;
         this.notificationMenuClick = false;
         this.menuClick = false;
+        this.profileClick = false;
     }
 
     onMenuButtonClick(event) {
@@ -136,6 +145,11 @@ export class AppMainComponent {
         this.hideOverlayMenu();
 
         event.preventDefault();
+    }
+
+    onProfileClick(event) {
+        this.profileClick = true;
+        this.inlineUserMenuActive = !this.inlineUserMenuActive;
     }
 
     onTopbarSubItemClick(event) {

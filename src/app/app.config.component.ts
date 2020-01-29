@@ -31,7 +31,7 @@ import { AppMainComponent } from './app.main.component';
                                 <span>Overlay</span>
                             </div>
                             <div class="panel-item">
-                                <a style="cursor: pointer" (click)="app.menuMode = 'horizontal'">
+                                <a style="cursor: pointer" (click)="app.menuMode = 'horizontal'; app.inlineUser = false">
                                     <img src="assets/layout/images/configurator/menu/roma-horizontal.png" alt="roma"/>
                                     <i class="pi pi-check" *ngIf="app.menuMode === 'horizontal'"></i>
                                 </a>

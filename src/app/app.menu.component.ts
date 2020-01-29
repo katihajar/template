@@ -35,8 +35,6 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
     inlineModel: any[];
 
-    inlineUserMenuActive = false;
-
     @ViewChild('layoutMenuScroller', { static: true }) layoutMenuScrollerViewChild: ScrollPanel;
 
     constructor(public app: AppMainComponent) { }
