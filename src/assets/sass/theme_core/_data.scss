@@ -835,68 +835,65 @@ body {
     }
 
     .ui-carousel {
-        padding: 0;
-
-        .ui-carousel-header {
-            background-color: $panelHeaderBgColor;
-            color: $panelHeaderTextColor;
-            padding: $panelHeaderPadding;
-            border: $panelHeaderBorder;
-            margin: 0;
-            font-weight: $panelHeaderFontWeight;
-
-            .ui-carousel-header-title {
+        .ui-carousel-content {
+            .ui-carousel-prev,
+            .ui-carousel-next {
+                border: none;
+                @include border-radius(4px);
+                margin: .2em;
+                height: 2.5em;
+                width: 2.5em;
                 padding: 0;
-            }
-        }
+                color: $secondaryButtonTextColor;
+                background-color: $secondaryButtonBgColor;
+                border: $secondaryButtonBorder;
+                @include transition(color $transitionDuration);
 
-        .ui-carousel-viewport {
-            border: $panelContentBorder;
-            background-color: $panelContentBgColor;
-            color: $panelContentTextColor;
-            padding: 0;
+                span {
+                    color: $secondaryButtonTextColor;
+                    vertical-align: middle;
+                }
 
-            .ui-carousel-items {
-                .ui-carousel-item {
-                    border: $panelContentBorder;
+                &:not(.ui-state-disabled) {
+                    &:hover {
+                        background-color: $secondaryButtonHoverBgColor;
+                        color: $secondaryButtonHoverTextColor;
+                        border-color: $secondaryButtonHoverBorderColor;
+
+                        span {
+                            color: $secondaryButtonHoverTextColor;
+                        }
+                    }
                 }
             }
         }
 
-        .ui-carousel-footer {
-            background-color: $panelHeaderBgColor;
-            color: $panelHeaderTextColor;
-            padding: $panelHeaderPadding;
-            border: $panelHeaderBorder;
-            margin: 0;
-        }
+        .ui-carousel-dots-container {
+            .ui-carousel-dot-item {
+                > .ui-button {
+                    border-color: transparent;
+                    background-color: transparent;
+                    @include shadow(none);
+                    padding: 0;
+                }
 
-        .ui-carousel-button {
-            color: $panelHeaderIconColor;
-            @include transition(color $transitionDuration);
+                .ui-carousel-dot-icon {
+                    width: 20px;
+                    height: 6px;
+                    background-color: #b2c1cd;
+                    margin: 0 .2em;
 
-            &.ui-carousel-next-button {
-                @include icon-override("\e92a");
-            }
+                    &::before {
+                        content: ' ';
+                    }
+                }
 
-            &.ui-carousel-prev-button {
-                @include icon-override("\e928");
-            }
+                &.ui-state-highlight {
+                    background-color: transparent;
 
-            &:not(.ui-state-disabled):hover {
-                color: $panelHeaderIconHoverColor;
-            }
-        }
-
-        .ui-carousel-page-links {
-            margin: .125em $inlineSpacing;
-
-            .ui-carousel-page-link {
-                color: $panelHeaderIconColor;
-                @include transition(color $transitionDuration);
-
-                &:hover {
-                    color: $panelHeaderIconHoverColor;
+                    .ui-carousel-dot-icon {
+                        background-color: $primaryColor;
+                    }
                 }
             }
         }
