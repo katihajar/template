@@ -974,7 +974,6 @@ body {
                     a {
                         background-color: $calendarCellDateTodayBgColor;
                         color: $calendarCellDateTodayTextColor;
-                        font-weight: 600;
 
                         &.ui-state-active {
                             color: $calendarCellDateSelectedTextColor;
