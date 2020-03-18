@@ -88,6 +88,8 @@
                     display: block;
                     padding: .75em 1em;
                     position: relative;
+                    cursor: pointer;
+                    outline: none;
                     @include border-radius($borderRadius);
                     @include transition(color $transitionDuration, background-color $transitionDuration, border-left-color $transitionDuration);
 

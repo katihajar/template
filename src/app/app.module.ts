@@ -79,7 +79,8 @@ import { AppNotfoundComponent } from './pages/app.notfound.component';
 import { AppErrorComponent } from './pages/app.error.component';
 import { AppAccessdeniedComponent } from './pages/app.accessdenied.component';
 import { AppLoginComponent } from './pages/app.login.component';
-import { AppMenuComponent, AppSubMenuComponent } from './app.menu.component';
+import { AppMenuComponent } from './app.menu.component';
+import {AppMenuitemComponent} from './app.menuitem.component';
 import { AppRightMenuComponent } from './app.right-menu.component';
 import { AppTopBarComponent } from './app.topbar.component';
 import { AppFooterComponent } from './app.footer.component';
@@ -101,6 +102,7 @@ import { CarService } from './demo/service/carservice';
 import { CountryService } from './demo/service/countryservice';
 import { EventService } from './demo/service/eventservice';
 import { NodeService } from './demo/service/nodeservice';
+import {MenuService} from './app.menu.service';
 
 @NgModule({
     imports: [
@@ -179,9 +181,9 @@ import { NodeService } from './demo/service/nodeservice';
         AppComponent,
         AppMainComponent,
         AppMenuComponent,
+        AppMenuitemComponent,
         AppConfigComponent,
         AppRightMenuComponent,
-        AppSubMenuComponent,
         AppTopBarComponent,
         AppFooterComponent,
         DashboardDemoComponent,
@@ -205,7 +207,7 @@ import { NodeService } from './demo/service/nodeservice';
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
-        CarService, CountryService, EventService, NodeService
+        CarService, CountryService, EventService, NodeService, MenuService
     ],
     bootstrap: [AppComponent]
 })

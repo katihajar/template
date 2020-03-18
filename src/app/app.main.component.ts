@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { MenuService } from './app.menu.service';
 
 @Component({
     selector: 'app-main',
     templateUrl: './app.main.component.html',
 })
 export class AppMainComponent {
-    menuMode = 'slim';
+    menuMode = 'static';
 
     overlayMenuActive: boolean;
 
@@ -49,6 +50,8 @@ export class AppMainComponent {
 
     inlineUserMenuActive = false;
 
+    constructor(private menuService: MenuService) { }
+
     onLayoutClick() {
         if (!this.userMenuClick) {
             this.topbarUserMenuActive = false;
@@ -68,7 +71,7 @@ export class AppMainComponent {
 
         if (!this.menuClick) {
             if (this.isHorizontal() || this.isSlim()) {
-                this.resetMenu = true;
+                this.menuService.reset();
             }
 
             if (this.overlayMenuActive || this.staticMenuMobileActive) {
