@@ -97,7 +97,7 @@ import interactionPlugin from '@fullcalendar/interaction';
                 text-align: left;
             }
         }
-        
+
         .car-item {
             padding-top: 5px;
         }
@@ -212,7 +212,7 @@ export class DataDemoComponent implements OnInit {
     brands: SelectItem[];
 
     colors: SelectItem[];
-    
+
     data: TreeNode[];
 
     selectedCar: Car;
