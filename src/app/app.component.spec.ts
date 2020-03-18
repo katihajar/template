@@ -7,7 +7,7 @@ import { AppConfigComponent } from './app.config.component';
 import { AppTopBarComponent } from './app.topbar.component';
 import { AppRightMenuComponent } from './app.right-menu.component';
 import { AppFooterComponent } from './app.footer.component';
-import { AppMenuComponent, AppSubMenuComponent } from './app.menu.component';
+import { AppMenuComponent } from './app.menu.component';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { AccordionModule } from 'primeng/accordion';
 import { PanelModule } from 'primeng/panel';
@@ -25,7 +25,6 @@ describe('AppComponent', () => {
                 AppConfigComponent,
                 AppTopBarComponent,
                 AppMenuComponent,
-                AppSubMenuComponent,
                 AppRightMenuComponent,
                 AppFooterComponent,
             ]
