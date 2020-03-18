@@ -130,24 +130,24 @@ export class AppMenuComponent implements OnInit, AfterViewInit &#123;
         this.model = [
             &#123; label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/']&#125;,
             &#123;
-                label: 'Components', icon: 'pi pi-fw pi-star',
+                label: 'Components', icon: 'pi pi-fw pi-star', routerLink: ['/components'],
                 items: [
-                    &#123; label: 'Sample Page', icon: 'pi pi-fw pi-th-large', routerLink: ['/sample']  &#125;,
-                    &#123; label: 'Forms', icon: 'pi pi-fw pi-file', routerLink: ['/forms'] &#125;,
-                    &#123; label: 'Data', icon: 'pi pi-fw pi-table', routerLink: ['/data'] &#125;,
-                    &#123; label: 'Panels', icon: 'pi pi-fw pi-list', routerLink: ['/panels'] &#125;,
-                    &#123; label: 'Overlays', icon: 'pi pi-fw pi-clone', routerLink: ['/overlays'] &#125;,
-                    &#123; label: 'Menus', icon: 'pi pi-fw pi-plus', routerLink: ['/menus'] &#125;,
-                    &#123; label: 'Messages', icon: 'pi pi-fw pi-envelope', routerLink: ['/messages'] &#125;,
-                    &#123; label: 'Charts', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/charts'] &#125;,
-                    &#123; label: 'File', icon: 'pi pi-fw pi-upload', routerLink: ['/file'] &#125;,
-                    &#123; label: 'Misc', icon: 'pi pi-fw pi-spinner', routerLink: ['/misc'] &#125;
+                    &#123; label: 'Sample Page', icon: 'pi pi-fw pi-th-large', routerLink: ['/components/sample']  &#125;,
+                    &#123; label: 'Forms', icon: 'pi pi-fw pi-file', routerLink: ['/components/forms'] &#125;,
+                    &#123; label: 'Data', icon: 'pi pi-fw pi-table', routerLink: ['/components/data'] &#125;,
+                    &#123; label: 'Panels', icon: 'pi pi-fw pi-list', routerLink: ['/components/panels'] &#125;,
+                    &#123; label: 'Overlays', icon: 'pi pi-fw pi-clone', routerLink: ['/components/overlays'] &#125;,
+                    &#123; label: 'Menus', icon: 'pi pi-fw pi-plus', routerLink: ['/components/menus'] &#125;,
+                    &#123; label: 'Messages', icon: 'pi pi-fw pi-envelope', routerLink: ['/components/messages'] &#125;,
+                    &#123; label: 'Charts', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/components/charts'] &#125;,
+                    &#123; label: 'File', icon: 'pi pi-fw pi-upload', routerLink: ['/components/file'] &#125;,
+                    &#123; label: 'Misc', icon: 'pi pi-fw pi-spinner', routerLink: ['/components/misc'] &#125;
                 ]
             &#125;,
             &#123;
-                label: 'Pages', icon: 'pi pi-fw pi-copy',
+                label: 'Pages', icon: 'pi pi-fw pi-copy', routerLink: ['/pages'],
                 items: [
-                    &#123; label: 'Empty', icon: 'pi pi-fw pi-clone', routerLink: ['/empty'] &#125;,
+                    &#123; label: 'Empty', icon: 'pi pi-fw pi-clone', routerLink: ['/pages/empty'] &#125;,
                     &#123; label: 'Login', icon: 'pi pi-fw pi-sign-in', routerLink: ['/login'], target: '_blank' &#125;,
                     &#123; label: 'Landing', icon: 'pi pi-fw pi-globe', url: 'assets/pages/landing.html', target: '_blank' &#125;,
                     &#123; label: 'Error', icon: 'pi pi-fw pi-exclamation-triangle', routerLink: ['/error'], target: '_blank' &#125;,
