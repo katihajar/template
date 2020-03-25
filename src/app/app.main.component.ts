@@ -6,7 +6,7 @@ import { MenuService } from './app.menu.service';
     templateUrl: './app.main.component.html',
 })
 export class AppMainComponent {
-    menuMode = 'static';
+    menuMode = 'slim';
 
     overlayMenuActive: boolean;
 
