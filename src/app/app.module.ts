@@ -102,7 +102,7 @@ import { CarService } from './demo/service/carservice';
 import { CountryService } from './demo/service/countryservice';
 import { EventService } from './demo/service/eventservice';
 import { NodeService } from './demo/service/nodeservice';
-import {MenuService} from './app.menu.service';
+import { MenuService } from './app.menu.service';
 
 @NgModule({
     imports: [
