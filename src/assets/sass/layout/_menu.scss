@@ -485,6 +485,7 @@
             }
             .layout-menu-container {
                 width: 57px;
+                overflow: visible;
 
                 .layout-profile {
                     .layout-profile-button {
@@ -635,11 +636,12 @@
 
             .layout-menu-container {
                 width: 100%;
+                overflow: visible;
                 min-height: 45px;
                 position: static;
                 padding: .5em 5em;
 
-                
+
                 .menu-scroll-content {
                     width: 268px;
                     padding-right: 18px;

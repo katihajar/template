@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { MenuItem } from 'primeng/api';
 import { AppMainComponent } from './app.main.component';
 
 @Component({
@@ -28,8 +27,6 @@ import { AppMainComponent } from './app.main.component';
     ]
 })
 export class AppMenuComponent implements OnInit {
-
-    @Input() reset: boolean;
 
     model: any[];
 
