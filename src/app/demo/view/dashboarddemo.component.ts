@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CarService } from '../service/carservice';
-import { Car } from '../domain/car';
-import { MenuItem } from 'primeng/primeng';
+// import { CarService } from '../service/carservice';
+// import { Car } from '../domain/car';
+import { MenuItem } from 'primeng/api';
 import { EventService } from '../service/eventservice';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -12,11 +12,11 @@ import interactionPlugin from '@fullcalendar/interaction';
 })
 export class DashboardDemoComponent implements OnInit {
 
-    cars: Car[];
+    cars: any[];
 
     cols: any[];
 
-    selectedCar: Car;
+    selectedCar: any;
 
     items: MenuItem[];
 
@@ -28,10 +28,10 @@ export class DashboardDemoComponent implements OnInit {
 
     events: any[];
 
-    constructor(private carService: CarService, private eventService: EventService) {}
+    constructor(private eventService: EventService) {}
 
     ngOnInit() {
-        this.carService.getCarsMedium().then(cars => this.cars = cars);
+        // this.carService.getCarsMedium().then(cars => this.cars = cars);
 
         this.cols = [
             { field: 'vin', header: 'Vin' },
