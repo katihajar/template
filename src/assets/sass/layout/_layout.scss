@@ -1,4 +1,4 @@
-@import './_variables';
+@import '../variables/layout_variables';
 @import './_mixins';
 @import './_loader';
 @import './_main';
@@ -15,4 +15,5 @@
 @import './_rtl';
 @import './config';
 @import '../overrides/layout_styles';
-@import '../_fonts';
+@import './_fonts';
+@import './_typography';

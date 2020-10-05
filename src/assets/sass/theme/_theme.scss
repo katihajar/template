@@ -1,4 +1,5 @@
-@import './_variables';
-@import '../overrides/_layout_styles';
-@import '../theme_core/_core';
+@import '../variables/theme_variables';
+@import '../overrides/_theme_variables';
+@import './designer/_components';
+@import './extensions/_vendor_extensions';
 @import '../overrides/_theme_styles';

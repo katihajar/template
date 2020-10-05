@@ -1,9 +1,10 @@
-$primaryDarkestColor:#703A00;
-$primaryDarkerColor:#A65700;
-$primaryColor:#E2841A;
-$primaryLighterColor:#EB9A40;
-$primaryLightestColor:#F5B064;
-$primaryColorText:#ffffff;
+$primaryColor: #E2841A !default;
+$primaryLightColor: scale-color($primaryColor, $lightness: 60%) !default;
+$primaryDarkColor: scale-color($primaryColor, $lightness: -10%) !default;
+$primaryDarkerColor: scale-color($primaryColor, $lightness: -20%) !default;
+$primaryTextColor: #ffffff !default;
 
-@import '../sass/theme/_theme_variables';
-@import '../sass/theme_core/_core';
+$highlightBg: $primaryColor;
+$highlightTextColor: $primaryTextColor;
+
+@import '../sass/theme/_theme';
