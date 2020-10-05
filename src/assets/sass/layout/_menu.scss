@@ -11,6 +11,8 @@
                 padding: 3em 0;
                 display: block;
                 text-align: center;
+                cursor: pointer;
+                user-select: none;
                 @include transition(background-color $transitionDuration);
 
                 img {

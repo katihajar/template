@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 import { MenuService } from './app.menu.service';
 
 @Component({
     selector: 'app-main',
     templateUrl: './app.main.component.html',
 })
-export class AppMainComponent {
-    menuMode = 'slim';
+export class AppMainComponent implements OnInit {
+    layoutMode = 'slim';
 
     overlayMenuActive: boolean;
 
@@ -38,9 +39,9 @@ export class AppMainComponent {
 
     rightPanelMenuActive: boolean;
 
-    inlineUser: boolean;
+    inlineUser: boolean = false;
 
-    isRTL: boolean;
+    isRTL: boolean = false;
 
     configActive: boolean;
 
@@ -50,7 +51,15 @@ export class AppMainComponent {
 
     inlineUserMenuActive = false;
 
-    constructor(private menuService: MenuService) { }
+    inputStyle: string = "outlined";
+
+    ripple: boolean = true;
+
+    constructor(private menuService: MenuService, private primengConfig: PrimeNGConfig) { }
+
+    ngOnInit() {
+        this.primengConfig.ripple = true;
+    }
 
     onLayoutClick() {
         if (!this.userMenuClick) {
@@ -118,7 +127,7 @@ export class AppMainComponent {
         event.preventDefault();
     }
 
-    onMenuClick($event) {
+    onMenuClick(event) {
         this.menuClick = true;
         this.resetMenu = false;
     }
@@ -163,20 +172,24 @@ export class AppMainComponent {
         this.configClick = true;
     }
 
+    onRippleChange(event) {
+        this.ripple = event.checked;
+    }
+
     isHorizontal() {
-        return this.menuMode === 'horizontal';
+        return this.layoutMode === 'horizontal';
     }
 
     isSlim() {
-        return this.menuMode === 'slim';
+        return this.layoutMode === 'slim';
     }
 
     isOverlay() {
-        return this.menuMode === 'overlay';
+        return this.layoutMode === 'overlay';
     }
 
     isStatic() {
-        return this.menuMode === 'static';
+        return this.layoutMode === 'static';
     }
 
     isMobile() {
@@ -195,12 +208,6 @@ export class AppMainComponent {
     hideOverlayMenu() {
         this.overlayMenuActive = false;
         this.staticMenuMobileActive = false;
-    }
-
-    changeMenuMode(menuMode: string) {
-        this.menuMode = menuMode;
-        this.staticMenuDesktopInactive = false;
-        this.overlayMenuActive = false;
     }
 
     blockBodyScroll(): void {

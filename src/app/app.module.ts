@@ -52,6 +52,7 @@ import { PickListModule } from 'primeng/picklist';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { RatingModule } from 'primeng/rating';
+import { RippleModule } from 'primeng/ripple';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { SidebarModule } from 'primeng/sidebar';
@@ -178,6 +179,7 @@ import { IconService } from './demo/service/iconservice';
         ProgressBarModule,
         RadioButtonModule,
         RatingModule,
+        RippleModule,
         ScrollPanelModule,
         SelectButtonModule,
         SidebarModule,
