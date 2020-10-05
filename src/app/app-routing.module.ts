@@ -27,6 +27,8 @@ import { SpacingComponent } from './utilities/spacing.component';
 import { TypographyComponent } from './utilities/typography.component';
 import { TextComponent } from './utilities/text.component';
 
+import { AppCrudComponent } from './pages/app.crud.component';
+import { AppCalendarComponent } from './pages/app.calendar.component';
 import { AppMainComponent } from './app.main.component';
 import { AppNotfoundComponent } from './pages/app.notfound.component';
 import { AppErrorComponent } from './pages/app.error.component';
@@ -62,6 +64,8 @@ import { AppLoginComponent } from './pages/app.login.component'
                 { path: 'utilities/spacing', component: SpacingComponent },
                 { path: 'utilities/typography', component: TypographyComponent },
                 { path: 'utilities/text', component: TextComponent },
+                { path: 'pages/crud', component: AppCrudComponent },
+                { path: 'pages/calendar', component: AppCalendarComponent },
                 { path: 'pages/empty', component: EmptyDemoComponent },
                 { path: 'documentation', component: DocumentationComponent }
             ]

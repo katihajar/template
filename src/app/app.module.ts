@@ -77,6 +77,8 @@ import { AppComponent } from './app.component';
 import { AppCodeModule } from './app.code.component'
 import { AppMainComponent } from './app.main.component';
 import { AppConfigComponent } from './app.config.component';
+import { AppCrudComponent } from './pages/app.crud.component';
+import { AppCalendarComponent } from './pages/app.calendar.component';
 import { AppNotfoundComponent } from './pages/app.notfound.component';
 import { AppErrorComponent } from './pages/app.error.component';
 import { AppAccessdeniedComponent } from './pages/app.accessdenied.component';
@@ -103,15 +105,15 @@ import { ChartsDemoComponent } from './demo/view/chartsdemo.component';
 import { FileDemoComponent } from './demo/view/filedemo.component';
 import { DashboardDemoComponent } from './demo/view/dashboarddemo.component';
 import { DocumentationComponent } from './demo/view/documentation.component';
-import {DisplayComponent} from './utilities/display.component';
-import {ElevationComponent} from './utilities/elevation.component';
-import {FlexboxComponent} from './utilities/flexbox.component';
-import {GridComponent} from './utilities/grid.component';
-import {IconsComponent} from './utilities/icons.component';
-import {SpacingComponent} from './utilities/spacing.component';
-import {TypographyComponent} from './utilities/typography.component';
-import {TextComponent} from './utilities/text.component';
-import {WidgetsComponent} from './utilities/widgets.component';
+import { DisplayComponent } from './utilities/display.component';
+import { ElevationComponent } from './utilities/elevation.component';
+import { FlexboxComponent } from './utilities/flexbox.component';
+import { GridComponent } from './utilities/grid.component';
+import { IconsComponent } from './utilities/icons.component';
+import { SpacingComponent } from './utilities/spacing.component';
+import { TypographyComponent } from './utilities/typography.component';
+import { TextComponent } from './utilities/text.component';
+import { WidgetsComponent } from './utilities/widgets.component';
 
 import { CountryService } from './demo/service/countryservice';
 import { EventService } from './demo/service/eventservice';
@@ -232,6 +234,8 @@ import { IconService } from './demo/service/iconservice';
         SpacingComponent,
         TypographyComponent,
         TextComponent,
+        AppCrudComponent,
+        AppCalendarComponent,
         WidgetsComponent,
         AppNotfoundComponent,
         AppErrorComponent,
