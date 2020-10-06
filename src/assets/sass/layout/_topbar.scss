@@ -70,7 +70,7 @@
             list-style-type: none;
 
             .user-profile {
-                padding: 0 32px;
+                padding: 0 16px;
 
                 .layout-profile-icon {
                     display: inline-block;
@@ -114,7 +114,7 @@
                         height: 45px;
                         line-height: 45px;
                         text-align: center;
-                        font-size: 2.5em;
+                        font-size: 1.5em;
                         vertical-align: middle;
                     }
 
@@ -222,7 +222,7 @@
             @include transition(background-color $transitionDuration);
 
             i {
-                font-size: 2.5em;
+                font-size: 1.5em;
                 vertical-align: middle;
             }
         }
