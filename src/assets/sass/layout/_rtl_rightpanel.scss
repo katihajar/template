@@ -2,18 +2,18 @@
     .layout-right-panel {
         direction: rtl;
         right: auto;
-        left: -288px;
+        left: 0px;
         border-left: 0;
         border-right: solid 1px #ebebef;
-        @include transition(left $transitionDuration);
-    
-        &.layout-right-panel-active {
-            right: auto;
-            left: 0;
+        transition: transform $transitionDuration;
+
+        &.layout-right-panel-enter,
+        &.layout-right-panel-leave-to {
+            transform: translateX(-100%);
         }
-    
-        .ui-tabview.ui-tabview-top {   
-            .ui-tabview-nav {
+
+        .p-tabview.p-tabview-top {
+            .p-tabview-nav {
                 li {
                     margin-left: 0;
                     margin-right: 0;
