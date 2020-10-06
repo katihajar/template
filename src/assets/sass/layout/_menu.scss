@@ -417,9 +417,14 @@
 
     .layout-main {
         padding-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
 
         .layout-content {
             padding: 16px;
+            flex: 1 1 0;
         }
     }
 }
@@ -439,7 +444,6 @@
             }
 
             .layout-footer {
-                margin-left: 288px;
                 @include transition(margin-left $transitionDuration);
             }
 
@@ -449,10 +453,6 @@
                 }
 
                 .layout-main {
-                    margin-left: 0;
-                }
-
-                .layout-footer {
                     margin-left: 0;
                 }
             }
@@ -621,10 +621,6 @@
             .layout-main {
                 margin-left: 57px;
             }
-
-            .layout-footer {
-                margin-left: 57px;
-            }
         }
 
         &.layout-horizontal {
@@ -703,10 +699,6 @@
                         }
                     }
                 }
-            }
-
-            .layout-main {
-                padding-top: 0;
             }
         }
 
