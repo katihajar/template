@@ -1,22 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-// import { CarService } from '../service/carservice';
-// import { Car } from '../domain/car';
 import { MenuItem } from 'primeng/api';
 import { EventService } from '../service/eventservice';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import { ProductService } from '../service/productservice';
 
 @Component({
     templateUrl: './dashboard.component.html'
 })
 export class DashboardDemoComponent implements OnInit {
 
-    cars: any[];
-
-    cols: any[];
-
-    selectedCar: any;
+    products: any[];
 
     items: MenuItem[];
 
@@ -24,21 +19,14 @@ export class DashboardDemoComponent implements OnInit {
 
     chartOptions: any;
 
-    fullCalendarOptions: any;
-
     events: any[];
 
-    constructor(private eventService: EventService) {}
+    fullcalendarOptions: any;
+
+    constructor(private eventService: EventService, private productService: ProductService) {}
 
     ngOnInit() {
-        // this.carService.getCarsMedium().then(cars => this.cars = cars);
-
-        this.cols = [
-            { field: 'vin', header: 'Vin' },
-            { field: 'year', header: 'Year' },
-            { field: 'brand', header: 'Brand' },
-            { field: 'color', header: 'Color' }
-        ];
+        this.productService.getProducts().then(data => this.products = data);
 
         this.items = [
             { label: 'Save', icon: 'pi pi-check' },
@@ -116,13 +104,15 @@ export class DashboardDemoComponent implements OnInit {
 
         this.eventService.getEvents().then(events => { this.events = events; });
 
-        this.fullCalendarOptions = {
-            plugins: [ dayGridPlugin, timeGridPlugin, interactionPlugin ],
-            defaultDate: '2016-01-12',
+        this.fullcalendarOptions = {
+            plugins:[dayGridPlugin, timeGridPlugin, interactionPlugin],
+            defaultDate: '2017-02-12',
             header: {
-                right: 'prev,next, today',
-                left: 'title'
-            }
+                left: 'prev,next',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            editable: true
         };
     }
 }

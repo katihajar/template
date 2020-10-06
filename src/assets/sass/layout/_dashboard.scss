@@ -7,28 +7,96 @@
     .overview-box {
         position: relative;
         padding: .5em 1em;
-
+    
         .overview-box-title {
-            color: $textSecondaryColor;
             font-size: 13px;
-            margin-bottom: .25em;
+            margin-bottom: 1.2em;
+            color: $textColor;
         }
-
+    
         .overview-box-value {
+            color: $textColor;
             font-size: 21px;
-            margin-bottom: 1em;
+            font-weight: 500;
+            opacity: .8;
+            margin-bottom: .25em;
+    
         }
-
+    
         img {
             width: 100%;
         }
-
+    
         .overview-box-status {
             position: absolute;
             right: 1em;
             top: .5em;
             color: #0fc752;
             font-size: 14px;
+            font-weight: 500;
+        }
+    
+        &.bluebg {
+            background-color:lighten(#0f97c7,10%);
+    
+            .overview-box-title {
+                color: #ffffff;
+            }
+    
+            .overview-box-value {
+                color: #ffffff;
+            }
+    
+            .overview-box-status {
+                color: #ffffff;
+            }
+        }
+        &.orangebg {
+            background-color: lighten(#F96F43,7%);
+    
+            .overview-box-title {
+                color: #ffffff;
+            }
+    
+            .overview-box-value {
+                color: #ffffff;
+            }
+    
+            .overview-box-status {
+                color: #ffffff;
+            }
+        }
+    
+        &.purplebg {
+            background-color:lighten(#9643F9,7%);
+    
+            .overview-box-title {
+                color: #ffffff;
+            }
+    
+            .overview-box-value {
+                color: #ffffff;
+            }
+    
+            .overview-box-status {
+                color: #ffffff;
+            }
+        }
+    
+        &.limebg {
+            background-color: lighten(#A5B600,7%);
+    
+            .overview-box-title {
+                color: #ffffff;
+            }
+    
+            .overview-box-value {
+                color: #ffffff;
+            }
+    
+            .overview-box-status {
+                color: #ffffff;
+            }
         }
     }
 
@@ -200,7 +268,7 @@
                 @include clearfix();
             }
 
-            .ui-chkbox {
+            .p-checkbox {
                 vertical-align: middle;
                 margin-right: .5em;
             }
@@ -224,7 +292,7 @@
             }
         }
 
-        .ui-progressbar {
+        .p-progressbar {
             height: 4px;
         }
     }
@@ -232,13 +300,14 @@
     .resolution-center {
         min-height: 325px;
 
-        .ui-inputtext {
+        .p-inputtext {
             display: block;
             margin-bottom: 2em;
+            width: 100%;
         }
 
         .resolution-button-bar {
-            .ui-button {
+            .p-button {
                 width: 48%;
 
                 &:first-child {
@@ -287,6 +356,10 @@
                 color: $textSecondaryColor;
                 font-size: 18px;
                 margin-left: 1em;
+
+                i {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -296,7 +369,7 @@
             padding: 12px;
             margin: 0;
             list-style-type: none;
-            
+
             li {
                 padding: 12px;
 
@@ -311,7 +384,7 @@
                 .chat-message {
                     position: relative;
                     padding: 8px;
-                    @include border-radius($borderRadius);
+                    border-radius: $borderRadius;
                 }
 
                 &.message-from {
@@ -328,7 +401,7 @@
                             pointer-events: none;
                             top: 16px;
                         }
-    
+
                         &:before {
                             border-right-color: #ebebef;
                             border-width: 10px;
@@ -336,7 +409,7 @@
                         }
                     }
                 }
-                
+
                 &.message-to {
                     .chat-message {
                         background-color: #ffffff;
@@ -355,7 +428,7 @@
                             border-width: 9px;
                             margin-top: -10px;
                         }
-                        
+
                         &:before {
                             left: 100%;
                             border: solid transparent;
@@ -373,11 +446,11 @@
                 }
             }
         }
-        
+
         .new-message {
             border: 1px solid #ebebef;
             border-right: 0 none;
-             
+
             input {
                 border: 0 none;
                 width: 100%;
@@ -388,10 +461,10 @@
 
             .p-col-fixed {
                 width: 100px;
-                
+
                 button {
                     width: 100%;
-                    @include border-radius(0);
+                    border-radius: 0;
                 }
             }
         }
@@ -399,32 +472,32 @@
 
     .user-card {
         padding: 0;
-
+    
         .user-card-header {
             height: 120px;
             overflow: hidden;
-            
+    
             img {
                 width: 100%;
                 height: 100%;
             }
         }
-        
-        .user-card-content {            
+    
+        .user-card-content {
             img {
                 width: 60px;
                 height: 60px;
                 margin: -30px 0 0 24px;
             }
-            
-            .ui-button {
+    
+            .p-button {
                 float: right;
                 width: 36px;
                 height: 36px;
                 margin: -18px 24px 0 0;
-                @include border-radius(50%);
+                border-radius: 50%;
             }
-            
+    
             .user-card-name {
                 font-size: 13px;
                 color: #ffffff;
@@ -434,20 +507,20 @@
                 font-weight: 700;
                 white-space: nowrap;
             }
-                        
+    
             .user-detail {
                 padding: .5em 1em;
-
+    
                 .user-detail-box {
                     padding: .5em;
                     position: relative;
                     border: 1px solid #dadada;
-                    @include border-radius($borderRadius);
-                    
+                    border-radius: $borderRadius;
+    
                     .user-detail-box-detail {
                         color: $textSecondaryColor;
                     }
-
+    
                     i {
                         position: absolute;
                         color: #8b8b90;
@@ -455,8 +528,8 @@
                         right: .5em;
                     }
                 }
-
-                .ui-progressbar {
+    
+                .p-progressbar {
                     height: 4px;
                     margin-top: 20px;
                 }
@@ -465,8 +538,7 @@
     }
 
     .global-sales {
-        
-        .ui-datatable {
+        .p-datatable {
             th {
                 border: 0 none;
                 text-align: left;
@@ -479,25 +551,21 @@
                     border: 0 none;
                 }
 
-                &.ui-state-highlight,
-                &.ui-state-hover {
+                &.p-highlight,
+                &:hover {
                     border: 0 none;
                 }
             }
 
-            .ui-paginator {
+            .p-paginator {
                 border: 0 none;
-            }
-
-            button:last-child {
-                margin-left: 6px;
             }
         }
     }
 
     .weather {
         padding: 0;
-        color: $textSecondaryColor; 
+        color: $textSecondaryColor;
 
         img {
             width: 100%;
@@ -518,7 +586,7 @@
         .weather-city {
             font-size: 14px;
             margin-bottom: .5em;
-        } 
+        }
 
         .weather-status {
             font-size: 24px;

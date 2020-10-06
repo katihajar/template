@@ -7,12 +7,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <title>PrimeFaces Roma</title>
+        <title>PrimeNG Roma</title>
         <link id="theme-css" rel="stylesheet" type="text/css" href="../theme/theme-blue.css">
         <link id="layout-css" rel="stylesheet" type="text/css" href="../layout/css/layout-blue.css">
         <link rel="stylesheet" type="text/css" href="primeng.min.css">
     </head>
-    
+
     <body class="landing-body">
         <div class="landing-wrapper">
             <div id="home" class="landing-header">
@@ -33,10 +33,10 @@
                 </div>
 
                 <div class="landing-header-content">
-                    <h1>PrimeFaces Presents Roma</h1>
-                    <p>Modern and elegant responsive application template with a premium look for PrimeFaces components.</p>
-                    <button type="button" class="ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all">
-                        <span class="ui-button-text ui-c"> 
+                    <h1>PrimeNG Presents Roma</h1>
+                    <p>Modern and elegant responsive application template with a premium look for PrimeNG components.</p>
+                    <button type="button" class="p-button p-button-text-only p-widget p-state-default p-corner-all">
+                        <span class="p-button-text p-c">
                             Learn More
                         </span>
                     </button>
@@ -106,11 +106,11 @@
             </div>
 
             <div id="news" class="landing-news">
-                <h3>PrimeFaces Premium Template</h3>
+                <h3>PrimeNG Premium Template</h3>
                 <p>Take advantage of media's most prominent business trend, and empowers your internal advertising teams. </p>
 
-                <button type="button" class="ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all">
-                        <span class="ui-button-text ui-c">    
+                <button type="button" class="p-button p-button-text-only p-widget p-state-default p-corner-all">
+                        <span class="p-button-text p-c">
                             Learn More
                         </span>
                 </button>
@@ -133,8 +133,8 @@
                                     <li>Responsive</li>
                                     <li>Push Messages</li>
                                 </ul>
-                                <button type="button" class="ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all">
-                                    <span class="ui-button-text ui-c"> 
+                                <button type="button" class="p-button p-button-text-only p-widget p-state-default p-corner-all">
+                                    <span class="p-button-text p-c">
                                         Buy Now
                                     </span>
                                 </button>
@@ -154,8 +154,8 @@
                                     <li>Push Messages</li>
                                     <li>10 Support Tickets</li>
                                 </ul>
-                                <button type="button" class="ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all">
-                                    <span class="ui-button-text ui-c"> 
+                                <button type="button" class="p-button p-button-text-only p-widget p-state-default p-corner-all">
+                                    <span class="p-button-text p-c">
                                         Buy Now
                                     </span>
                                 </button>
@@ -176,8 +176,8 @@
                                     <li>10 Support Tickets</li>
                                     <li>Free Shipping</li>
                                 </ul>
-                                <button type="button" class="ui-button ui-button-text-only ui-widget ui-state-default ui-corner-all">
-                                    <span class="ui-button-text ui-c"> 
+                                <button type="button" class="p-button p-button-text-only p-widget p-state-default p-corner-all">
+                                    <span class="p-button-text p-c">
                                         Buy Now
                                     </span>
                                 </button>
@@ -192,7 +192,7 @@
                     <div class="multimedia-topic">MULTIMEDIA</div>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/OgwFrGMb8Y8" frameborder="0" allowfullscreen="true"></iframe>
+                    <iframe src="https://www.youtube.com/embed/pkOx7bSBQsg" frameborder="0" allowfullscreen="true"></iframe>
                 </div>
                 <h3>ROMA | Teaser Trailer [HD] </h3>
                 <p>Time and Space constrain us, but they also define who we are, creating inexplicable bonds with the others that flow with us at the same time and through the same places.</p>
@@ -231,7 +231,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <script type="text/javascript">
@@ -242,7 +242,7 @@
                     else
                         element.className += ' ' + className;
                 },
-    
+
                 removeClass: function(element, className) {
                     if (element.classList)
                         element.classList.remove(className);
@@ -256,20 +256,20 @@
                     else
                         return new RegExp('(^| )' + className + '( |$)', 'gi').test(element.className);
                 },
-    
+
                 hideMenu: function() {
                     var menu = document.getElementById('landing-menu');
                     this.removeClass(menu, 'fadeInDown');
                     this.addClass(menu, 'fadeOutUp');
                     var $this = this;
-    
+
                     setTimeout(function () {
                         $this.removeClass(menu, 'landing-menu-active');
                         $this.removeClass(menu, 'fadeOutUp');
                         $this.removeClass(document.body, 'landing-body-block-scroll');
                     }, 150);
                 },
-    
+
                 showMenu: function() {
                     var menu = document.getElementById('landing-menu');
                     this.addClass(menu, 'landing-menu-active');
@@ -301,6 +301,6 @@
                 });
             }
         </script>
-    <body>
+    </body>
     <link id="prime-flex" rel="stylesheet" type="text/css" href="primeflex.css">
 </html>
