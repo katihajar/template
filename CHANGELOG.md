@@ -7,9 +7,8 @@
 - Migrate to PrimeOne Design Architecture
 - Upgrade to Angular and PrimeNG 10 
 
-#### 8.0.1 to 9.0.0            
-#### Angular 9 and PrimeNG 9
-            
+#### 8.0.1 to 9.0.0
+
 * Update dependencies with <a href="https://angular.io/cli/update">ng update</a>.
 * Update theme.css and layout.css files.
 * Update app.menu.component.ts and app.menu.component.html while retaining your MenuModel.
