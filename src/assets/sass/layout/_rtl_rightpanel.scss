@@ -2,14 +2,14 @@
     .layout-right-panel {
         direction: rtl;
         right: auto;
-        left: 0px;
+        left: -288px;
         border-left: 0;
         border-right: solid 1px #ebebef;
-        transition: transform $transitionDuration;
+        transition: left $transitionDuration;
 
-        &.layout-right-panel-enter,
-        &.layout-right-panel-leave-to {
-            transform: translateX(-100%);
+        &.layout-right-panel-active {
+            right: auto;
+            left: 0;
         }
 
         .p-tabview.p-tabview-top {

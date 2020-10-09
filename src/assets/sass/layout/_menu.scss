@@ -624,6 +624,10 @@
         }
 
         &.layout-horizontal {
+            .layout-main {
+                padding-top: 0;
+            }
+
             .layout-topbar {
                 position: static;
 

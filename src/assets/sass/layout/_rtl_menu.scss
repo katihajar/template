@@ -3,9 +3,9 @@
         .layout-menu-container {
             direction: rtl;
 
-            .layout-profile {    
-                .layout-profile-menu {    
-                    li {    
+            .layout-profile {
+                .layout-profile-menu {
+                    li {
                         a {
                             text-align: right;
 
@@ -85,22 +85,6 @@
                     }
                 }
             }
-
-            .p-scrollpanel {
-                .p-scrollpanel-content {
-                    padding: 0 0 18px 18px;
-                }
-
-                .menu-scroll-content {
-                    padding-right: 0;
-                    padding-left: 18px;
-                }
-
-                .p-scrollpanel-bar-y {
-                    right: auto !important;
-                    left: -278px;
-                }
-            }
         }
 
         &.layout-menu-light {
@@ -128,7 +112,7 @@
                     right: 0;
                     @include transition(right $transitionDuration);
                 }
-        
+
                 .layout-main {
                     margin-left: 0;
                     margin-right: 288px;
@@ -137,16 +121,15 @@
 
                 .layout-footer {
                     margin-left: 0;
-                    margin-right: 288px;
                     @include transition(margin-right $transitionDuration);
                 }
-        
+
                 &.layout-static-inactive {
                     .layout-menu-container {
                         left: auto;
                         right: -288px;
                     }
-        
+
                     .layout-main {
                         margin-left: 0;
                         margin-right: 0;
@@ -158,14 +141,14 @@
                     }
                 }
             }
-        
+
             &.layout-overlay {
                 .layout-menu-container {
                     left: auto;
                     right: -288px;
                     @include transition(right $transitionDuration);
                 }
-        
+
                 &.layout-overlay-active {
                     .layout-menu-container {
                         left: auto;
@@ -173,7 +156,7 @@
                     }
                 }
             }
-        
+
             &.layout-slim {
                 .layout-menu-container {
                     right: 0;
@@ -184,7 +167,7 @@
                             right: 57px;
                         }
                     }
-                    
+
                     .layout-menu {
                         > li {
                             > a {
@@ -194,7 +177,7 @@
                                     margin-left: 0;
                                 }
                             }
-        
+
                             > ul {
                                 left: auto;
                                 right: 52px;
@@ -204,7 +187,7 @@
                         .layout-menu-tooltip {
                             left: auto;
                             right: 57px;
-                            
+
                             .layout-menu-tooltip-arrow {
                                 left: auto;
                                 right: 0;
@@ -214,14 +197,8 @@
                             }
                         }
                     }
-
-                    .p-scrollpanel {
-                        .menu-scroll-content {
-                            padding: 0;
-                        }
-                    }
                 }
-        
+
                 .layout-main {
                     margin-left: 0;
                     margin-right: 57px;
@@ -229,39 +206,38 @@
 
                 .layout-footer {
                     margin-left: 0;
-                    margin-right: 57px;
                 }
             }
-        
+
             &.layout-horizontal {
                 .layout-topbar {
-                    .layout-topbar-logo { 
+                    .layout-topbar-logo {
                         margin: 10px 5em 0 0;
                     }
                 }
 
                 .layout-menu-container {
-                    .p-scrollpanel {            
+                    .p-scrollpanel {
                         .menu-scroll-content {
                             padding-right: 0;
                             padding-left: 18px;
                         }
                     }
-                    
+
                     .layout-menu {
-                        > li {    
+                        > li {
                             > a {
                                 .layout-menuitem-icon {
                                     margin-right: 0;
                                     margin-left: .5em;
                                 }
-            
+
                                 .layout-submenu-toggler {
                                     margin-left: 0;
                                     margin-right: .5em;
                                 }
                             }
-        
+
                             > ul {
                                 left: auto;
                                 right: 0;
@@ -275,8 +251,8 @@
                         }
                     }
                 }
-            }    
-        
+            }
+
             &.layout-horizontal, &.layout-slim {
                 .layout-topbar {
                     .layout-topbar-search {
@@ -284,7 +260,7 @@
                         margin-right: 40px;
                     }
                 }
-                
+
                 .layout-menu-container {
                     .layout-menu {
                         ul {
@@ -293,31 +269,31 @@
                                     padding-left: 0;
                                     padding-right: 16px;
                                 }
-        
+
                                 li {
                                     a {
                                         padding-left: 0;
                                         padding-right: 32px;
                                     }
-        
+
                                     li {
                                         a {
                                             padding-left: 0;
                                             padding-right: 48px;
                                         }
-        
+
                                         li {
                                             a {
                                                 padding-left: 0;
                                                 padding-right: 64px;
                                             }
-        
+
                                             li {
                                                 a {
                                                     padding-left: 0;
                                                     padding-right: 80px;
                                                 }
-        
+
                                                 li {
                                                     a {
                                                         padding-left: 0;
@@ -338,7 +314,7 @@
 }
 
 @media screen and (max-width: 896px) {
-    .layout-rtl {    
+    .layout-rtl {
         &.layout-wrapper {
             .layout-topbar {
                 .layout-topbar-logo {

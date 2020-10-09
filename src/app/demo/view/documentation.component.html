@@ -2,13 +2,13 @@
     <div class="p-col-12">
         <div class="card docs no-margin">
 
-            <h1>Current Version</h1>
+            <h4>Current Version</h4>
             <p>Angular 10 and PrimeNG 10</p>
 
-            <h1>Dependencies</h1>
+            <h4>Dependencies</h4>
             <p>Roma has no direct dependency other than PrimeNG. More information about dependencies is available at <a href="https://www.primefaces.org/why-primeng-templates/">Why PrimeNG Templates</a> article.</p>
 
-            <h1>Getting Started</h1>
+            <h4>Getting Started</h4>
             <p>Roma is a true native application template for Angular and is distributed as a CLI project. In case CLI is not installed already, use
                 the command below to set it up.
             </p>
@@ -27,7 +27,7 @@ ng serve
 
             <p>The application should run at http://localhost:4200/, you may now start with the development of your application.</p>
 
-            <h1>Important CLI Commands</h1>
+            <h4>Important CLI Commands</h4>
             <p>Following commands are derived from CLI.</p>
 <app-code ngPreserveWhitespaces ngNonBindable lang="markup">
 Run 'ng serve' for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -43,12 +43,12 @@ Run 'ng e2e' to execute the end-to-end tests via [Protractor](http://www.protrac
 Run 'ng help' for more options.
 </app-code>
 
-            <h1>Structure</h1>
+            <h4>Structure</h4>
             <p>Roma consists of 3 main parts; the application layout, layout resources and theme resources for PrimeNG components. <i>app.component.html</i> inside app folder is the html template for the base layout,
                 required resources for the layout are placed inside the <i>src/assets/layout</i> folder and similarly theme resources are inside <i>src/assets/theme</i> folder.
             </p>
 
-            <h1>Template</h1>
+            <h4>Template</h4>
             <p>Main layout is the html template of the app.main.component.ts, it is divided into a couple of sections such as topbar, sidebar, right panel and footer. Here is the code for
                 the main template. The component class app.main.component.ts implements the logic such as opening menus and managing layout modes.
             </p>
@@ -83,7 +83,7 @@ Run 'ng help' for more options.
 &lt;/div&gt;
 </app-code>
 
-            <h1>Menu</h1>
+            <h4>Menu</h4>
             <p>Menu is a separate component defined in app.menu.component.ts file based on PrimeNG MenuModel API. In order to define the menuitems,
             navigate to this file and define your own model as a nested structure. Here is the menu component from the sample application.</p>
 
@@ -235,7 +235,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit &#123;
 </app-code>
 </div>
 
-            <h1>Integration with an Existing CLI Project</h1>
+            <h4>Integration with an Existing CLI Project</h4>
             <p>To setup Roma in an existing project, follow the steps below;</p>
 
 <ul>
@@ -262,7 +262,7 @@ npm install primeicons@latest --save
             <p>Last part is adding theme and layout css files, in the CLI app they are defined using link tags in index.html so the demo can switch them on
             the fly by changing the path however if this is not a requirement, you may also add them to the styles configuration above so they go inside the bundle.</p>
 
-            <h1>Theme</h1>
+            <h4>Theme</h4>
             <p>Roma provides 15 PrimeNG themes out of the box. Setup of a theme is simple by including the css of theme
                 to your bundle that are located inside assets/theme folder such as assets/theme/theme-amber-teal.css.</p>
 
@@ -329,10 +329,11 @@ sass --watch src/assets/theme/mytheme/theme.scss:src/assets/theme/mytheme/theme.
                 <li>Serve the css by importing it using a link tag or a bundler.</li>
             </ul>
 
-            <h1>Common SASS Variables</h1>
+            <h4>Common SASS Variables</h4>
             <p>In case you'd like to customize the shared variables, the _variables.scss files are where the options are defined for both layout and theme.</p>
 
-<h3>sass/varaibles/_theme_variables.scss</h3>
+<h5>sass/theme/_variables.scss</h5>
+<div style="height:400px;overflow: auto;">
 <app-code ngPreserveWhitespaces ngNonBindable lang="css">
 //reused color variables
 $shade000:#ffffff !default;    //surface
@@ -430,7 +431,7 @@ $inputListHeaderBorder:0 none !default;
 //inputs with overlays (e.g. autocomplete, dropdown, multiselect)
 $inputOverlayBg:$inputListBg !default;
 $inputOverlayHeaderBg:$inputListHeaderBg !default;
-$inputOverlayBorder:0 none !default;                  
+$inputOverlayBorder:0 none !default;
 $inputOverlayShadow:0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12) !default;
 
 //button
@@ -1066,8 +1067,9 @@ $galleriaThumbnailNavigatorHeight:2rem !default;
     --font-family:#&#123;$fontFamily&#125;;
 &#125;
 </app-code>
+</div>
 
-<h3>sass/varaibles/_layout_variables</h3>
+<h5>sass/layout/_variables</h5>
 <app-code ngPreserveWhitespaces ngNonBindable lang="css">
 $fontFamily:'Inter UI',sans-serif;
 $fontSize:13px;
@@ -1108,7 +1110,7 @@ $slimMenuTooltipBgColor:#333333;
 $slimMenuTooltipTextColor:#c8c8c8;
 </app-code>
 
-            <h1>Menu Modes</h1>
+            <h4>Menu Modes</h4>
             <p>Menu has 4 modes, static, overlay, slim and horizontal. Layout container element in app.component.html is used to define which mode to use by adding specific classes. List
             below indicates the style classes for each mode. </p>
             <ul>
@@ -1126,14 +1128,14 @@ $slimMenuTooltipTextColor:#c8c8c8;
             <p>It is also possible to leave the choice to the user by keeping the preference at a component and using an ngClass expression so that user can switch between modes. Sample
                     application has an example implementation of such use case. Refer to app.component.ts for an example.</p>
 
-            <h1>Menu Colors</h1>
+            <h4>Menu Colors</h4>
             <p>Menu offers two color options, "light" and "dark" which is defined using the main container element.</p>
             <ul>
                 <li>Light: "layout-wrapper layout-menu-light"</li>
                 <li>Dark: "layout-wrapper layout-menu-dark"</li>
             </ul>
 
-            <h1>TopBar Colors</h1>
+            <h4>TopBar Colors</h4>
             <p>Roma provides 17 built-in color alternatives for the topbar which is defined by adding a style class to the "layout-wrapper" element such as "layout-topbar-dark".</p>
 
 <app-code ngPreserveWhitespaces ngNonBindable lang="markup">
@@ -1162,13 +1164,13 @@ $slimMenuTooltipTextColor:#c8c8c8;
                 <li>layout-topbar-purple</li>
             </ul>
 
-            <h1>Grid CSS</h1>
+            <h4>Grid CSS</h4>
             <p>Roma uses PrimeNG Flex Grid CSS throughout the demos such as Dashboard, however any Grid library can be used with it since Roma Layout itself does not depend on PrimeFlex CSS.</p>
 
-            <h1>RTL</h1>
+            <h4>RTL</h4>
             <p>Layout can be used in RTL orientation as well by adding "layout-rtl" to the "layout-wrapper" div in app.main.component.html.</p>
 
-            <h1>Customizing Styles</h1>
+            <h4>Customizing Styles</h4>
             <p>It is suggested to add your customizations in the following sass files under the "sass/overrides" folder instead of adding them to the
                 scss files under sass folder to avoid maintenance issues after an update.</p>
 
@@ -1179,7 +1181,8 @@ $slimMenuTooltipTextColor:#c8c8c8;
                 <li><b>_theme_styles</b>: Styles for the theme.</li>
             </ul>
 
-            <h1>Migration Guide</h1>
+            <h4>Migration Guide</h4>
+            <p>Every change is included in <b>CHANGELOG.md</b> file at the root folder of the distribution along with the instructions to update.</p>
 
         </div>
     </div>
