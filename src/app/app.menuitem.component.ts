@@ -12,6 +12,7 @@ import {AppMainComponent} from './app.main.component';
     /* tslint:enable:component-selector */
     template: `
 		<ng-container>
+			<div *ngIf="root" class="layout-menuitem-root-text">{{item.label}}</div>
 			<a [attr.href]="item.url" (click)="itemClick($event)" *ngIf="!item.routerLink || item.items" (mouseenter)="onMouseEnter()"
 			   (keydown.enter)="itemClick($event)"
 			   [attr.target]="item.target" [attr.tabindex]="0" pRipple>
@@ -30,9 +31,9 @@ import {AppMainComponent} from './app.main.component';
 				<div class="layout-menu-tooltip-arrow"></div>
 				<div class="layout-menu-tooltip-text">{{item.label}}</div>
 			</div>
-			<ul *ngIf="item.items && active"
-				[@children]="((app.isHorizontal() || app.isSlim()) && root) ? (active ? 'visible' : 'hidden') :
-				(active ? 'visibleAnimated' : 'hiddenAnimated')">
+			<ul *ngIf="item.items"
+				[@children]="((app.isHorizontal() || app.isSlim()) && root && !app.isMobile()) ? (active ? 'visible' : 'hidden') :
+				(root ? 'visible' : active ? 'visibleAnimated' : 'hiddenAnimated')">
 				<ng-template ngFor let-child let-i="index" [ngForOf]="item.items">
 					<li app-menuitem [item]="child" [index]="i" [parentKey]="key" [class]="child.badgeClass"></li>
 				</ng-template>
@@ -40,6 +41,7 @@ import {AppMainComponent} from './app.main.component';
 		</ng-container>
     `,
     host: {
+        '[class.layout-root-menuitem]': 'root',
         '[class.active-menuitem]': 'active'
     },
     animations: [

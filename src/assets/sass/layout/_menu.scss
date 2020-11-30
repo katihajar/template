@@ -87,6 +87,21 @@
             }
 
             li {
+
+                &.layout-root-menuitem {
+                    > .layout-menuitem-root-text {
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        padding: 1.5rem 0 0.5rem 2.5rem;
+                        color: #6c7276;
+                    }
+
+                    > a {
+                        display: none;
+                    }
+                }
+
                 a {
                     display: block;
                     padding: .75em 1em;
@@ -238,6 +253,13 @@
                 }
 
                 li {
+
+                    &.layout-root-menuitem {
+                        > .layout-menuitem-root-text {
+                            color: $menuitemTextColor;
+                        }
+                    }
+
                     a {
                         .layout-menuitem-text {
                             color: $menuitemTextColor;
@@ -355,6 +377,13 @@
                 }
 
                 li {
+
+                    &.layout-root-menuitem {
+                        > .layout-menuitem-root-text {
+                            color: $darkMenuitemTextColor;
+                        }
+                    }
+
                     a {
                         .layout-menuitem-text {
                             color: $darkMenuitemTextColor;
@@ -542,6 +571,16 @@
                     > li {
                         position: relative;
 
+                        &.layout-root-menuitem {
+                            > .layout-menuitem-root-text {
+                                display: none;
+                            }
+
+                            > a {
+                                display: block;
+                            }
+                        }
+
                         > a {
                             display: block;
                             text-align: center;
@@ -661,6 +700,16 @@
                         position: relative;
                         border-left: 0 none;
                         border-right: 0 none;
+
+                        &.layout-root-menuitem {
+                            > .layout-menuitem-root-text {
+                                display: none;
+                            }
+
+                            > a {
+                                display: block;
+                            }
+                        }
 
                         > a {
                             height: 2.5em;
