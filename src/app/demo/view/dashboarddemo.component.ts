@@ -7,7 +7,8 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { ProductService } from '../service/productservice';
 
 @Component({
-    templateUrl: './dashboard.component.html'
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./tabledemo.scss']
 })
 export class DashboardDemoComponent implements OnInit {
 

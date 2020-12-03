@@ -121,6 +121,12 @@
                         vertical-align: middle;
                     }
 
+                    &.rotated-icon {
+                        .layout-menuitem-icon {
+                            transform: rotate(90deg);
+                        }
+                    }
+
                     .layout-submenu-toggler {
                         position: absolute;
                         right: 16px;
@@ -606,6 +612,7 @@
 
                         > ul {
                             position: absolute;
+                            display: none;
                             top: 0;
                             left: 52px;
                             min-width: 200px;
@@ -618,6 +625,10 @@
                                 &:hover + .layout-menu-tooltip {
                                     display: none;
                                 }
+                            }
+
+                            > ul {
+                                display: block;
                             }
                         }
                     }
@@ -731,6 +742,7 @@
                         > ul {
                             top: 2.5em;
                             left: 0;
+                            display: none;
                             min-width: 200px;
                             position: absolute;
                             margin: 0;
@@ -747,6 +759,7 @@
                             }
 
                             > ul {
+                                display: block;
                                 border-top: 4px solid $primaryColor;
                             }
                         }

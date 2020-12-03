@@ -14,15 +14,14 @@ import {AppMainComponent} from './app.main.component';
 		<ng-container>
 			<div *ngIf="root" class="layout-menuitem-root-text">{{item.label}}</div>
 			<a [attr.href]="item.url" (click)="itemClick($event)" *ngIf="!item.routerLink || item.items" (mouseenter)="onMouseEnter()"
-			   (keydown.enter)="itemClick($event)"
-			   [attr.target]="item.target" [attr.tabindex]="0" pRipple>
+			   (keydown.enter)="itemClick($event)" [attr.target]="item.target" [attr.tabindex]="0" [ngClass]="item.class" pRipple>
 				<i [ngClass]="item.icon" class="layout-menuitem-icon"></i>
 				<span class="layout-menuitem-text">{{item.label}}</span>
 				<i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="item.items"></i>
 			</a>
 			<a (click)="itemClick($event)" (mouseenter)="onMouseEnter()" *ngIf="item.routerLink && !item.items"
 			   [routerLink]="item.routerLink" routerLinkActive="active-menuitem-routerlink"
-			   [routerLinkActiveOptions]="{exact: true}" [attr.target]="item.target" [attr.tabindex]="0" pRipple>
+			   [routerLinkActiveOptions]="{exact: true}" [attr.target]="item.target" [attr.tabindex]="0" [ngClass]="item.class" pRipple>
 				<i [ngClass]="item.icon" class="layout-menuitem-icon"></i>
 				<span class="layout-menuitem-text">{{item.label}}</span>
 				<i class="pi pi-fw pi-angle-down layout-submenu-toggler" *ngIf="item.items"></i>
@@ -31,9 +30,8 @@ import {AppMainComponent} from './app.main.component';
 				<div class="layout-menu-tooltip-arrow"></div>
 				<div class="layout-menu-tooltip-text">{{item.label}}</div>
 			</div>
-			<ul *ngIf="item.items"
-				[@children]="((app.isHorizontal() || app.isSlim()) && root && !app.isMobile()) ? (active ? 'visible' : 'hidden') :
-				(root ? 'visible' : active ? 'visibleAnimated' : 'hiddenAnimated')">
+			<ul *ngIf="(item.items && root) || (item.items && active)"
+				[@children]="(root ? 'visible' : active ? 'visibleAnimated' : 'hiddenAnimated')">
 				<ng-template ngFor let-child let-i="index" [ngForOf]="item.items">
 					<li app-menuitem [item]="child" [index]="i" [parentKey]="key" [class]="child.badgeClass"></li>
 				</ng-template>
@@ -158,6 +156,8 @@ export class AppMenuitemComponent implements OnInit, OnDestroy {
                 this.menuService.reset();
                 this.app.menuHoverActive = false;
             }
+
+            this.app.staticMenuMobileActive = false;
         }
     }
 
