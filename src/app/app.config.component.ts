@@ -14,26 +14,7 @@ import { AppMainComponent } from './app.main.component';
             </div>
             <div class="layout-config-content">
                 <div class="layout-config-section options">
-                    <span class="section-name">Input Style</span>
-                    <div class="p-formgroup-inline">
-                        <div class="p-field-radiobutton">
-                            <p-radioButton inputId="input_outlined" name="inputstyle" [(ngModel)]="app.inputStyle"  value="outlined"></p-radioButton>
-                            <label for="input_outlined">Outlined</label>
-                        </div>
-                        <div class="p-field-radiobutton">
-                            <p-radioButton inputId="input_filled" name="inputstyle" [(ngModel)]="app.inputStyle" value="filled"></p-radioButton>
-                            <label for="input_filled">Filled</label>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="layout-config-section dark">
-                    <span class="section-name">Ripple Effect</span>
-                    <p-inputSwitch [ngModel]="app.ripple" (onChange)="app.onRippleChange($event)"></p-inputSwitch>
-                </div>
-
-                <div class="layout-config-section options">
-                    <span class="section-name">Menu Type</span>
+                    <span class="section-name">Menu Mode</span>
                     <div class="p-formgroup-inline menu-type p-grid p-nogutter">
                         <div class="p-field-radiobutton p-md-6">
                             <p-radioButton inputId="static" name="layoutMode" value="static" [(ngModel)]="app.layoutMode"></p-radioButton>
@@ -78,6 +59,25 @@ import { AppMainComponent } from './app.main.component';
                             <label for="top">Overlay</label>
                         </div>
                     </div>
+                </div>
+
+                <div class="layout-config-section options">
+                    <span class="section-name">Input Background</span>
+                    <div class="p-formgroup-inline">
+                        <div class="p-field-radiobutton">
+                            <p-radioButton inputId="input_outlined" name="inputstyle" [(ngModel)]="app.inputStyle"  value="outlined"></p-radioButton>
+                            <label for="input_outlined">Outlined</label>
+                        </div>
+                        <div class="p-field-radiobutton">
+                            <p-radioButton inputId="input_filled" name="inputstyle" [(ngModel)]="app.inputStyle" value="filled"></p-radioButton>
+                            <label for="input_filled">Filled</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="layout-config-section dark">
+                    <span class="section-name">Ripple Effect</span>
+                    <p-inputSwitch [ngModel]="app.ripple" (onChange)="app.onRippleChange($event)"></p-inputSwitch>
                 </div>
 
                 <div class="layout-config-section options">
