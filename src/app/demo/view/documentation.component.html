@@ -64,7 +64,7 @@ Run 'ng help' for more options.
     'layout-static-inactive': staticMenuDesktopInactive,
     'layout-rtl': isRTL,
     'p-input-filled': inputStyle === 'filled',
-    'p-ripple-disabled': !ripple}&#125;" (click)="onLayoutClick()"&gt;
+    'p-ripple-disabled': !ripple&#125;&#125;" (click)="onLayoutClick()"&gt;
     &lt;app-topbar&gt;&lt;/app-topbar&gt;
 
     &lt;app-menu&gt;&lt;/app-menu&gt;
@@ -120,7 +120,12 @@ export class AppMenuComponent implements OnInit, AfterViewInit &#123;
 
     ngOnInit() &#123;
         this.model = [
-            &#123; label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/']&#125;,
+            &#123;
+                label: 'Favorites', icon: 'pi pi-fw pi-home',
+                items: [
+                    &#123;label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/']&#125;
+                ]
+            &#125;,
             &#123;
                 label: 'UI Kit', icon: 'pi pi-fw pi-star', routerLink: ['/uikit'],
                 items: [
@@ -210,10 +215,15 @@ export class AppMenuComponent implements OnInit, AfterViewInit &#123;
                 ]
             &#125;,
             &#123;
-                label: 'Docs', icon: 'pi pi-fw pi-file', routerLink: ['/documentation']
-            &#125;,
-            &#123;
-                label: 'Buy Now', icon: 'pi pi-fw pi-money-bill', url: ['https://www.primefaces.org/store']
+                label: 'Start', icon: 'pi pi-download',
+                items: [
+                    &#123;
+                        label: 'Buy Now', icon: 'pi pi-fw pi-shopping-cart', url: ['https://www.primefaces.org/store']
+                    &#125;,
+                    &#123;
+                        label: 'Documentation', icon: 'pi pi-fw pi-info-circle', routerLink: ['/documentation']
+                    &#125;
+                ]
             &#125;
         ];
         this.inlineModel = [
@@ -253,8 +263,6 @@ npm install primeicons@latest --save
 
 <app-code ngPreserveWhitespaces ngNonBindable lang="markup">
 "styles": [
-    "../node_modules/primeng/resources/primeng.min.css",        //required: PrimeNG components
-    "node_modules/primeicons/primeicons.css",                   //required: PrimeIcons
     "styles.scss"                                               //your styles and overrides
 ],
 </app-code>
@@ -332,7 +340,7 @@ sass --watch src/assets/theme/mytheme/theme.scss:src/assets/theme/mytheme/theme.
             <h4>Common SASS Variables</h4>
             <p>In case you'd like to customize the shared variables, the _variables.scss files are where the options are defined for both layout and theme.</p>
 
-<h5>sass/theme/_variables.scss</h5>
+<h6>sass/theme/_variables.scss</h6>
 <div style="height:400px;overflow: auto;">
 <app-code ngPreserveWhitespaces ngNonBindable lang="css">
 //reused color variables
@@ -1069,7 +1077,7 @@ $galleriaThumbnailNavigatorHeight:2rem !default;
 </app-code>
 </div>
 
-<h5>sass/layout/_variables</h5>
+<h6>sass/layout/_variables</h6>
 <app-code ngPreserveWhitespaces ngNonBindable lang="css">
 $fontFamily:'Inter UI',sans-serif;
 $fontSize:13px;
