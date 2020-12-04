@@ -106,7 +106,7 @@ import { AppMainComponent } from './app.main.component';
                 </div>
             
                 <div class="layout-config-section colors">
-                    <span class="section-name">Themes</span>
+                    <span class="section-name">Component Themes</span>
                     <div class="layout-themes">
                             <div *ngFor="let t of themes">
                                 <a style="cursor: pointer" (click)="changeTheme(t.label)" [ngStyle]="{'background-color': t.color}">
