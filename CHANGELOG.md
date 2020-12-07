@@ -1,5 +1,14 @@
 # Changelog
 
+## 10.1.1
+
+**Migration Guide**
+- Update theme files and layout files.
+
+**Fixed bugs:**
+
+- Static and overlay menu horizontal scroll
+
 ## 10.1.0
 
 **Migration Guide**
