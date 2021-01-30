@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { AppComponent } from './app.component';
 import { AppMainComponent } from './app.main.component';
 
 @Component({
@@ -32,7 +33,7 @@ export class AppMenuComponent implements OnInit {
 
     inlineModel: any[];
 
-    constructor(public app: AppMainComponent) { }
+    constructor(public app: AppComponent, public appMain: AppMainComponent) { }
 
     ngOnInit() {
         this.model = [
@@ -159,6 +160,6 @@ export class AppMenuComponent implements OnInit {
     }
 
     onMenuClick(event) {
-        this.app.onMenuClick(event);
+        this.appMain.onMenuClick(event);
     }
 }

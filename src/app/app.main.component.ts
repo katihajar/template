@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { MenuService } from './app.menu.service';
+import {AppComponent} from './app.component';
 
 @Component({
     selector: 'app-main',
     templateUrl: './app.main.component.html',
 })
-export class AppMainComponent implements OnInit {
-    layoutMode = 'slim';
+export class AppMainComponent {
 
     overlayMenuActive: boolean;
 
@@ -16,10 +16,6 @@ export class AppMainComponent implements OnInit {
     staticMenuMobileActive: boolean;
 
     layoutMenuScroller: HTMLDivElement;
-
-    lightMenu = true;
-
-    topbarColor = 'layout-topbar-blue';
 
     menuClick: boolean;
 
@@ -39,10 +35,6 @@ export class AppMainComponent implements OnInit {
 
     rightPanelMenuActive: boolean;
 
-    inlineUser: boolean = false;
-
-    isRTL: boolean = false;
-
     configActive: boolean;
 
     configClick: boolean;
@@ -51,15 +43,7 @@ export class AppMainComponent implements OnInit {
 
     inlineUserMenuActive = false;
 
-    inputStyle: string = "outlined";
-
-    ripple: boolean = true;
-
-    constructor(private menuService: MenuService, private primengConfig: PrimeNGConfig) { }
-
-    ngOnInit() {
-        this.primengConfig.ripple = true;
-    }
+    constructor(private menuService: MenuService, private primengConfig: PrimeNGConfig, public app: AppComponent) { }
 
     onLayoutClick() {
         if (!this.userMenuClick) {
@@ -173,23 +157,24 @@ export class AppMainComponent implements OnInit {
     }
 
     onRippleChange(event) {
-        this.ripple = event.checked;
+        this.app.ripple = event.checked;
+        this.primengConfig = event.checked;
     }
 
     isHorizontal() {
-        return this.layoutMode === 'horizontal';
+        return this.app.layoutMode === 'horizontal';
     }
 
     isSlim() {
-        return this.layoutMode === 'slim';
+        return this.app.layoutMode === 'slim';
     }
 
     isOverlay() {
-        return this.layoutMode === 'overlay';
+        return this.app.layoutMode === 'overlay';
     }
 
     isStatic() {
-        return this.layoutMode === 'static';
+        return this.app.layoutMode === 'static';
     }
 
     isMobile() {

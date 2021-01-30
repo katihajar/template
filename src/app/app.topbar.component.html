@@ -1,10 +1,10 @@
 <div class="layout-topbar">
 
-    <a class="layout-right-panel-button layout-topbar-icon" (click)="app.onRightMenuClick($event)" href="#">
+    <a class="layout-right-panel-button layout-topbar-icon" (click)="appMain.onRightMenuClick($event)" href="#">
             <i class="pi pi-ellipsis-v"></i>
     </a>
 
-    <a href="#" class="layout-menu-button layout-topbar-icon" (click)="app.onMenuButtonClick($event)">
+    <a href="#" class="layout-menu-button layout-topbar-icon" (click)="appMain.onMenuButtonClick($event)">
         <i class="pi pi-bars"></i>
     </a>
 
@@ -18,8 +18,8 @@
     </span>
 
     <ul  class="topbar-menu" >
-        <li class="user-profile" [ngClass]="{'active-topmenuitem fadeInDown': app.topbarUserMenuActive}">
-            <a href="#" (click)="app.onTopbarUserMenuButtonClick($event)" *ngIf="!app.inlineUser">
+        <li class="user-profile" [ngClass]="{'active-topmenuitem fadeInDown': appMain.topbarUserMenuActive}">
+            <a href="#" (click)="appMain.onTopbarUserMenuButtonClick($event)" *ngIf="!app.inlineUser">
                 <img src="assets/layout/images/avatar.png" alt="roma-layout" />
                 <div class="layout-profile-userinfo">
                     <span class="layout-profile-name">Arlene Welch</span>
@@ -53,8 +53,8 @@
                     </li>
             </ul>
         </li>
-        <li [ngClass]="{'active-topmenuitem fadeInDown': app.topbarNotificationMenuActive}">
-                <a href="#" class="layout-topbar-icon" (click)="app.onTopbarNotificationMenuButtonClick($event)">
+        <li [ngClass]="{'active-topmenuitem fadeInDown': appMain.topbarNotificationMenuActive}">
+                <a href="#" class="layout-topbar-icon" (click)="appMain.onTopbarNotificationMenuButtonClick($event)">
                     <i class="topbar-icon pi pi-fw pi-bell"></i>
                 </a>
                 <ul class="fadeInDown">

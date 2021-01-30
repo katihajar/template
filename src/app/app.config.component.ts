@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
+import { AppComponent } from './app.component';
 import { AppMainComponent } from './app.main.component';
 
 @Component({
     selector: 'app-config',
     template: `
-        <div class="layout-config" [ngClass]="{'layout-config-active': app.configActive}" (click)="app.onConfigClick($event)">
+        <div class="layout-config" [ngClass]="{'layout-config-active': appMain.configActive}" (click)="appMain.onConfigClick($event)">
             <a style="cursor: pointer" id="layout-config-button" class="layout-config-button" (click)="onConfigButtonClick($event)">
                 <i class="pi pi-cog"></i>
             </a>
@@ -51,7 +52,7 @@ import { AppMainComponent } from './app.main.component';
                     <span class="section-name">User Profile</span>
                     <div class="p-formgroup-inline p-grid p-nogutter">
                         <div class="p-field-radiobutton p-md-6">
-                            <p-radioButton inputId="inline" name="profileMode" [value]="true" [(ngModel)]="app.inlineUser" [disabled]="app.isHorizontal()"></p-radioButton>
+                            <p-radioButton inputId="inline" name="profileMode" [value]="true" [(ngModel)]="app.inlineUser" [disabled]="appMain.isHorizontal()"></p-radioButton>
                             <label for="inline">Inline</label>
                         </div>
                         <div class="p-field-radiobutton p-md-6">
@@ -74,10 +75,10 @@ import { AppMainComponent } from './app.main.component';
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="layout-config-section dark">
                     <span class="section-name">Ripple Effect</span>
-                    <p-inputSwitch [ngModel]="app.ripple" (onChange)="app.onRippleChange($event)"></p-inputSwitch>
+                    <p-inputSwitch [ngModel]="app.ripple" (onChange)="appMain.onRippleChange($event)"></p-inputSwitch>
                 </div>
 
                 <div class="layout-config-section options">
@@ -93,7 +94,7 @@ import { AppMainComponent } from './app.main.component';
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="layout-config-section colors">
                     <span class="section-name">Topbar Colors</span>
                     <div class="layout-themes topbar-colors">
@@ -104,7 +105,7 @@ import { AppMainComponent } from './app.main.component';
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="layout-config-section colors">
                     <span class="section-name">Component Themes</span>
                     <div class="layout-themes">
@@ -127,7 +128,7 @@ export class AppConfigComponent implements OnInit {
 
     topbarColors: any[];
 
-    constructor(public app: AppMainComponent) {}
+    constructor(public app: AppComponent, public appMain: AppMainComponent) {}
 
     ngOnInit() {
         this.topbarColors = [
@@ -151,21 +152,21 @@ export class AppConfigComponent implements OnInit {
         ];
 
         this.themes = [
-            {label: 'blue', color:'#0f97c7'},
-            {label: 'green', color:'#10B163'},
-            {label: 'orange', color:'#E2841A'},
-            {label: 'magenta', color:'#B944D6'},
-            {label: 'bluegrey', color:'#578697'},
-            {label: 'deeppurple', color:'#6952EC'},
-            {label: 'brown', color:'#97664A'},
-            {label: 'lime', color:'#A5B600'},
-            {label: 'rose', color:'#AB5353'},
-            {label: 'cyan', color:'#1BA7AF'},
-            {label: 'teal', color:'#4EA279'},
-            {label: 'deeporange', color:'#F96F43'},
-            {label: 'indigo', color:'#435AD8'},
-            {label: 'pink', color:'#E93A76'},
-            {label: 'purple', color:'#9643F9'}
+            {label: 'blue', color: '#0f97c7'},
+            {label: 'green', color: '#10B163'},
+            {label: 'orange', color: '#E2841A'},
+            {label: 'magenta', color: '#B944D6'},
+            {label: 'bluegrey', color: '#578697'},
+            {label: 'deeppurple', color: '#6952EC'},
+            {label: 'brown', color: '#97664A'},
+            {label: 'lime', color: '#A5B600'},
+            {label: 'rose', color: '#AB5353'},
+            {label: 'cyan', color: '#1BA7AF'},
+            {label: 'teal', color: '#4EA279'},
+            {label: 'deeporange', color: '#F96F43'},
+            {label: 'indigo', color: '#435AD8'},
+            {label: 'pink', color: '#E93A76'},
+            {label: 'purple', color: '#9643F9'}
         ];
     }
 
@@ -194,7 +195,7 @@ export class AppConfigComponent implements OnInit {
     replaceLink(linkElement, href) {
         if (this.isIE()) {
             linkElement.setAttribute('href', href);
-        } 
+        }
         else {
             const id = linkElement.getAttribute('id');
             const cloneLinkElement = linkElement.cloneNode(true);
@@ -216,12 +217,12 @@ export class AppConfigComponent implements OnInit {
     }
 
     onConfigButtonClick(event) {
-        this.app.configActive = !this.app.configActive;
+        this.appMain.configActive = !this.appMain.configActive;
         event.preventDefault();
     }
 
     onConfigCloseClick(event) {
-        this.app.configActive = false;
+        this.appMain.configActive = false;
         event.preventDefault();
     }
 }

@@ -10,7 +10,7 @@ export class AppRightMenuComponent {
 
     messagesActive: boolean;
 
-    constructor(public app: AppMainComponent) {
+    constructor(public appMain: AppMainComponent) {
     }
 
     messagesClick() {

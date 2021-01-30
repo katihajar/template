@@ -33,7 +33,7 @@ import { AppMainComponent } from './app.main.component';
 import { AppNotfoundComponent } from './pages/app.notfound.component';
 import { AppErrorComponent } from './pages/app.error.component';
 import { AppAccessdeniedComponent } from './pages/app.accessdenied.component';
-import { AppLoginComponent } from './pages/app.login.component'
+import { AppLoginComponent } from './pages/app.login.component';
 
 @NgModule({
     imports: [
