@@ -3,7 +3,7 @@
         <div class="card docs no-margin">
 
             <h4>Current Version</h4>
-            <p>Angular 10 and PrimeNG 10</p>
+            <p>Angular 11 and PrimeNG 11</p>
 
             <h4>Dependencies</h4>
             <p>Roma has no direct dependency other than PrimeNG. More information about dependencies is available at <a href="https://www.primefaces.org/why-primeng-templates/">Why PrimeNG Templates</a> article.</p>
@@ -53,18 +53,18 @@ Run 'ng help' for more options.
                 the main template. The component class app.main.component.ts implements the logic such as opening menus and managing layout modes.
             </p>
 <app-code ngPreserveWhitespaces ngNonBindable lang="markup">
-&lt;div class="layout-wrapper" [ngClass]="&#123;'layout-horizontal': layoutMode === 'horizontal',
-    'layout-overlay': layoutMode === 'overlay',
-    'layout-static': layoutMode === 'static',
-    'layout-slim': layoutMode === 'slim',
-    'layout-menu-light': lightMenu === true,
-    'layout-menu-dark': lightMenu === false,
+&lt;div class="layout-wrapper" [ngClass]="&#123;'layout-horizontal': app.layoutMode === 'horizontal',
+    'layout-overlay': app.layoutMode === 'overlay',
+    'layout-static': app.layoutMode === 'static',
+    'layout-slim': app.layoutMode === 'slim',
+    'layout-menu-light': app.lightMenu === true,
+    'layout-menu-dark': app.lightMenu === false,
     'layout-overlay-active': overlayMenuActive,
     'layout-mobile-active': staticMenuMobileActive,
     'layout-static-inactive': staticMenuDesktopInactive,
-    'layout-rtl': isRTL,
-    'p-input-filled': inputStyle === 'filled',
-    'p-ripple-disabled': !ripple&#125;&#125;" (click)="onLayoutClick()"&gt;
+    'layout-rtl': app.isRTL,
+    'p-input-filled': app.inputStyle === 'filled',
+    'p-ripple-disabled': !app.ripple&#125;&#125;" (click)="onLayoutClick()"&gt;
     &lt;app-topbar&gt;&lt;/app-topbar&gt;
 
     &lt;app-menu&gt;&lt;/app-menu&gt;
@@ -116,7 +116,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit &#123;
 
     inlineModel: any[];
 
-    constructor(public app: AppMainComponent) &#123; &#125;
+    constructor(public appMain: AppMainComponent) &#123; &#125;
 
     ngOnInit() &#123;
         this.model = [
@@ -131,6 +131,8 @@ export class AppMenuComponent implements OnInit, AfterViewInit &#123;
                 items: [
                     &#123;label: 'Form Layout', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout']&#125;,
                     &#123;label: 'Input', icon: 'pi pi-fw pi-check-square', routerLink: ['/uikit/input']&#125;,
+                    &#123;label: 'Float Label', icon: 'pi pi-bookmark', routerLink: ['/uikit/floatlabel']&#125;,
+                    &#123;label: 'Invalid State', icon: 'pi pi-exclamation-circle', routerLink: ['/uikit/invalidstate']&#125;,
                     &#123;label: 'Button', icon: 'pi pi-fw pi-mobile', routerLink: ['/uikit/button'], class: 'rotated-icon'&#125;,
                     &#123;label: 'Table', icon: 'pi pi-fw pi-table', routerLink: ['/uikit/table']&#125;,
                     &#123;label: 'List', icon: 'pi pi-fw pi-list', routerLink: ['/uikit/list']&#125;,
@@ -164,6 +166,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit &#123;
                 items: [
                     &#123; label: 'Crud', icon: 'pi pi-fw pi-pencil', routerLink: ['/pages/crud'] &#125;,
                     &#123; label: 'Calendar', icon: 'pi pi-fw pi-calendar-plus', routerLink: ['/pages/calendar'] &#125;,
+                    &#123;label: 'Timeline', icon: 'pi pi-fw pi-calendar', routerLink: ['/pages/timeline']&#125;,
                     &#123; label: 'Landing', icon: 'pi pi-fw pi-globe', url: 'assets/pages/landing.html', target: '_blank' &#125;,
                     &#123; label: 'Login', icon: 'pi pi-fw pi-sign-in', routerLink: ['/login'], target: '_blank' &#125;,
                     &#123; label: 'Error', icon: 'pi pi-fw pi-exclamation-triangle', routerLink: ['/error'], target: '_blank' &#125;,
@@ -263,7 +266,7 @@ npm install primeicons@latest --save
 
 <app-code ngPreserveWhitespaces ngNonBindable lang="markup">
 "styles": [
-    "styles.scss"                                               //your styles and overrides
+    "styles.scss"                      //your styles and overrides
 ],
 </app-code>
 
@@ -860,6 +863,17 @@ $treeNodeContentPadding:.5rem !default;
 $treeNodeChildrenPadding:0 0 0 1rem !default;
 $treeNodeIconColor:$shade600 !default;
 
+//timeline
+$timelineVerticalEventContentPadding:0 1rem !default;
+$timelineHorizontalEventContentPadding:1rem 0 !default;
+$timelineEventMarkerWidth:1rem !default;
+$timelineEventMarkerHeight:1rem !default;
+$timelineEventMarkerBorderRadius:50% !default;
+$timelineEventMarkerBorder:2px solid $primaryColor !default;
+$timelineEventMarkerBackground:$shade000 !default;
+$timelineEventConnectorSize:2px !default;
+$timelineEventColor:$shade300 !default;
+
 //org chart
 $organizationChartConnectorColor:$shade300 !default;
 
@@ -1060,6 +1074,40 @@ $galleriaThumbnailNavigatorHoverColor:$shade100 !default;
 $galleriaThumbnailNavigatorBorderRadius:50% !default;
 $galleriaThumbnailNavigatorWidth:2rem !default;
 $galleriaThumbnailNavigatorHeight:2rem !default;
+
+//divider
+$dividerHorizontalMargin:1rem 0;
+$dividerHorizontalPadding:0 1rem;
+$dividerVerticalMargin:0 1rem;
+$dividerVerticalPadding:1rem 0;
+$dividerSize:1px;
+$dividerColor:$shade300;
+
+//avatar
+$avatarBg:$shade300;
+$avatarTextColor:$textColor;
+
+//chip
+$chipBg:$shade300;
+$chipTextColor:$textColor;
+$chipBorderRadius: 16px;
+
+//scrollTop
+$scrollTopBg:rgba(0,0,0,0.7);
+$scrollTopHoverBg:rgba(0,0,0,0.8);
+$scrollTopWidth:3rem;
+$scrollTopHeight:3rem;
+$scrollTopBorderRadius:50%;
+$scrollTopFontSize:1.5rem;
+$scrollTopTextColor:$shade100;
+
+//skeleton
+$skeletonBg:$shade200;
+$skeletonAnimationBg:rgba(255,255,255,0.4);
+
+//splitter
+$splitterGutterBg:$shade100;
+$splitterGutterHandleBg:$shade300;
 
 :root &#123;
     --surface-a:#&#123;$shade000&#125;;
