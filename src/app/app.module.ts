@@ -139,6 +139,11 @@ import {CustomerService} from './demo/service/customerservice';
 import {PhotoService} from './demo/service/photoservice';
 import {ProductService} from './demo/service/productservice';
 import {IconService} from './demo/service/iconservice';
+import { CommandeCreateComponent } from './view/admin/commandes/commande-create/commande-create.component';
+import { CommandesComponent } from './view/admin/commandes/commandes.component';
+import { CommandeListComponent } from './view/admin/commandes/commande-list/commande-list.component';
+import { CommandeEditComponent } from './view/admin/commandes/commande-edit/commande-edit.component';
+import { CommandeViewComponent } from './view/admin/commandes/commande-view/commande-view.component';
 
 @NgModule({
     imports: [
@@ -272,7 +277,12 @@ import {IconService} from './demo/service/iconservice';
         AppNotfoundComponent,
         AppErrorComponent,
         AppAccessdeniedComponent,
-        AppLoginComponent
+        AppLoginComponent,
+        CommandeCreateComponent,
+        CommandesComponent,
+        CommandeListComponent,
+        CommandeEditComponent,
+        CommandeViewComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
