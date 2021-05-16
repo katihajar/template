@@ -38,6 +38,11 @@ import {AppErrorComponent} from './pages/app.error.component';
 import {AppAccessdeniedComponent} from './pages/app.accessdenied.component';
 import {AppLoginComponent} from './pages/app.login.component';
 import {CommandesComponent} from './view/admin/commandes/commandes.component';
+import {LearnComponent} from './view/admin/learn/learn.component';
+import {ProfComponent} from './view/admin/prof/prof.component';
+
+
+
 
 @NgModule({
     imports: [
@@ -46,7 +51,9 @@ import {CommandesComponent} from './view/admin/commandes/commandes.component';
                 path: '', component: AppMainComponent,
                 children: [
                     {path: '', component: DashboardDemoComponent},
-                    {path: 'view/commande', component: CommandesComponent},
+                    {path: 'pages/commande', component: CommandesComponent},
+                    {path: 'pages/parcours', component: LearnComponent},
+                    {path: 'pages/classRoom', component: ProfComponent},
                     {path: 'uikit/formlayout', component: FormLayoutDemoComponent},
                     {path: 'uikit/floatlabel', component: FloatLabelDemoComponent},
                     {path: 'uikit/invalidstate', component: InvalidStateDemoComponent},

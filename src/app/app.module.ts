@@ -87,7 +87,7 @@ import {TreeTableModule} from 'primeng/treetable';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 
 import {AppComponent} from './app.component';
-import {AppCodeModule} from './app.code.component'
+import {AppCodeModule} from './app.code.component';
 import {AppMainComponent} from './app.main.component';
 import {AppConfigComponent} from './app.config.component';
 import {AppCrudComponent} from './pages/app.crud.component';
@@ -139,11 +139,28 @@ import {CustomerService} from './demo/service/customerservice';
 import {PhotoService} from './demo/service/photoservice';
 import {ProductService} from './demo/service/productservice';
 import {IconService} from './demo/service/iconservice';
-import { CommandeCreateComponent } from './view/admin/commandes/commande-create/commande-create.component';
-import { CommandesComponent } from './view/admin/commandes/commandes.component';
-import { CommandeListComponent } from './view/admin/commandes/commande-list/commande-list.component';
-import { CommandeEditComponent } from './view/admin/commandes/commande-edit/commande-edit.component';
-import { CommandeViewComponent } from './view/admin/commandes/commande-view/commande-view.component';
+import {CommandeCreateComponent} from './view/admin/commandes/commande-create/commande-create.component';
+import {CommandesComponent} from './view/admin/commandes/commandes.component';
+import {CommandeListComponent} from './view/admin/commandes/commande-list/commande-list.component';
+import {CommandeViewComponent} from './view/admin/commandes/commande-view/commande-view.component';
+import {CommandeEditComponent} from './view/admin/commandes/commande-edit/commande-edit.component';
+import {ParcoursCreateComponent} from './view/admin/learn/parcours-create/parcours-create.component';
+import {ParcoursEditComponent} from './view/admin/learn/parcours-edit/parcours-edit.component';
+import {CoursListComponent} from './view/admin/learn/cours-list/cours-list.component';
+import {CoursEditComponent} from './view/admin/learn/cours-edit/cours-edit.component';
+import {SectionListComponent} from './view/admin/learn/section-list/section-list.component';
+import {SectionViewComponent} from './view/admin/learn/section-view/section-view.component';
+import {SectionEditComponent} from './view/admin/learn/section-edit/section-edit.component';
+import {LearnComponent} from './view/admin/learn/learn.component';
+import {CoursCreateComponent} from './view/admin/learn/cours-create/cours-create.component';
+import {ParcoursListComponent} from './view/admin/learn/parcours-list/parcours-list.component';
+import {ConfirmationService, MessageService} from 'primeng/api';
+import {ProfComponent} from './view/admin/prof/prof.component';
+import {ProfListComponent} from './view/admin/prof/prof-list/prof-list.component';
+import {ClassRoomListComponent} from './view/admin/prof/class-room-list/class-room-list.component';
+import { EtudiantViewComponent } from './View/Admin/Prof/etudiant-view/etudiant-view.component';
+import { QuizViewComponent } from './View/Admin/Prof/quiz-view/quiz-view.component';
+
 
 @NgModule({
     imports: [
@@ -282,12 +299,27 @@ import { CommandeViewComponent } from './view/admin/commandes/commande-view/comm
         CommandesComponent,
         CommandeListComponent,
         CommandeEditComponent,
-        CommandeViewComponent
+        CommandeViewComponent,
+        LearnComponent,
+        ParcoursListComponent,
+        ParcoursCreateComponent,
+        ParcoursEditComponent,
+        CoursListComponent,
+        CoursCreateComponent,
+        CoursEditComponent,
+        SectionListComponent,
+        SectionViewComponent,
+        SectionEditComponent,
+       ProfComponent,
+        ProfListComponent,
+        ClassRoomListComponent,
+        EtudiantViewComponent,
+        QuizViewComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
         CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService, MenuService
+        PhotoService, ProductService, MenuService , MessageService , ConfirmationService
     ],
     bootstrap: [AppComponent]
 })

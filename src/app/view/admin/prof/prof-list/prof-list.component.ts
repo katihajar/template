@@ -1,26 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {ConfirmationService, MessageService} from 'primeng/api';
-import {ClassRoomService} from '../controller/service/class-room.service';
-import {Prof} from '../controller/Model/prof.model';
-import {EtudiantClassRoom} from '../controller/Model/etudiant-class-room.model';
-import {QuizClassRoom} from '../controller/Model/quiz-class-room.model';
-import {ClassRoom} from '../controller/Model/class-room.model';
+import {Prof} from '../../../../controller/Model/prof.model';
+import {ClassRoom} from '../../../../controller/Model/class-room.model';
+import {QuizClassRoom} from '../../../../controller/Model/quiz-class-room.model';
+import {EtudiantClassRoom} from '../../../../controller/Model/etudiant-class-room.model';
+import {ClassRoomService} from '../../../../controller/service/class-room.service';
+
+
+
+
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './app.login.component.html',
+  selector: 'app-prof-list',
+  templateUrl: './prof-list.component.html',
+  styleUrls: ['./prof-list.component.scss']
 })
-export class AppLoginComponent {
+export class ProfListComponent implements OnInit {
   cols: any[];
   constructor(private messageService: MessageService, private confirmationService: ConfirmationService,
               private service: ClassRoomService) {
-  }
-  get submittedProf(): boolean {
-    return this.service.submittedProf;
-  }
-
-  set submittedProf(value: boolean) {
-    this.service.submittedProf = value;
   }
   public FindClass(profs: Prof) {
     this.prof = profs;
@@ -38,6 +36,10 @@ export class AppLoginComponent {
       {field: 'etudiantList', header: 'EtudiantList'},
       {field: 'classRoomList', header: 'ClassRoomList'}
     ];
+  }
+  ngOnInit(): void {
+    this.initCol();
+    this.service.findAllProf().subscribe(data => this.profList = data);
   }
   get etudiantClassRoom(): EtudiantClassRoom {
     return this.service.etudiantClassRoom;
